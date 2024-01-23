@@ -144,8 +144,8 @@ alias py="python3 -u"
 alias birthdaemon="emacs --daemon"
 alias killdaemon='emacsclient -e "(kill-emacs)"'
 
-if command -v zellij &> /dev/null && [ -z "$ZELLIJ" ]; then
-    zellij
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux
 fi
 
 eval "$(oh-my-posh init bash -c /home/darth/.dotfiles/ohmyposhtheme.omp.json)"
