@@ -204,9 +204,6 @@
 (highlight-indentation-mode 1)
 ;;---
 
-;; Remove line numbers
-(global-display-line-numbers-mode -1)
-
 ;; Show symbols
 (global-prettify-symbols-mode 1)
 
