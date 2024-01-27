@@ -137,16 +137,20 @@ ex ()
 }
 
 export PATH=”$HOME/.emacs.d/bin:$PATH”
+export PATH=$PATH:/usr/local/bin
 
-alias personal="cd /run/media/darth/New\ Volume/Personal"
-alias uni="cd /run/media/darth/New\ Volume/College"
 alias py="python3 -u"
 alias birthdaemon="emacs --daemon"
 alias killdaemon='emacsclient -e "(kill-emacs)"'
+alias p="sudo pacman"
+alias vim="nvim"
+alias shut="shutdown now"
 
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux
+    tmux attach
+
 fi
 
 eval "$(oh-my-posh init bash -c /home/darth/.dotfiles/ohmyposhtheme.omp.json)"
+
 
