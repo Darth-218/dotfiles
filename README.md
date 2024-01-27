@@ -24,4 +24,6 @@ startup.sh is to be added to `/etc/profile.d/` and it contains:
 ---
 # TODO
 
-1. Make an install.sh
+1. Organize the README.md and preferably migrate to org mode.
+2. Make an install.sh
+
