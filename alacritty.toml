@@ -19,7 +19,7 @@ white = "#E8E3E3"
 yellow = "#D9BC8C"
 
 [colors.primary]
-background = "#15141b"
+background = "#151515"
 foreground = "#E8E3E3"
 
 [cursor]
@@ -28,7 +28,7 @@ thickness = 0.2
 unfocused_hollow = false
 
 [font]
-size = 8
+size = 9
 
 [font.bold]
 family = "JetBrains Mono"
@@ -49,7 +49,9 @@ style = "Medium"
 [shell]
 program = "/bin/bash"
 
+[window]
+opacity = 0.9
+
 [window.padding]
 x = 20
-y = 20
-
+y = 10
