@@ -174,7 +174,7 @@
 
 ; UI
 ;; Font
-(set-face-attribute 'default nil :font "JetBrains Mono" :height 105 :weight 'bold)
+(set-face-attribute 'default nil :font "JetBrains Mono" :height 120 :weight 'bold)
 
 ;; Breaking lines
 (setq-default truncate-lines nil)

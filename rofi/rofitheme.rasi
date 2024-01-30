@@ -5,9 +5,9 @@
 
     bg0:     #15141b;
     bg1:     #3d375e7f;
-    fg0:     #D8DEE9;
+    fg0:     #D8D9DA;
 
-    accent-color:     #a277ff;
+    accent-color:     #239A7F;
     urgent-color:     #EBCB8B;
 
     background-color:   transparent;

@@ -1,19 +1,14 @@
 #!/bin/bash
 
-if pgrep -x "dunst" > /dev/null; then
-  :
-else
-  dunst -conf ~/.config/dunst/dunstrc &
-fi
+sudo systemctl start sddm &
 
-if pgrep -x "emacs" > /dev/null; then
-    notify-send "Emacs Daemon is Running"
-else
-    notify-send "Starting Emacs Daemon"
-    emacs --daemon
-    notify-send "Emacs Daemon is Started"
-fi
+# Set background
+feh --bg-scale ~/suckless/Wallpaper.jpg &
 
+# Set status bar
+slstatus &
+
+# Start picom (Compositor)
 if pgrep -x "picom" > /dev/null; then
     notify-send "Picom is Running"
 else
@@ -21,7 +16,20 @@ else
     notify-send "Picom is Started"
 fi
 
-feh --bg-scale ~/suckless/Wallpaper.jpg &
+# Start dunst (Notification manager)
+if pgrep -x "dunst" > /dev/null; then
+  :
+else
+  dunst -conf ~/.dotfiles/dunst/dunstrc &
+fi
 
-slstatus &
+# Start emacs' daemon
+if pgrep -x "emacs" > /dev/null; then
+    notify-send "Emacs Daemon is Running"
+else
+    notify-send "Starting Emacs Daemon"
+    emacs --daemon &
+    notify-send "Emacs Daemon is Started"
+fi
+
 

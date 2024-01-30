@@ -7,20 +7,25 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetbrainsMono Nerd Font:bold:size=10" };
-static const char dmenufont[]       = "JetbrainsMono Nerd Font:bold:size=10";
+static const char dmenufont[]       = "JetbrainsMono Nerd Font:bold:size=13";
 static const char col_gray1[]       = "#15141b";
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray3[]       = "#d8d9da";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_purple[]        = "#a277ff";
+static const char col_purple[]        = "#239a7f";
 static const char *colors[][3]      = {
 	/*               fg         bg          border   */
 	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2 },
 	[SchemeSel]  = { col_purple,  col_gray1,  col_purple  },
 };
 
+static const char *const autostart[] = {
+	"st", NULL,
+	NULL /* terminate */
+};
+
 /* tagging */
-static const char *tags[] = { "01|", "10|", "11|", "100|", "101|", "111|", "1000|", "1001|", "1011|" };
+static const char *tags[] = { "󰣇 ", " ", "󰈹 ", " ", "󰶎 ", "󰎆 ", "󰐀 ", "󱃠 ", "󰘧 " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -128,7 +133,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 
-  // Workspaces
+  // Tags
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
