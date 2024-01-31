@@ -151,6 +151,6 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 
 fi
 
-eval "$(oh-my-posh init bash -c /home/darth/.dotfiles/ohmyposhtheme.omp.json)"
+eval "$(oh-my-posh init bash -c /home/darth/.dotfiles/oh-my-posh/ohmyposhtheme.omp.json)"
 
 
