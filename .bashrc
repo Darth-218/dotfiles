@@ -146,6 +146,8 @@ alias p="sudo pacman"
 alias vim="nvim"
 alias shut="shutdown now"
 
+bind 'TAB:menu-complete'
+
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach
 
