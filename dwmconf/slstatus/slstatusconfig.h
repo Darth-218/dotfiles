@@ -73,7 +73,7 @@ static const struct arg args[] = {
   { run_command,         "󰕾 %4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
 	{ datetime,            "%s | ",       "%a %b %d %r" },
 	{ battery_state,       "%s ",         "BAT1"        },
-	{ battery_perc,        "%s%%󱊢|",      "BAT1"        },
+	{ battery_perc,        "%s%% | ",      "BAT1"        },
   { keymap,              "%s - ",       NULL},
   { keyboard_indicators, "%s - ",       "c"},
   { keyboard_indicators, "%s ",         "n"},
