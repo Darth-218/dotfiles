@@ -1,7 +1,17 @@
 - Colors -
 
-Blue : #239A7F
+Background : #15141b
 
-Darkpurple : #15141b
+Foreground : #D8D9DA
 
-White : #D8D9DA
+- Accents -
+
+Blue : #54c59f
+
+Purple : #8464c6
+
+grey : #6d6d6d
+
+pink : #f694ff
+
+yellow : #ffca85
