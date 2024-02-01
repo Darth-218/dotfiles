@@ -66,18 +66,14 @@ static const char unknown_str[] = " ";
 static const struct arg args[] = {
 	/* function            format          argument */
   { netspeed_rx,         "%s- ",        "wlp4s0"      },
-<<<<<<< HEAD
   { wifi_essid,          "  %s ",     "wlp4s0"      },
-=======
-  { wifi_essid,          " %s ",     "wlp4s0"      },
->>>>>>> 7c50b2a4a5c0f291b6bc08bdc22d85f7e9458771
 	{ wifi_perc,           "%s%% | ",        "wlp4s0"      },
   { ram_free,            "RAM: [%s/",   NULL          },
   { ram_total,           "%s] | ",      NULL          },
   { run_command,         "󰕾 %4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
 	{ datetime,            "%s | ",       "%a %b %d %r" },
 	{ battery_state,       "%s ",         "BAT1"        },
-	{ battery_perc,        "%s%% 󱊢|",      "BAT1"        },
+	{ battery_perc,        "%s%%󱊢|",      "BAT1"        },
   { keymap,              "%s - ",       NULL},
   { keyboard_indicators, "%s - ",       "c"},
   { keyboard_indicators, "%s ",         "n"},
