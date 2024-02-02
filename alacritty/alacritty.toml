@@ -47,7 +47,7 @@ family = "JetBrains Mono"
 style = "Medium"
 
 [shell]
-program = "/bin/bash"
+program = "/bin/zsh"
 
 [window]
 opacity = 0.9
