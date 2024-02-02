@@ -45,7 +45,7 @@ HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
@@ -70,7 +70,10 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,6 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
 # # Update PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
@@ -109,7 +115,7 @@ alias py="python3 -u"
 alias birthdaemon="emacs --daemon"
 alias killdaemon='emacsclient -e "(kill-emacs)"'
 alias p="sudo pacman"
-alias vim="nvim"
+alias nv="nvim"
 alias shut="shutdown now"
 
 # tmux check and attach
