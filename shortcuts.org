@@ -1,0 +1,30 @@
+super + b                : Toggle statusbar
+super + j / k            : Switch focus
+super + i / d            : Increase/Decrease the number of master windows
+super + h / l            : Increase/Decrease the size of the master window
+super + ret              : Switch master window
+super + tab              : Switch to the previous tag
+super + shift + c        : Kill active window
+super + t                : Toggle the tiling layout
+super + f                : Toggle the floating layout
+super + m                : Toggle the fullscreen layout
+super + shift + space    : Toggle the previous layout
+super + 0                : Toggle all tags at once
+super + shift + 0        : Show window on all tags
+super + ctrl + = / -     : Increase/Decrease gap size
+super + ctrl + shift + = : Return gap size to the default value
+super + = / -            : Increase/Decrease volume
+super + shift + q        : Quit DWM
+super + 1-9              : Switch to tag
+super + a - e            : Launch an emacs client
+super + a - b            : Launch the mercury browser
+super + a - d            : launch discord
+super + a - f            : Launch thunar
+super + r - d            : Launch rofi's drun menu
+super + r - r            : Launch rofi's run menu
+super + r - c            : Launch rofi's calculator
+super + r - f            : Launch rofi's file browser
+super + r - e            : Launch rofi's emoji menu
+super + r - w            : Launch rofi's wifi menu
+super + r - p            : Launch rofi's power menu
+super + s                : Lock the screen
