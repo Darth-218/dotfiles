@@ -71,7 +71,7 @@ static const struct arg args[] = {
   { ram_free,            "RAM: [%s/",   NULL          },
   { ram_total,           "%s] | ",      NULL          },
   { run_command,         "󰕾 %4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ datetime,            "%s | ",       "%a %b %d %r" },
+	{ datetime,            " %s | ",       "%a %b %d %r" },
 	{ battery_state,       "%s ",         "BAT1"        },
 	{ battery_perc,        "%s%% | ",      "BAT1"        },
   { keymap,              "%s - ",       NULL},
