@@ -2,82 +2,85 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      "alignment": "left",
+      "type": "prompt",
+      "alignment": "right",
+      "overflow": "hide",
       "segments": [
         {
-          "foreground": "#88c0d0",
-          "style": "plain",
-          "template": "<#5e81ac>\u250f[</>{{ .UserName }}<#5e81ac>]</>",
-          "type": "session"
-        },
-        {
-          "foreground": "#b48ead",
+          "type": "executiontime",
+          "style": "powerline",
+          "foreground": "#a9ffb4",
+          "template": " {{ .FormattedMs }}s <#ffffff>\uf017</>",
           "properties": {
-            "fetch_stash_count": true,
-            "fetch_status": true,
-            "fetch_upstream_icon": true
-          },
-          "style": "plain",
-          "template": "<#5e81ac>--[</>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}<#8fbcbb> \u25cf </>{{ end }}{{ if .Staging.Changed }}<#88c0d0> \u25cf </>{{ end }}<#5e81ac>]</>",
-          "type": "git"
+            "threshold": 0,
+            "style": "dallas"
+          }
         },
         {
-          "foreground": "#b48ead",
-          "style": "plain",
-          "template": "<#5e81ac>--[</>{{.Profile}}{{if .Region}}@{{.Region}}{{end}}<#5e81ac>]</>",
-          "type": "aws"
+          "type": "node",
+          "style": "powerline",
+          "foreground": "#45bf17",
+          "template": " \ue718 {{ .Full }} "
         },
         {
-          "foreground": "#b48ead",
-          "style": "plain",
-          "template": "<#5e81ac>--[</>{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<#5e81ac>]</>",
-          "type": "kubectl"
-        },
-        {
-          "foreground": "#d8dee9",
-          "style": "plain",
-          "template": "<#5e81ac>[</>\uf0e7<#5e81ac>]</>",
-          "type": "root"
-        },
-        {
-          "foreground": "#d8dee9",
-          "style": "plain",
-          "template": "<#5e81ac>[x</>{{ reason .Code }}<#5e81ac>]</>",
-          "type": "status"
+          "type": "npm",
+          "style": "powerline",
+          "foreground": "#FE4A49",
+          "template": "<#F3EFF5>and</> \ue71e {{ .Full }} "
         }
-      ],
-      "type": "prompt"
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "overflow": "break",
+      "segments": [
+        {
+          "type": "path",
+          "style": "powerline",
+          "foreground": "#ffafd2",
+          "properties": {
+            "style": "agnoster_full",
+            "home_icon": "home",
+            "folder_icon": "\uf07b",
+            "folder_separator_icon": " \u276f "
+          },
+          "template": "\ue5ff {{ .Path }} "
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "foreground": "#f14e32",
+          "properties": {
+            "branch_icon": "\ue725 "
+          },
+          "template": "({{ .HEAD }})"
+        }
+      ]
     },
     {
       "alignment": "left",
       "newline": true,
+      "type": "prompt",
       "segments": [
         {
-          "foreground": "#88c0d0",
+          "type": "status",
+          "style": "diamond",
+          "foreground": "#00c7fc",
           "properties": {
-            "style": "full"
+            "always_enabled": true
           },
-          "style": "plain",
-          "template": "<#5e81ac>\u2516[</>{{ .Path }}<#5e81ac>]</>",
-          "type": "path"
+          "template": "<#00c7fc>\u276f</>_: "
         }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
-          "foreground": "#5e81ac",
-          "style": "plain",
-          "template": " \uf054 ",
-          "type": "text"
-        }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
-  "final_space": true,
+  "console_title_template": "{{ .Folder }}",
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#FEF5ED",
+    "template": "{{ .Shell }}"
+  },
   "version": 2
 }
