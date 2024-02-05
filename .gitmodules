@@ -1,0 +1,3 @@
+[submodule "DWM"]
+	path = DWM
+	url = https://github.com/Darth-218/DWM.git
