@@ -1,0 +1,81 @@
+* Patches
+
+** keychord
+Adds the ability to add an undefined number of prefixes to a keybind
+
+** attachbelow
+Keeps the master window when spawning new ones
+
+** restartsig
+Restarts the DWM config without the need for logging out
+
+** pertag
+Changing the layout only affects the active tag
+
+** alwayscenter
+Spawns floating windows at the center of the screen
+
+** functionalgaps
+Adds togglable gaps between windows and windows and windows and the screen
+
+** barpadding
+Adds padding inside the status bar
+
+** statuspadding
+Adds padding between the status bar and the screen
+* Keybindings
+** DWM
+- super + shift + q        : Quit DWM
+- super + shift + ctrl + q : Restart DWM
+- super + b                : Toggle statusbar
+
+** Window binds
+- super + j / k            : Switch focus
+- super + i / d            : Increase/Decrease the number of master windows
+- super + h / l            : Increase/Decrease the size of the master window
+- super + ret              : Switch master window
+- super + shift + c        : Kill active window
+
+** Layout binds
+- super + t                : Toggle the tiling layout
+- super + f                : Toggle the floating layout
+- super + m                : Toggle the fullscreen layout
+- super + shift + space    : Toggle the previous layout
+
+** Tag binds
+- super + tab              : Switch to the previous tag
+- super + 0                : Toggle all tags at once
+- super + 1-9              : Switch to tag
+- super + shift + 0        : Show window on all tags
+
+** Gap binds
+- super + ctrl + = / -     : Increase/Decrease gap size
+- super + ctrl + shift + = : Return gap size to the default value
+
+** Application binds
+- super + a - e            : Launch an emacs client
+- super + a - b            : Launch the mercury browser
+- super + a - d            : launch discord
+- super + a - f            : Launch thunar
+
+** Menu binds
+- super + r - d            : Launch rofi's drun menu
+- super + r - r            : Launch rofi's run menu
+- super + r - c            : Launch rofi's calculator
+- super + r - f            : Launch rofi's file browser
+- super + r - e            : Launch rofi's emoji menu
+- super + r - w            : Launch rofi's wifi menu
+- super + r - p            : Launch rofi's power menu
+
+** Screenlock
+- super + s - l            : Lock the screen
+
+** Volume binds
+- super + = / -            : Increase/Decrease volume
+In addition to the hardware keys
+
+** Screenshot binds
+- super + s - f            : Screenshot the full desktop
+- super + s - r            : Screenshot selected region
+- super + s - m            : Screenshot active monitor
+- super + s - a            : Screenshot active window
