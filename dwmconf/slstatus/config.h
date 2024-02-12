@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 250;
+const unsigned int interval = 200;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = " ";
@@ -65,7 +65,9 @@ static const char unknown_str[] = " ";
  */
 static const struct arg args[] = {
 	/* function            format          argument */
-  { wifi_essid,          " : %s ",      "wlp4s0"      },
+  { netspeed_rx,         "  : %s ",     "wlp4s0"      },
+  { netspeed_rx,         "- %s ",        "wlp4s0"      },
+  { wifi_essid,          "  : %s ",     "wlp4s0"      },
 	{ wifi_perc,           "%s%% | ",      "wlp4s0"      },
   { cpu_perc,            " : %2s%% | ", NULL          },
   { ram_perc,            " : %s%%  ",  NULL          },
@@ -75,6 +77,6 @@ static const struct arg args[] = {
 	{ battery_state,       "%s ",          "BAT1"        },
 	{ battery_perc,        "%s%% | ",      "BAT1"        },
   { keymap,              "󰌌 : %s - ",    NULL          },
-  { keyboard_indicators, "%s - ",        "c"           },
-  { keyboard_indicators, "%s",          "n"           },
+  { keyboard_indicators, "%s - ",        "n"           },
+  { keyboard_indicators, "%s   ",        "c"           },
 };

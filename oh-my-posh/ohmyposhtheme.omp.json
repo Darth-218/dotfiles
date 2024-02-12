@@ -79,8 +79,8 @@
   "console_title_template": "{{ .Folder }}",
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "#FEF5ED",
-    "template": "{{ .Shell }}"
+    "foreground": "#f694ff",
+    "template": "~> "
   },
   "version": 2
 }

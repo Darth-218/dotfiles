@@ -207,7 +207,4 @@
 ;; Show symbols
 (global-prettify-symbols-mode 1)
 
-;; Transparency
-(add-to-list 'default-frame-alist '(alpha-background . 90))
 ;---
-

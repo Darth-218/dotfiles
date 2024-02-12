@@ -3,8 +3,6 @@
 # Change Keymap 
 xmodmap ~/.dotfiles/Keymap/switchedkeys
 
-sudo systemctl start sddm &
-
 # Set background
 feh --bg-scale ~/suckless/Wallpaper.jpg &
 
@@ -20,19 +18,19 @@ fi
 
 # Start picom (Compositor)
 if pgrep -x "picom" > /dev/null; then
-    notify-send "Picom is Running"
+    notify-send -a "Picom" "Picom is Running"
 else
     picom --config ~/.config/picom/picom.conf &
-    notify-send "Picom is Started"
+    notify-send -a "Picom" "Picom is Started"
 fi
 
 # Start emacs' daemon
 if pgrep -x "emacs" > /dev/null; then
-    notify-send "Emacs Daemon is Running"
+    notify-send -a "Emacs" "Emacs Daemon is Running"
 else
-    notify-send "Starting Emacs Daemon"
+    notify-send -a "Emacs" "Starting Emacs Daemon"
     emacs --daemon &
-    notify-send "Emacs Daemon is Started"
+    notify-send -a "Emacs" "Emacs Daemon is Started"
 fi
 
 
