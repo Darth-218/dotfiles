@@ -49,7 +49,7 @@
 (use-package company
   :ensure t
   :custom
-  (company-idle-delay 0.3) ;; how long to wait until popup
+  (company-idle-delay 0.2) ;; how long to wait until popup
   ;; (company-begin-commands nil) ;; uncomment to disable popup
   :bind
   (:map company-active-map
@@ -113,22 +113,12 @@
   (add-hook 'before-save-hook 'lsp-format-buffer nil t))
 (setq rustic-format-on-save nil)
 
-
-;; Flutter config
-(use-package flutter
-  :ensure t
-  :after dart-mode
-  :hook
-  (dart-mode . flutter-test-mode))
-
-
 ;; C/C++ Language server
 (require 'irony)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 ;---
-
 
 ; To view pdfs
 (use-package pdf-tools
@@ -144,13 +134,6 @@
   :init (pdf-loader-install)
   :config (add-to-list 'revert-without-query ".pdf"))
 ;--
-
-
-; Terminal emulator
-(use-package vterm
-  :ensure t)
-;---
-
 
 ; Org things
 (use-package org)
@@ -169,10 +152,21 @@
   (org-roam-db-autosync-enable))
 
 (add-hook 'org-mode-hook #'turn-on-org-cdlatex)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+  (C . t)))
+
 ;---
 
+; Treemacs
+;;(global-set-key (kbd "<SPC> e") 'treemacs)
+
+(setq eshell-prompt-regexp "^[^λ]+ λ ")
 
 ; UI
+
 ;; Font
 (set-face-attribute 'default nil :font "JetBrainsMono Nerd Font" :height 120 :weight 'bold)
 
@@ -181,7 +175,7 @@
 
 ;; Center cursor (vertically)
 (require 'centered-cursor-mode)
-(global-centered-cursor-mode 1)
+(global-centered-cursor-mode 0)
 
 ;; Show battery
 (require 'fancy-battery)

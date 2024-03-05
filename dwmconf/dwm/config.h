@@ -1,31 +1,32 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const int startwithgaps	    = 1;	 /* 1 means gaps are used by default */
-static const unsigned int gappx     = 10;       /* default gap between windows in pixels */
+static const unsigned int gappx     = 1;       /* default gap between windows in pixels */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int horizpadbar        = 4;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 8;        /* vertical padding for statusbar */
-static const int vertpad            = 10;       /* vertical padding of bar */
-static const int sidepad            = 10;       /* horizontal padding of bar */
+static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
+static const int vertpadbar         = 10;        /* vertical padding for statusbar */
+static const int vertpad            = 0;       /* vertical padding of bar */
+static const int sidepad            = 0;       /* horizontal padding of bar */
 static const char *fonts[]          = { "JetbrainsMono Nerd Font:bold:size=10" };
 static const char dmenufont[]       = "JetbrainsMono Nerd Font:bold:size=13";
-static const char col_gray1[]       = "#0D1017";
+static const char col_gray1[]       = "#15141b";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d8d9da";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_purple[]      = "#c17ac8";
+static const char col_gold[]        = "#ffca85";
+static const char col_purple[]        = "#a3a2aa";
 static const char *colors[][3]      = {
 	/*               fg         bg          border   */
 	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2 },
-	[SchemeSel]  = { col_purple,  col_gray1,  col_purple  },
+	[SchemeSel]  = { col_gold,  col_gray1,  col_purple  },
 };
 
 /* tagging */
-static const char *tags[] = {" ", "󰈹 ", " ", "󰇰 ", "󰎅 ", " ", " ", "󰰱 ", "󰰷 " };
+static const char *tags[] = {" ", "󰈹 ", " ", "󰇰 ", "󰎅 ", " ", " ", "󰰱 ", "󰰷 " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -51,7 +52,18 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "| 󰝘 ",      tile },    /* first entry is default */
 	{ "|  ",      NULL },    /* no layout function means floating behavior */ 
-       { "|  ",      monocle },
+  { "|  ",      monocle }, /* { "[@]",      spiral },
+	{ "[\\]",     dwindle },
+	{ "H[]",      deck },
+	{ "TTT",      bstack },
+	{ "===",      bstackhoriz },
+	{ "HHH",      grid },
+	{ "###",      nrowgrid },
+	{ "---",      horizgrid },
+	{ ":::",      gaplessgrid },
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
+	{ NULL,       NULL }, */
 };
 
 /* key definitions */
@@ -110,8 +122,6 @@ static const char *volup[]   = { "amixer", "set", "Master", "5%+", NULL };
 static const char *voldown[] = { "amixer", "set", "Master", "5%-", NULL };
 // Mute
 static const char *volmute[] = { "amixer", "set", "Master", "toggle", NULL };
-// Audio level notification
-static const char *audionotif[] = {"audionotif.sh", NULL};
 
 /* Brightness control */
 
@@ -126,13 +136,13 @@ static const char *lockscrn[] = {"betterlockscreen", "-l", "blur", NULL};
 /* Screenshot */
 
 // Full desktop screenshot
-static const char *fulldeskss[] = {"spectacle", "-f"};
+static const char *fulldeskss[] = {"spectacle", "-bfc"};
 // Active monitor screenshot
-static const char *activemss[]  = {"spectacle", "-m"};
+static const char *activemss[]  = {"spectacle", "-bmc"};
 // Active window screenshot
-static const char *activewss[]  = {"spectacle", "-a"};
+static const char *activewss[]  = {"spectacle", "-bac"};
 // Region screenshot
-static const char *regionss[]   = {"spectacle", "-r"};
+static const char *regionss[]   = {"spectacle", "-brc"};
 
 /* Include media function keys */
 #include <X11/XF86keysym.h>
@@ -206,12 +216,14 @@ static Keychord *keychords[] = {
                                                             setgaps,   {.i =  GAP_RESET } }),
 
        /* Volume controls */
+       // Volume up (without media keys)
+       &((Keychord){1, {{MODKEY, XK_equal}},                spawn,     {.v = volup } }),
+       // Volume down (without media keys)
+       &((Keychord){1, {{MODKEY, XK_minus}},                spawn,     {.v = voldown } }),
        // Volume up (media keys)
        &((Keychord){1, {{0, XF86XK_AudioRaiseVolume}},      spawn,     {.v = volup } }),
-       /* &((Keychord){1, {{0, XF86XK_AudioRaiseVolume}},      spawn,     {.v = audionotif } }), */
        // Volume down (media keys)
        &((Keychord){1, {{0, XF86XK_AudioLowerVolume}},      spawn,     {.v = voldown } }),
-       /* &((Keychord){1, {{0, XF86XK_AudioLowerVolume}},      spawn,     {.v = audionotif } }), */
        // Mute (media keys)
        &((Keychord){1, {{0, XF86XK_AudioMute}},             spawn,     {.v = volmute } }),
 
@@ -278,7 +290,7 @@ static Keychord *keychords[] = {
 
        /* Screen -> super + s */
        // "l" Lockscreen bind
-       &((Keychord){2, {{MODKEY, XK_s}, {0, XK_l}},         spawn,     {.v = lockscrn } }),
+       &((Keychord){1, {{MODKEY, XK_s}, {0, XK_l}},         spawn,     {.v = lockscrn } }),
 
        // "f" Full desktop screenshot
        &((Keychord){2, {{MODKEY, XK_s}, {0, XK_f}},         spawn,     {.v = fulldeskss } }),

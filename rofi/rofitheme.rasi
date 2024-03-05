@@ -7,7 +7,7 @@
     bg1:     #3d375e7f;
     fg0:     #D8D9DA;
 
-    accent-color:     #239A7F;
+    accent-color:     #ff6767;
     urgent-color:     #EBCB8B;
 
     background-color:   transparent;

@@ -64,19 +64,17 @@ static const char unknown_str[] = " ";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function            format          argument */
-  { netspeed_rx,         "  : %s ",     "wlp4s0"      },
-  { netspeed_rx,         "- %s ",        "wlp4s0"      },
-  { wifi_essid,          "  : %s ",     "wlp4s0"      },
-	{ wifi_perc,           "%s%% | ",      "wlp4s0"      },
-  { cpu_perc,            " : %2s%% | ", NULL          },
-  { ram_perc,            " : %s%%  ",  NULL          },
-  { ram_used,            "%s | ",        NULL          },
-  { run_command,         "󰕾 : %2s | ",   "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ datetime,            "%s | ",        "󰃭 %a %b %d |  %r" },
-	{ battery_state,       "%s ",          "BAT1"        },
-	{ battery_perc,        "%s%% | ",      "BAT1"        },
-  { keymap,              "󰌌 : %s - ",    NULL          },
-  { keyboard_indicators, "%s - ",        "n"           },
-  { keyboard_indicators, "%s   ",        "c"           },
+	/* function            format              argument */
+  { wifi_essid,          "^c#f0c674^ : ^c#d8d9da^%s ^c#f0c674^|",         "wlp4s0" },
+  { cpu_perc,            " ^c#f0c674^ : ^c#d8d9da^%3s%% ^c#f0c674^|",     NULL     },
+  { ram_perc,            " ^c#f0c674^ : ^c#d8d9da^%3s%% ^c#f0c674^ ",    NULL     },
+  { ram_used,            "^c#d8d9da^%s ^c#f0c674^|",                       NULL     },
+  { uptime,              " ^c#f0c674^Up: ^c#d8d9da^%s ^c#f0c674^|",        NULL     },
+  { alsa_master_vol,     " ^c#f0c674^󰕾 : ^c#d8d9da^%4s ^c#f0c674^|",       NULL     },
+	{ datetime,            " ^c#f0c674^󰃭 ^c#d8d9da^%s ^c#f0c674^|",          "%a %b %d %Y @ %r" },
+	{ battery_state,       " ^c#f0c674^%s ",                                 "BAT1"   },
+	{ battery_perc,        "^c#d8d9da^%s%% ^c#f0c674^|",                     "BAT1"   },
+  { keymap,              " ^c#f0c674^󰌌 : ^c#d8d9da^%s ^c#f0c674^- ",       NULL     },
+  { keyboard_indicators, "^c#d8d9da^%s ^c#f0c674^- ",                      "n"      },
+  { keyboard_indicators, "^c#d8d9da^%s ",                                  "c"      },
 };

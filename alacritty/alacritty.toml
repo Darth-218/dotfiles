@@ -1,34 +1,37 @@
-import = ["/home/darth/.config/alacritty/aura-theme.toml"]
+import = ["/home/darth/.config/alacritty/gruvbox_material_medium_dark.toml"]
 
+# Default colors
+[colors.primary]
+background = '#282828'
+foreground = '#d4be98'
+
+# Normal colors
+[colors.normal]
+black   = '#3c3836'
+red     = '#ea6962'
+green   = '#a9b665'
+yellow  = '#d8a657'
+blue    = '#7daea3'
+magenta = '#d3869b'
+cyan    = '#89b482'
+white   = '#d4be98'
+
+# Bright colors (same as normal colors)
 [colors.bright]
-black = "#4d4d4d"
-blue = "#a277ff"
-cyan = "#61ffca"
-green = "#61ffca"
-magenta = "#a277ff"
-red = "#ff6767"
-white = "#edecee"
-yellow = "#ffca85"
+black   = '#3c3836'
+red     = '#ea6962'
+green   = '#a9b665'
+yellow  = '#d8a657'
+blue    = '#7daea3'
+magenta = '#d3869b'
+cyan    = '#89b482'
+white   = '#d4be98'
 
 [colors.cursor]
-cursor = "#a277ff"
-
-[colors.normal]
-black = "#110f18"
-blue = "#a277ff"
-cyan = "#61ffca"
-green = "#61ffca"
-magenta = "#a277ff"
-red = "#ff6767"
-white = "#edecee"
-yellow = "#ffca85"
-
-[colors.primary]
-background = "#15141b"
-foreground = "#edecee"
+cursor = "#d4be98"
 
 [colors.selection]
-background = "#29263c"
+background = "#7daea3"
 text = "CellForeground"
 
 [cursor]
@@ -57,9 +60,6 @@ style = "Medium"
 
 [shell]
 program = "/bin/zsh"
-
-[window]
-opacity = 0.9
 
 [window.padding]
 x = 20
