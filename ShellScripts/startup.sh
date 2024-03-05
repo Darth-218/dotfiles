@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Change Keymap 
-xmodmap ~/.dotfiles/Keymap/switchedkeys
-
 # Set background
 feh --bg-scale ~/suckless/Wallpaper.jpg &
 
@@ -18,7 +15,7 @@ fi
 
 # Start picom (Compositor)
 if pgrep -x "picom" > /dev/null; then
-    notify-send -a "Picom" "Picom is Running"
+    notify-send -a "Picom" "Picom is starting"
 else
     picom --config ~/.config/picom/picom.conf &
     notify-send -a "Picom" "Picom is Started"
@@ -33,4 +30,6 @@ else
     notify-send -a "Emacs" "Emacs Daemon is Started"
 fi
 
+# Change Keymap 
+setxkbmap -option "caps:swapescape"
 
