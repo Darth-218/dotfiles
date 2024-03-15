@@ -64,17 +64,17 @@ static const char unknown_str[] = " ";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function            format              argument */
-  { wifi_essid,          "^c#f0c674^ : ^c#d8d9da^%s ^c#f0c674^|",         "wlp4s0" },
-  { cpu_perc,            " ^c#f0c674^ : ^c#d8d9da^%3s%% ^c#f0c674^|",     NULL     },
-  { ram_perc,            " ^c#f0c674^ : ^c#d8d9da^%3s%% ^c#f0c674^ ",    NULL     },
-  { ram_used,            "^c#d8d9da^%s ^c#f0c674^|",                       NULL     },
-  { uptime,              " ^c#f0c674^Up: ^c#d8d9da^%s ^c#f0c674^|",        NULL     },
-  { alsa_master_vol,     " ^c#f0c674^󰕾 : ^c#d8d9da^%4s ^c#f0c674^|",       NULL     },
-	{ datetime,            " ^c#f0c674^󰃭 ^c#d8d9da^%s ^c#f0c674^|",          "%a %b %d %Y @ %r" },
-	{ battery_state,       " ^c#f0c674^%s ",                                 "BAT1"   },
-	{ battery_perc,        "^c#d8d9da^%s%% ^c#f0c674^|",                     "BAT1"   },
-  { keymap,              " ^c#f0c674^󰌌 : ^c#d8d9da^%s ^c#f0c674^- ",       NULL     },
-  { keyboard_indicators, "^c#d8d9da^%s ^c#f0c674^- ",                      "n"      },
-  { keyboard_indicators, "^c#d8d9da^%s ",                                  "c"      },
+    /* function            format              argument */
+    {wifi_essid, "^c#ffca85^ : ^c#c4b28a^%s ^c#ffca85^|", "wlp4s0"},
+    {cpu_perc, " ^c#ffca85^ : ^c#c4b28a^%3s%% ^c#ffca85^|", NULL},
+    {ram_perc, " ^c#ffca85^ : ^c#c4b28a^%3s%% ^c#ffca85^→ ", NULL},
+    {ram_used, "^c#c4b28a^%s ^c#ffca85^|", NULL},
+    {uptime, " ^c#ffca85^Up: ^c#c4b28a^%s ^c#ffca85^|", NULL},
+    {alsa_master_vol, " ^c#ffca85^󰕾 : ^c#c4b28a^%4s ^c#ffca85^|", NULL},
+    {datetime, " ^c#ffca85^󰃭 ^c#c4b28a^%s ^c#ffca85^|", "%a %b %d %Y @ %r"},
+    {battery_state, " ^c#ffca85^%s ", "BAT1"},
+    {battery_perc, "^c#c4b28a^%s%% ^c#ffca85^|", "BAT1"},
+    {keymap, " ^c#ffca85^󰌌 : ^c#c4b28a^%s ^c#ffca85^- ", NULL},
+    {keyboard_indicators, "^c#c4b28a^%s ^c#ffca85^- ", "n"},
+    {keyboard_indicators, "^c#c4b28a^%s ", "c"},
 };

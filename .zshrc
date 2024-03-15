@@ -116,14 +116,15 @@ alias birthdaemon="emacs --daemon"
 alias killdaemon='emacsclient -e "(kill-emacs)"'
 alias p="sudo pacman"
 alias nv="nvim"
-alias shut="shutdown now"
+alias capsesc="setxkbmap -option 'caps:swapescape'"
+alias lg="lazygit"
 
 # tmux check and attach
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach
-else
-    tmux
-fi
+# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#     tmux attach
+# else
+#     tmux
+# fi
 
 eval "$(zoxide init --cmd cd zsh)"
 

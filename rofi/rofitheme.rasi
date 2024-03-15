@@ -3,11 +3,11 @@
 * {
     font:   "JetbrainsMono Nerd Font Bold 12";
 
-    bg0:     #15141b;
-    bg1:     #3d375e7f;
-    fg0:     #D8D9DA;
+    bg0:     #282828;
+    bg1:     #89b482;
+    fg0:     #a9b665;
 
-    accent-color:     #ff6767;
+    accent-color:     #d8a657;
     urgent-color:     #EBCB8B;
 
     background-color:   transparent;
@@ -36,8 +36,12 @@ prompt, entry, element-icon, element-text {
     vertical-align: 0.5;
 }
 
+entry {
+      text-color: #282828;
+}
+
 prompt {
-    text-color: @accent-color;
+    text-color: #282828;
 }
 
 textbox {

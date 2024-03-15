@@ -158,7 +158,7 @@
  '((python . t)
   (C . t)))
 
-;---
+;--->
 
 ; Treemacs
 ;;(global-set-key (kbd "<SPC> e") 'treemacs)
@@ -168,7 +168,7 @@
 ; UI
 
 ;; Font
-(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font" :height 120 :weight 'bold)
+(set-face-attribute 'default nil :font "JetBrainsMono NerdFont" :height 120 :weight 'bold)
 
 ;; Breaking lines
 (setq-default truncate-lines nil)
@@ -200,5 +200,23 @@
 
 ;; Show symbols
 (global-prettify-symbols-mode 1)
+
+;; ligatures
+
+(use-package ligature
+  :config
+  (ligature-set-ligatures '(org-mode prog-mode) '("-|" "-~" "---" "-<<" "-<" "--" "->" "->>" "-->" "///" "/=" "/=="
+                                      "/>" "//" "/*" "*>" "***" "*/" "<-" "<<-" "<=>" "<=" "<|" "<||"
+                                      "<|||" "<|>" "<:" "<>" "<-<" "<<<" "<==" "<<=" "<=<" "<==>" "<-|"
+                                      "<<" "<~>" "<=|" "<~~" "<~" "<$>" "<$" "<+>" "<+" "</>" "</" "<*"
+                                      "<*>" "<->" "<!--" ":>" ":<" ":::" "::" ":?" ":?>" ":=" "::=" "=>>"
+                                      "==>" "=/=" "=!=" "=>" "===" "=:=" "==" "!==" "!!" "!=" ">]" ">:"
+                                      ">>-" ">>=" ">=>" ">>>" ">-" ">=" "&&&" "&&" "|||>" "||>" "|>" "|]"
+                                      "|}" "|=>" "|->" "|=" "||-" "|-" "||=" "||" ".." ".?" ".=" ".-" "..<"
+                                      "..." "+++" "+>" "++" "[||]" "[<" "[|" "{|" "??" "?." "?=" "?:" "##"
+                                      "###" "####" "#[" "#{" "#=" "#!" "#:" "#_(" "#_" "#?" "#(" ";;" "_|_"
+                                      "__" "~~" "~~>" "~>" "~-" "~@" "$>" "^=" "]#"))
+
+  (global-ligature-mode t))
 
 ;---
