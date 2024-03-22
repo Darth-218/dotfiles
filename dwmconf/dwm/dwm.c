@@ -1,1 +1,0 @@
-/home/darth/suckless/dwm/dwm.c.bak
