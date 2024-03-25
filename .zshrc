@@ -42,6 +42,7 @@ export PATH=$PATH:/home/darth/go/bin
 alias py="python3 -u"
 alias birthdaemon="emacs --daemon"
 alias killdaemon='emacsclient -e "(kill-emacs)"'
+alias tmux="tmux -f ~/.dotfiles/tmux/tmux.conf"
 alias p="sudo pacman"
 alias nv="nvim"
 alias capsesc="setxkbmap -option 'caps:swapescape'"
