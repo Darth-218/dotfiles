@@ -3,11 +3,11 @@
 * {
     font:   "JetbrainsMono Nerd Font Bold 12";
 
-    bg0:     #282828;
-    bg1:     #89b482;
-    fg0:     #a9b665;
+    bg0:     #181616;
+    bg1:     #625e5a;
+    fg0:     #c8c093;
 
-    accent-color:     #d8a657;
+    accent-color:     #c47463;
     urgent-color:     #EBCB8B;
 
     background-color:   transparent;
