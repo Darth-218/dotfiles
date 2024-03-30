@@ -33,23 +33,24 @@ source $ZSH/oh-my-zsh.sh
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+bindkey '^ ' autosuggest-accept
+
 # # Update PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/home/darth/go/bin
 
 # Aliases
-alias py="python3 -u"
-alias birthdaemon="emacs --daemon"
-alias killdaemon='emacsclient -e "(kill-emacs)"'
-alias tmux="tmux -f ~/.dotfiles/tmux/tmux.conf"
 alias p="sudo pacman"
-alias nv="nvim"
+alias py="python3 -u"
 alias capsesc="setxkbmap -option 'caps:swapescape'"
+alias mux="tmux -f ~/.dotfiles/tmux/tmux.conf"
+alias nv="nvim"
 alias lg="lazygit"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
+alias uni="cd college-stuff"
 
 eval "$(zoxide init --cmd cd zsh)"
 
