@@ -4,25 +4,21 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#43242b",
-          "backgroundbak": "#--170B3B",
-          "foreground": "#c8c093",
+          "foreground": "#b6927b",
           "properties": {
-            "folder_icon": "\udb80\ude56",
+            "folder_icon": "..",
             "folder_separator_icon": "/",
             "home_icon": "~",
             "max_depth": 3,
             "style": "agnoster_short"
           },
           "style": "powerline",
-          "template": " \udb82\udfaf {{ .Path }} ",
+          "template": " \udb82\udfaf {{ .Path }} ",
           "type": "path"
         },
         {
-          "background": "#c0a36e",
           "backgroundbak": "#--341948",
-          "foreground": "#43242b",
-          "powerline_symbol": "\ue0b4",
+          "foreground": "#8993a7",
           "properties": {
             "branch_max_length": 25,
             "fetch_stash_count": true,
@@ -30,14 +26,12 @@
             "fetch_upstream_icon": true
           },
           "style": "powerline",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
           "type": "git"
         },
         {
-          "background": "#e4d794",
           "backgroundbak": "#-4c1f5e",
-          "foreground": "#43242b",
-          "powerline_symbol": "\ue0b4",
+          "foreground": "#98BB6C",
           "properties": {
             "always_enabled": true
           },
@@ -109,9 +103,7 @@
         },
         {
           "background": "#e4d794",
-          "backgroundbak": "#-4c1f5e",
           "foreground": "#E64747",
-          "foregroundbak": "#-E64747",
           "leading_diamond": " \ue0b6",
           "properties": {
             "fetch_version": false
@@ -129,15 +121,12 @@
       "newline": true,
       "segments": [
         {
-          "background": "#c0a36e",
-          "backgroundbak": "#-4c1f5e",
-          "foreground": "#43242b",
+          "foreground": "#DCA561",
           "properties": {
             "time_format": "15:04:05"
           },
           "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} \udb80\udea0 ",
-          "trailing_diamond": "\ue0b4",
+          "template": " {{ .CurrentDate | date .Format }} \udb80\udea0:",
           "type": "time"
         }
       ],
