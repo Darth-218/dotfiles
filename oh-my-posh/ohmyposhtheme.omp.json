@@ -4,7 +4,7 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#FDD7FE",
+          "foreground": "#ff9e3b",
           "properties": {
             "folder_icon": "..",
             "folder_separator_icon": "/",
