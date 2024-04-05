@@ -57,6 +57,10 @@ eval "$(zoxide init --cmd cd zsh)"
 # Oh My Posh initialization
 eval "$(oh-my-posh init zsh --config /home/darth/.dotfiles/oh-my-posh/ohmyposhtheme.omp.json)"
 
+# Tmux startup
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 
 # >>> juliaup initialize >>>
 
