@@ -30,6 +30,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+LS_COLORS=$LS_COLORS:'di=31:' ; export LS_COLORS
+LS_COLORS=$LS_COLORS:'ow=0;35:' ; export LS_COLORS
+
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
@@ -39,11 +42,14 @@ bindkey '^ ' autosuggest-accept
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/home/darth/go/bin
+export PATH=$PATH:/home/darth/suckless/eww/target/release/
 
 # Aliases
 alias p="sudo pacman"
+alias gpp="g++"
 alias py="python3 -u"
 alias capsesc="setxkbmap -option 'caps:swapescape'"
+alias ctrlalt="setxkbmap -option 'ctrl:swap_lalt_lctl'"
 alias mux="tmux -f ~/.dotfiles/tmux/tmux.conf"
 alias nv="nvim"
 alias lg="lazygit"
@@ -51,6 +57,7 @@ alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
 alias uni="cd college-stuff"
+alias minecraft="sudo java -jar /home/darth/the-duat/Personal/Setup\ files/Tlauncher/TLauncher-2.899.jar"
 
 eval "$(zoxide init --cmd cd zsh)"
 
