@@ -59,6 +59,8 @@ alias gp="git push"
 alias uni="cd college-stuff"
 alias minecraft="sudo java -jar /home/darth/the-duat/Personal/Setup\ files/Tlauncher/TLauncher-2.899.jar"
 
+alias server="ssh fury@100.97.146.68"
+
 eval "$(zoxide init --cmd cd zsh)"
 
 # Oh My Posh initialization
