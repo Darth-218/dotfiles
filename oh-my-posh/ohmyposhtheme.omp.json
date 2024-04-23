@@ -5,10 +5,8 @@
       "segments": [
         {
           "foreground": "#c4746e",
-	  "background": "#181616",
+	  "background": "transparent",
           "properties": {
-            "home_icon": "~",
-            "max_depth": 0,
             "style": "folder"
           },
           "style": "powerline",
@@ -16,7 +14,7 @@
           "type": "path"
         },
         {
-          "background": "#181616",
+          "background": "transparent",
           "foreground": "#8993a7",
           "properties": {
             "branch_max_length": 25,
@@ -28,7 +26,7 @@
           "type": "git"
         },
         {
-          "background": "#181616",
+          "background": "transparent",
           "foreground": "#a6a69c",
           "properties": {
             "always_enabled": true
@@ -41,7 +39,15 @@
       "type": "prompt"
     }
   ],
-  "console_title_template": "{{ .Shell }} - {{ .Folder }}",
+
+  "console_title_template": "{{ .Folder }}",
+  "transient_prompt": {
+
+    "background": "transparent",
+    "foreground": "#c4b28a",
+    "template": "=> "
+  },
+
   "final_space": true,
   "version": 2
 }
