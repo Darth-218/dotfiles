@@ -33,8 +33,6 @@ LS_COLORS=$LS_COLORS:'ow=0;35:' ; export LS_COLORS
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
-PS0="~~>"
-
 bindkey '^ ' autosuggest-accept
 
 # # Update PATH
