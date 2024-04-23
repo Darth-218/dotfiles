@@ -50,13 +50,14 @@ alias gpp="g++"
 alias py="python3 -u"
 alias capsesc="setxkbmap -option 'caps:swapescape'"
 alias ctrlalt="setxkbmap -option 'ctrl:swap_lalt_lctl'"
-alias mux="tmux -f ~/.dotfiles/tmux/tmux.conf"
+alias ls='eza -1 -l --icons=always --time=created --no-permissions --no-user --no-time'
+alias cat='bat .zshrc -n --theme ansi'
+alias loc='plocate'
 alias nv="nvim"
 alias lg="lazygit"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
-alias uni="cd college-stuff"
 alias minecraft="sudo java -jar /home/darth/the-duat/Personal/Setup\ files/Tlauncher/TLauncher-2.899.jar"
 
 alias server="ssh fury@100.97.146.68"
