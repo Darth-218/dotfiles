@@ -1,13 +1,10 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 export ZSH="$HOME/.oh-my-zsh"
 
 CASE_SENSITIVE="false"
 
 HYPHEN_INSENSITIVE="true"
 
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 plugins=(git
   zsh-autosuggestions
@@ -36,11 +33,14 @@ LS_COLORS=$LS_COLORS:'ow=0;35:' ; export LS_COLORS
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+PS0="~~>"
+
 bindkey '^ ' autosuggest-accept
 
 # # Update PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/bin/flutter/bin
 export PATH=$PATH:/home/darth/go/bin
 export PATH=$PATH:/home/darth/suckless/eww/target/release/
 
