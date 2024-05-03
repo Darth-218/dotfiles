@@ -9,7 +9,8 @@ ENABLE_CORRECTION="false"
 plugins=(git
   zsh-autosuggestions
   zsh-syntax-highlighting
-  command-not-found)
+  command-not-found
+  zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,6 +42,7 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/bin/flutter/bin
 export PATH=$PATH:/home/darth/go/bin
 export PATH=$PATH:/home/darth/suckless/eww/target/release/
+export PATH=$PATH:/home/darth/.config/rofi/scripts
 
 # Aliases
 alias p="sudo pacman"
@@ -49,7 +51,7 @@ alias py="python3 -u"
 alias capsesc="setxkbmap -option 'caps:swapescape'"
 alias ctrlalt="setxkbmap -option 'ctrl:swap_lalt_lctl'"
 alias ls='eza -1 -l --icons=always --time=created --no-permissions --no-user --no-time'
-alias cat='bat .zshrc -n --theme ansi'
+alias cat='bat -n --theme ansi'
 alias loc='plocate'
 alias nv="nvim"
 alias lg="lazygit"
@@ -78,3 +80,4 @@ path=('/home/darth/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+clear && afetch
