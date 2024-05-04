@@ -43,6 +43,7 @@ export PATH=$PATH:/usr/bin/flutter/bin
 export PATH=$PATH:/home/darth/go/bin
 export PATH=$PATH:/home/darth/suckless/eww/target/release/
 export PATH=$PATH:/home/darth/.config/rofi/scripts
+export PATH=$PATH:~/bin
 
 # Aliases
 alias p="sudo pacman"
@@ -59,8 +60,9 @@ alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
 alias minecraft="sudo java -jar /home/darth/the-duat/Personal/Setup\ files/Tlauncher/TLauncher-2.899.jar"
-
 alias server="ssh fury@100.97.146.68"
+
+mkdircd(){mkdir "$1" && cd "$1" ;}
 
 eval "$(zoxide init --cmd cd zsh)"
 
