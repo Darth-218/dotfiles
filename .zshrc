@@ -44,6 +44,7 @@ export PATH=$PATH:/home/darth/go/bin
 export PATH=$PATH:/home/darth/suckless/eww/target/release/
 export PATH=$PATH:/home/darth/.config/rofi/scripts
 export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin/.zig/zig
 
 # Aliases
 alias p="sudo pacman"
@@ -62,7 +63,8 @@ alias gp="git push"
 alias minecraft="sudo java -jar /home/darth/the-duat/Personal/Setup\ files/Tlauncher/TLauncher-2.899.jar"
 alias server="ssh fury@100.97.146.68"
 
-mkdircd(){mkdir "$1" && cd "$1" ;}
+mkdircd(){mkdir "$1" && cd "$1" ; }
+f(){sesh connect $(sesh list | fzf) ; }
 
 eval "$(zoxide init --cmd cd zsh)"
 
@@ -82,4 +84,4 @@ path=('/home/darth/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
-clear && afetch
+clear
