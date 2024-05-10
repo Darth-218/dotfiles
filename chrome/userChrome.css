@@ -1,0 +1,9 @@
+ #TabsToolbar:not([customizing="true"]) {
+  visibility: collapse !important;
+}
+/* if the titlebar is also hidden and your browser is maximized,
+ * clicking on the top pixel of the screen should trigger menu items (Fitt’s law)
+ */
+#toolbar-menubar {
+  padding-top: 0px !important;
+}
