@@ -1,40 +1,50 @@
-export ZSH="$HOME/.oh-my-zsh"
+# Enable Powerlevel10k instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-CASE_SENSITIVE="false"
+# Setting a default directory for zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-HYPHEN_INSENSITIVE="true"
+# Making sure Zinit exits
+if [ ! -d "$ZINIT_HOME" ]; then
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
 
-ENABLE_CORRECTION="false"
+source "${ZINIT_HOME}/zinit.zsh"
 
-plugins=(git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  command-not-found
-  zsh-vi-mode)
+# Prompt
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-source $ZSH/oh-my-zsh.sh
+# Plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+autoload -U compinit && compinit
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
-# export MANPATH="/usr/local/man:$MANPATH"
+bindkey -e
 
-# export LANG=en_US.UTF-8
+# History
+HISTSIZE=2500
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-LS_COLORS=$LS_COLORS:'di=31:' ; export LS_COLORS
-LS_COLORS=$LS_COLORS:'ow=0;35:' ; export LS_COLORS
-
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
-
-bindkey '^ ' autosuggest-accept
+# Completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # # Update PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
@@ -47,6 +57,7 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/bin/.zig/zig
 
 # Aliases
+alias ls='ls --color'
 alias p="sudo pacman"
 alias gpp="g++"
 alias py="python3 -u"
@@ -60,28 +71,18 @@ alias lg="lazygit"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
-alias minecraft="sudo java -jar /home/darth/the-duat/Personal/Setup\ files/Tlauncher/TLauncher-2.899.jar"
 alias server="ssh fury@100.97.146.68"
 
+# Some functions
 mkdircd(){mkdir "$1" && cd "$1" ; }
 f(){sesh connect $(sesh list | fzf) ; }
 
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(fzf --zsh)"
 
-# Oh My Posh initialization
-eval "$(oh-my-posh init zsh --config /home/darth/.dotfiles/oh-my-posh/ohmyposhtheme.omp.json)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Tmux startup
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/home/darth/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
-clear
+enable-fzf-tab
