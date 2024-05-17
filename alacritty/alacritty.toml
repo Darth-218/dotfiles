@@ -18,3 +18,4 @@ dimensions = {columns = 209, lines = 44}
 
 [cursor]
 style = {shape = "beam", blinking = "off"}
+thickness = 0.6
