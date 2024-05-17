@@ -23,6 +23,7 @@ zinit light zsh-users/zsh-completions
 autoload -U compinit && compinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 
 bindkey -e
 
