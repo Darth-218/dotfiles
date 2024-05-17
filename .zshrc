@@ -45,6 +45,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # # Update PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
@@ -61,8 +62,6 @@ alias ls='ls --color'
 alias p="sudo pacman"
 alias gpp="g++"
 alias py="python3 -u"
-alias capsesc="setxkbmap -option 'caps:swapescape'"
-alias ctrlalt="setxkbmap -option 'ctrl:swap_lalt_lctl'"
 alias ls='eza -1 -l --icons=always --time=created --no-permissions --no-user --no-time'
 alias cat='bat -n --theme ansi'
 alias loc='plocate'
@@ -74,8 +73,9 @@ alias gp="git push"
 alias server="ssh fury@100.97.146.68"
 
 # Some functions
-mkdircd(){mkdir "$1" && cd "$1" ; }
-f(){sesh connect $(sesh list | fzf) ; }
+mkdircd(){mkdir "$1" && cd "$1" ;}
+f(){sesh connect $(sesh list | fzf) ;}
+fixkeys(){setxkbmap -option 'caps:swapescape' ; setxkbmap -option 'ctrl:swap_lalt_lctl' ;}
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
