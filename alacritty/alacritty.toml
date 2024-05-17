@@ -1,0 +1,13 @@
+[font.normal]
+family="Firacode Nerd Font Mono"
+style="SemiBold"
+
+[font]
+offset.y = 4
+
+[colors.primary]
+background = "#080808"
+foreground = "#80a0ff"
+
+[window]
+padding = {x = 10, y = 1}
