@@ -16,3 +16,5 @@ foreground = "#80a0ff"
 padding = {x = 10, y = 5}
 dimensions = {columns = 209, lines = 44}
 
+[cursor]
+style = {shape = "beam", blinking = "off"}
