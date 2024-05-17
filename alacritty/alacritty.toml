@@ -1,13 +1,18 @@
+shell = "/bin/zsh"
+
 [font.normal]
 family="Firacode Nerd Font Mono"
 style="SemiBold"
 
 [font]
 offset.y = 4
+size = 8
 
 [colors.primary]
 background = "#080808"
 foreground = "#80a0ff"
 
 [window]
-padding = {x = 10, y = 1}
+padding = {x = 10, y = 5}
+dimensions = {columns = 209, lines = 44}
+
