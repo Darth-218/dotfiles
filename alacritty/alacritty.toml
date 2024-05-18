@@ -13,11 +13,9 @@ padding = {x = 10, y = 5}
 dimensions = {columns = 209, lines = 44}
 
 [cursor]
-style = {shape = "beam", blinking = "off"}
-thickness = 0.6
+style = {shape = "block", blinking = "off"}
 
 # Moonfly theme #
-draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 background = "#080808"
