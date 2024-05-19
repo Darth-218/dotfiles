@@ -15,6 +15,9 @@ dimensions = {columns = 209, lines = 44}
 [cursor]
 style = {shape = "block", blinking = "off"}
 
+[mouse]
+hide_when_typing = true
+
 # Moonfly theme #
 
 [colors.primary]
