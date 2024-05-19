@@ -13,7 +13,7 @@ padding = {x = 10, y = 5}
 dimensions = {columns = 209, lines = 44}
 
 [cursor]
-style = {shape = "block", blinking = "off"}
+style = {shape = "block", blinking = "on"}
 
 [mouse]
 hide_when_typing = true
