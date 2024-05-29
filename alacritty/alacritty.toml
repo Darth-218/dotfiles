@@ -1,11 +1,11 @@
 shell = "/bin/zsh"
 
 [font.normal]
-family="Firacode Nerd Font Mono"
+family="JetbrainsMono NFM ExtraBold"
 style="SemiBold"
 
 [font]
-offset.y = 4
+offset.y = 3
 size = 8
 
 [window]
@@ -19,7 +19,6 @@ style = {shape = "block", blinking = "on"}
 hide_when_typing = true
 
 # Moonfly theme #
-
 [colors.primary]
 background = "#080808"
 foreground = "#b2b2b2"
