@@ -16,10 +16,19 @@ alignment = "left"
   type = "git"
   style = "plain"
   foreground = "#7E9CD8"
-  template = " ({{.Dir}} on {{ .HEAD }} ?{{.Staging.Untracked}} ~{{.Staging.Modified}} +{{.Staging.Added}} -{{.Staging.Deleted}})"
+  template = " ({{ .Dir }} on {{ .HEAD }}{{if or .Working.Changed .Staging.Changed}}+{{end}})"
 
-  #   [[blocks.segments.properties]]
-  #   branch_icon = ""
+  [[blocks.segments]]
+  type = "executiontime"
+  style = "plain"
+  powerline_symbol = ""
+  foreground = "#c6a679"
+  template = " {{ .FormattedMs }} "
+
+  [properties]
+  threshold = 500
+  style = "austin"
+  always_enabled = true
 
 [[blocks]]
 newline = true
