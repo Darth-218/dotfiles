@@ -1,7 +1,6 @@
-# Enable Powerlevel10k instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+eval "$(oh-my-posh init zsh --config ~/.dotfiles/oh-my-posh/ohmyposhtheme.omp.toml)"
+eval "$(zoxide init --cmd cd zsh)"
+eval "$(fzf --zsh)"
 
 # Setting a default directory for zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -14,9 +13,6 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Prompt
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
 # Plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -24,8 +20,6 @@ autoload -U compinit && compinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
-
-bindkey -e
 
 # History
 HISTSIZE=2500
@@ -79,12 +73,6 @@ alias server="ssh fury@100.97.146.68"
 mkdircd(){mkdir "$1" && cd "$1" ;}
 f(){sesh connect $(sesh list | fzf) ;}
 fixkeys(){setxkbmap -option 'caps:swapescape' ; setxkbmap -option 'ctrl:swap_lalt_lctl' ;}
-
-eval "$(zoxide init --cmd cd zsh)"
-eval "$(fzf --zsh)"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
