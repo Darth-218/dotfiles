@@ -1,0 +1,57 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+final_space = true
+version = 2
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "path"
+  style = "plain"
+  foreground = "#a39ec4"
+  template = "{{.PWD}}"
+
+  [[blocks.segments]]
+  type = "git"
+  style = "plain"
+  foreground = "#7E9CD8"
+  template = " ({{.Dir}} on {{ .HEAD }} ?{{.Staging.Untracked}} ~{{.Staging.Modified}} +{{.Staging.Added}} -{{.Staging.Deleted}})"
+
+    [[blocks.segments.properties]]
+    branch_icon = ""
+
+[[blocks]]
+newline = true
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  style = "plain"
+  type = "path"
+  foreground = "#c6a679"
+  foreground_templates = ["{{if gt .Code 0}}#c4746e{{end}}"]
+  template = "{{if gt .Code 0}}->>{{end}}{{if eq .Code 0}}->{{end}}"
+
+[transient_prompt]
+foreground = "#c6a679"
+template = "* "
+
+[[blocks]]
+type = "rprompt"
+alignment = "right"
+overflow = "hide"
+
+  [[blocks.segments]]
+  type = "path"
+  foreground = "#D27E99"
+  template = "{{.Shell}} "
+
+  [[blocks.segments]]
+  type = "time"
+  style = "plain"
+  foreground = "#9ec49f"
+  template = "{{.CurrentDate | date .Format}} "
+
+    [blocks.segments.properties]
+    time_format = "15:04:05"
