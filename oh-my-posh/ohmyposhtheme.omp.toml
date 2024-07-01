@@ -18,8 +18,8 @@ alignment = "left"
   foreground = "#7E9CD8"
   template = " ({{.Dir}} on {{ .HEAD }} ?{{.Staging.Untracked}} ~{{.Staging.Modified}} +{{.Staging.Added}} -{{.Staging.Deleted}})"
 
-    [[blocks.segments.properties]]
-    branch_icon = ""
+  #   [[blocks.segments.properties]]
+  #   branch_icon = ""
 
 [[blocks]]
 newline = true
