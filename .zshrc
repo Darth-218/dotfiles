@@ -53,6 +53,7 @@ export PATH=$PATH:/home/darth/.config/rofi/scripts
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/ash/bin/
 export PATH=$PATH:~/bin/.zig/zig
+export PATH=$PATH:/home/darth/.dotnet/tools
 
 # Aliases
 alias ls='ls --color'
