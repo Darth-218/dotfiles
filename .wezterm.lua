@@ -4,7 +4,7 @@ local config = {}
 config.enable_tab_bar = false
 
 
-config.font = wezterm.font 'JetbrainsMono NFM ExtraBold'
+config.font = wezterm.font('Jetbrains Mono', { weight = "ExtraBold"})
 
 config.colors = {
   foreground = "#f0f0f0",
