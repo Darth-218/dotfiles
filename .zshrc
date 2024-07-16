@@ -42,6 +42,8 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+export SUDO_EDITOR=/usr/bin/nvim
+
 # # Update PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
@@ -71,9 +73,13 @@ alias gp="git push"
 alias server="ssh fury@100.97.146.68"
 
 # Some functions
-mkdircd(){mkdir "$1" && cd "$1" ;}
-f(){sesh connect $(sesh list | fzf) ;}
-fixkeys(){setxkbmap -option 'caps:swapescape' ; setxkbmap -option 'ctrl:swap_lalt_lctl' ;}
+tsfunc() { ts ; }
+mkdircd() { mkdir "$1" && cd "$1" ; }
+f() { sesh connect $(sesh list | fzf) ; }
+fixkeys() {
+  setxkbmap -option 'caps:swapescape';
+  setxkbmap -option 'ctrl:swap_lalt_lctl';
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
