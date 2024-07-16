@@ -3,14 +3,18 @@ local config = {}
 
 config.enable_tab_bar = false
 
-
-config.font = wezterm.font('Jetbrains Mono', { weight = "ExtraBold"})
+-- config.font = wezterm.font('Jetbrains Mono', { weight = "ExtraBold"})
+config.font = wezterm.font_with_fallback {
+  "Jetbrains Mono NF ExtraBold",
+  "Fira Code"
+}
 
 config.colors = {
   foreground = "#f0f0f0",
   background = "#000000",
   cursor_fg = "#000000",
   cursor_bg = "#cccccc",
+  cursor_border = "#cccccc",
   selection_fg = "#262626",
   selection_bg = "#f0f0f0",
 
