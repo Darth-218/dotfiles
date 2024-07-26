@@ -6,7 +6,7 @@ config.enable_tab_bar = false
 -- config.font = wezterm.font('Jetbrains Mono', { weight = "ExtraBold"})
 config.font = wezterm.font_with_fallback {
   "Jetbrains Mono NF ExtraBold",
-  "Fira Code"
+  "FiraCode Nerd Font SemBd",
 }
 
 config.colors = {
