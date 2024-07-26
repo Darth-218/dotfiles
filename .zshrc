@@ -84,4 +84,3 @@ fixkeys() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 enable-fzf-tab
-clear
