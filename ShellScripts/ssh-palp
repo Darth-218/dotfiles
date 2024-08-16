@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh palpatine@100.65.0.90
