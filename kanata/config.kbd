@@ -1,12 +1,8 @@
 
 (defsrc
-  esc caps lmet lalt
-  )
-
-(defalias
-  esctrl (tap-hold 100 150 esc lctrl)
+  esc caps lalt
   )
 
 (deflayer base
-  caps @esctrl lalt lmet
+  caps esc lctrl
 )
