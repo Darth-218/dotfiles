@@ -1,0 +1,23 @@
+shell = "/bin/zsh"
+
+import = [
+  "~/.config/alacritty/themes/themes/kanagawa_dragon.toml"
+]
+
+[font.normal]
+family="JetbrainsMono NFM ExtraBold"
+style="SemiBold"
+
+[font]
+offset.y = 3
+size = 8
+
+[window]
+padding = {x = 10, y = 5}
+dimensions = {columns = 209, lines = 44}
+
+[cursor]
+style = {shape = "block", blinking = "on"}
+
+[mouse]
+hide_when_typing = true
