@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd /storage/0403-0201/Notes
-git pull && git add -A && git commit -a -m "android vault backup: `date +'%d-%m-%Y %H-%M-%S'`" && git pull
