@@ -1,0 +1,19 @@
+# Rofi shortcuts
+super + m ; {r,d,c,f,p}
+  rofi -theme ~/.config/rofi/launchers/type-4/style-4.rasi -show {run,drun,calc,filebrowser,power-menu -modi power-menu:~/.local/bin/rofi-power-menu}
+
+# flameshot shortcuts
+super + o ; {f,m,r}
+  flameshot {full,screen,gui}
+
+# Volume shortcuts
+super + {equal,minus}
+  pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioRaiseVolume pactl set-sink-volume @DEFAULT_SINK@ +5%
+XF86AudioLowerVolume pactl set-sink-volume @DEFAULT_SINK@ +5%
+XF86AudioMute pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# brightness shortcuts
+super + shift + {equal,minus}
+  brightnessctl set {+5%,5%-}
