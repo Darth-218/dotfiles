@@ -8,7 +8,7 @@ super + o ; {f,m,r}
 
 # Volume shortcuts
 super + {equal,minus}
-  pactl set-sink-volume @DEFAULT_SINK@ +5%
+  pactl set-sink-volume @DEFAULT_SINK@ {+5%,-5%}
 
 XF86AudioRaiseVolume pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioLowerVolume pactl set-sink-volume @DEFAULT_SINK@ +5%
