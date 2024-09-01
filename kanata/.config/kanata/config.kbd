@@ -1,8 +1,8 @@
 
 (defsrc
-  esc caps lalt
+  esc caps lctrl lalt
   )
 
 (deflayer base
-  caps esc lctrl
+  caps esc lalt lctrl
 )
