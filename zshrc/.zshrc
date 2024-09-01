@@ -53,6 +53,7 @@ export PATH=$PATH:/home/darth/go/bin
 export PATH=$PATH:/home/darth/suckless/eww/target/release/
 export PATH=$PATH:/home/darth/.config/rofi/scripts
 export PATH=$PATH:~/bin
+export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/ash/bin/
 export PATH=$PATH:~/bin/.zig/zig
 export PATH=$PATH:/home/darth/.dotnet/tools
