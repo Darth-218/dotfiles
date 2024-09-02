@@ -4,36 +4,36 @@ return {
   version = "*",
   dependencies = 'nvim-tree/nvim-web-devicons',
 
-  -- config = function()
+  config = function()
 
-  --   require("bufferline").setup({
+    require("bufferline").setup({
 
-  --     options = {
-	-- color_icons = false,
-	-- show_buffer_close_icons = false,
-	-- diagnostics = "nvim_lsp",
-	-- show_duplicate_prefix = true,
-	-- modified_icon = '<~',
+      options = {
+	color_icons = false,
+	show_buffer_close_icons = false,
+	diagnostics = "nvim_lsp",
+	show_duplicate_prefix = true,
+	modified_icon = '<~',
 
-	-- indicator = {
-	  -- icon = "",
-	  -- style = 'none'
-	-- },
+	indicator = {
+	  icon = "",
+	  style = 'none'
+	},
 
-	-- offsets = {
+	offsets = {
 
-	  -- {
-	    -- text_align = "center",
-	    -- separator = true,
-	  -- }
-	-- },
+	  {
+	    text_align = "center",
+	    separator = true,
+	  }
+	},
 
-	-- hover = {
-	  -- enabled = true,
-	  -- delay = 100,
-	  -- reveal = {'close'}
-	-- }
-  --     }
-  --   })
-  -- end
+	hover = {
+	  enabled = true,
+	  delay = 1,
+	  reveal = {'close'}
+	}
+      }
+    })
+  end
 }

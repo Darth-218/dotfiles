@@ -1,8 +1,12 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load custom-file)
-(load-theme 'moonlight t)
 
+;; (use-package ef-themes		  
+;;   :ensure t					  
+;;   :init						  
+;;   (load-theme 'ef-winter 't)
+;;   )
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -13,6 +17,7 @@
 
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers 'relative)
+(setq tab-width 4)
 (set-face-attribute 'default nil :font "JetBrainsMono NF SemiBold" :height 110)
 
 (require 'package)
@@ -23,18 +28,46 @@
 (unless package-archive-contents
  (package-refresh-contents))
 
-(use-package evil)
-(evil-mode)
+(use-package evil
+  :ensure t
+  :init
+  (evil-mode))
 
-(use-package which-key)
-(which-key-mode)
+(use-package breadcrumb
+  :ensure t
+  :init
+  (breadcrumb-mode))
 
-(add-hook 'python-mode-hook 'eglot-ensure)
-(add-hook 'go-mode-hook 'eglot-ensure)
+(use-package which-key
+  :ensure t
+  :init
+  (which-key-mode))
 
-(use-package markdown-ts-mode
-   :mode ("\\.md\\'" . markdown-ts-mode)
-   :defer 't
-   :config
-   (add-to-list 'treesit-language-source-alist '(markdown "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "split_parser" "tree-sitter-markdown/src"))
-   (add-to-list 'treesit-language-source-alist '(markdown-inline "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "split_parser" "tree-sitter-markdown-inline/src")))
+(use-package vertico
+  :ensure t
+  :custom
+  (vertico-cycle t)
+  :init
+  (vertico-mode))
+
+(use-package marginalia
+  :after vertico
+  :ensure t
+  :custom
+  (marginalia-annotators '(marginalia-annotators-heavy marginalia-annotators-light nil))
+  :init
+  (marginalia-mode))
+
+(use-package eglot
+  :ensure t
+  :hook ((python-mode-hook . eglot-enusre)
+	 (go-mode-hook . eglot-enusre)))
+
+(add-hook 'before-save-hook 'gofmt-before-save)
+
+(use-package company
+  :ensure t
+  :after eglot
+  :hook (eglot . company-mode)
+  :custom
+  (company-idle-delay 0.0))

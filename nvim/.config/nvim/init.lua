@@ -1,5 +1,6 @@
 require("options.lazy")
 require("options.keymaps")
+require("options.darthline")
 
 vim.o.shiftwidth = 2
 
@@ -10,4 +11,4 @@ end
 
 Tmux()
 
-vim.cmd.colorscheme("mellifluous")
+vim.cmd.colorscheme("material-deep-ocean")

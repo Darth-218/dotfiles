@@ -29,7 +29,7 @@ return {
       lualine_c = {'diff'},
       lualine_x = {'diagnostics'},
       lualine_y = {'branch'},
-      lualine_z = {'filetype'}
+      lualine_z = {'filename'}
     },
     inactive_sections = {
       lualine_a = {},

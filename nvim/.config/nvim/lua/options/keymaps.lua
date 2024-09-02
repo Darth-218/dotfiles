@@ -14,7 +14,7 @@ vim.keymap.set("v", "<leader>y", '"+y')
 -- Quick saving
 vim.keymap.set("n", "<leader>s", "<cmd>:w<CR>")
 
--- Splitting window --
+-- Splitting windows --
 --
 -- Horizontally
 vim.keymap.set("n", "<C-w>-", "<C-w>s", {noremap = true})
@@ -23,7 +23,7 @@ vim.keymap.set("n", "<C-w>\\", "<C-w>v", {noremap = true})
 
 
 -- Plugins --
-
+--
 -- Oil
 vim.keymap.set("n", "-", "<cmd>Oil --float<CR>", {noremap = true})
 
@@ -47,6 +47,10 @@ vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, {noremap = true})
 
 -- bufkill
 vim.keymap.set("n", "<leader>bq", "<cmd>BD<CR>") -- Kill buffer
+
+-- bufferline
+vim.keymap.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
 
 -- lspconfig
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true})
