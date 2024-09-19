@@ -1,4 +1,8 @@
-eval "$(oh-my-posh init zsh --config ~/.ohmyposhtheme.omp.toml)"
+# eval "$(oh-my-posh init zsh --config ~/.ohmyposhtheme.omp.toml)"
+RPROMPT="%F{#c6a679}%*%f"
+PS1="%F{#a39ec4}[%n@%m]: %~%f
+%(?.%F{#c6a679}-->%f.%F{#c47463}->>%f) "
+
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 
