@@ -19,14 +19,14 @@ font JetBrainsMonoSB:monospace 8
 
 # Color scheme
 # set $bgcolor    #768a84
-set $bgcolor    #262626
+set $bgcolor    #c075d7
 set $in-bgcolor #000000
 set $text       #ffffff
 set $u-bgcolor  #ff0000
 set $indicator  #ff9e3b
 set $in-text    #969696
 #                       border          background      text            indicator (a line which shows where the next window will be placed)     
-client.focused          $bgcolor        $bgcolor        $text           $indicator
+client.focused          $bgcolor        #262626         $text           $indicator
 client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor
