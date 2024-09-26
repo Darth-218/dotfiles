@@ -72,10 +72,7 @@ alias cat='bat -n --theme ansi'
 alias loc='plocate'
 alias nv="nvim"
 alias lg="lazygit"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias server="ssh fury@100.97.146.68"
+alias internet="watch -n 0.5 lsof -i"
 
 # Some functions
 tsfunc() { ts ; }
