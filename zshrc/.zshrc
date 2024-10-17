@@ -6,6 +6,12 @@ PS1="%F{#a39ec4}[%n@%m]: %~%f
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 
+if tmux info &> /dev/null; then 
+  tmux attach
+else
+  tmux
+fi
+
 # Setting a default directory for zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
