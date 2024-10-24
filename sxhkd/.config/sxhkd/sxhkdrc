@@ -1,6 +1,6 @@
 # Rofi shortcuts
-super + m ; {r,d,c,f,p}
-  rofi -theme ~/.config/rofi/launchers/type-4/style-4.rasi -show {run,drun,calc,filebrowser,power-menu -modi power-menu:~/.local/bin/rofi-power-menu}
+super + m ; {r,d,c,f,p,w}
+  rofi -theme ~/.config/rofi/launchers/type-4/style-4.rasi -show {run,drun,calc,filebrowser,power-menu -modi power-menu:~/.local/bin/rofi-power-menu,window}
 
 # flameshot shortcuts
 super + o ; {f,m,r}
