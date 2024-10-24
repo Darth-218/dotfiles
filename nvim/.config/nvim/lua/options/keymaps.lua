@@ -45,12 +45,10 @@ vim.keymap.set("n", "<leader>d", "<cmd>Dashboard<CR>", {noremap = true})
 -- Undotree
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, {noremap = true})
 
--- bufkill
-vim.keymap.set("n", "<leader>bq", "<cmd>BD<CR>") -- Kill buffer
-
 -- bufferline
 vim.keymap.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
 vim.keymap.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<leader>bk", "<cmd>BufferLinePickClose<CR>")
 
 -- lspconfig
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true})
