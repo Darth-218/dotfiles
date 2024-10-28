@@ -33,7 +33,7 @@ vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files hidden=true<CR>", {n
 vim.keymap.set("n", "<leader>r", "<cmd>Telescope oldfiles<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>g", "<cmd>Telescope git_files<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>tl", "<cmd>Telescope live_grep<CR>", {noremap = true})
-vim.keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<CR>", {noremap = true})
+vim.keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>tm", "<cmd>Telescope marks<CR>", {noremap = true})
 
 -- Trouble
