@@ -10,10 +10,9 @@ super + o ; {f,m,r}
 super + {equal,minus}
   pactl set-sink-volume @DEFAULT_SINK@ {+5%,-5%}
 
-XF86AudioRaiseVolume pactl set-sink-volume @DEFAULT_SINK@ +5%
-XF86AudioLowerVolume pactl set-sink-volume @DEFAULT_SINK@ +5%
-XF86AudioMute pactl set-sink-mute @DEFAULT_SINK@ toggle
-
 # brightness shortcuts
 super + shift + {equal,minus}
   brightnessctl set {+5%,5%-}
+
+super + space
+  launcheww
