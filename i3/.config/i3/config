@@ -117,9 +117,6 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod+space exec ~/.dotfiles/ShellScripts/keylayouts.sh
-
 # focus the parent container
 bindsym $mod+a focus parent
 
