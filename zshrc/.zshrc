@@ -7,16 +7,17 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 
 
-# if tmux info &> /dev/null; then 
-#   tmux "tmux attach"
-# else
-#   if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
-#     echo "not tmux"
-#   else
-#     echo "tmux"
-# fi
-
-# if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+if tmux info &> /dev/null; then 
+  if ! [ -n "$TMUX" ]; then
+    tmux attach;
+    echo "attaching to tmux...";
+  else
+    echo "already in tmux..."
+  fi
+else
+  tmux;
+  echo "starting tmux..."
+fi
 
 # Setting a default directory for zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -87,14 +88,12 @@ alias lg="lazygit"
 alias internet="watch -n 0.5 lsof -i"
 
 # Some functions
-tsfunc() { ts ; }
 mkdircd() { mkdir "$1" && cd "$1" ; }
-f() { sesh connect $(sesh list | fzf) ; }
 fixkeys() {
-  setxkbmap -option 'caps:swapescape';
-  setxkbmap -option 'ctrl:swap_lalt_lctl';
+  setxkbmap -option "caps:swapescape";
+  setxkbmap -option "ctrl:swap_lalt_lctl";
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ]&& source ~/.fzf.zsh
 
 enable-fzf-tab
