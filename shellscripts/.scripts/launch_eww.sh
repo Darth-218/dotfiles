@@ -1,9 +1,9 @@
 #!/bin/bash
 
-WINDOW="TimeWindow"
+WINDOW="TimeWindow VolumeWindow SystemWindow WifiWindow"
 
-if eww active-windows | grep -q $WINDOW; then
-  eww close $WINDOW
+if eww active-windows | grep -q "Window"; then
+  eww close-all
 else
-  eww open $WINDOW
+  eww open-many $WINDOW
 fi
