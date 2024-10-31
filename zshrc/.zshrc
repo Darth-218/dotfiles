@@ -88,6 +88,7 @@ alias lg="lazygit"
 alias internet="watch -n 0.5 lsof -i"
 
 # Some functions
+f() { sesh connect "$(sesh list | fzf-tmux -p 55%,60%)"; }
 mkdircd() { mkdir "$1" && cd "$1" ; }
 fixkeys() {
   setxkbmap -option "caps:swapescape";
