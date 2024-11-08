@@ -12,7 +12,7 @@ if tmux info &> /dev/null; then
     tmux attach;
     echo "attaching to tmux...";
   else
-    echo "already in tmux..."
+    echo "in tmux..."
   fi
 else
   tmux;
