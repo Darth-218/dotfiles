@@ -12,27 +12,31 @@
 
 (defpoll volume
   :interval "0.2s"
-  `awk -F"[][]" '/Left/ { print $2 }' <(amixer sget Master)`)
+  `./eww_scripts/volume.sh`)
 
 (defpoll battery_level
   :interval "1s"
-  `cat /sys/class/power_supply/BAT1/capacity`)
+  `./eww_scripts/battery.sh`)
 
-(defpoll battery_status
-  :interval "1s"
-  `cat /sys/class/power_supply/BAT1/status`)
+; (defpoll battery_status
+;   :interval "1s"
+;   `cat /sys/class/power_supply/BAT1/status`)
 
 (defpoll RAM_usage
   :interval "1s"
-  `free -h | grep Mem | awk '{print ($3) * 100 / ($2)}' | awk -F '.' '{print ($1)}'`)
+  `./eww_scripts/ram.sh`)
 
 (defpoll CPU_usage
   :interval "1s"
-  `echo "$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]"`)
+  `./eww_scripts/cpu.sh`)
 
 (defpoll WiFi_SSID
   :interval "1s"
-  `nmcli -t -f active,ssid dev wifi | grep 'yes' | awk -F ':' '{print ($2)}'`)
+  `./eww_scripts/wifi.sh`)
+
+(defpoll Eth_Connection
+  :interval "1s"
+  `./eww_scripts/ethernet.sh`)
 
 (defwidget VolumeWidget []
   (box :orientation "h" :spacing 4 :space-evenly false :halign "center"
@@ -45,7 +49,7 @@
 (defwidget SystemWidget []
   (box :orientation "v"
     (box :orientation "h" :spacing 4 :space-evenly false :halign "center"
-         (label :text "Battery:") battery_status battery_level)
+         (label :text "Battery:") battery_level)
     (box :orientation "h" :spacing 4 :space-evenly false :halign "center"
          (label :text "RAM:") RAM_usage)
     (box :orientation "h" :spacing 4 :space-evenly false :halign "center"
@@ -55,18 +59,9 @@
     (box :orientation "h" :spacing 4 :space-evenly false :halign "center"
          (label :text "SSID:") WiFi_SSID))
 
-(defwindow notexample
-           :monitor 0
-           :geometry (geometry :x "0%"
-                               :y "20px"
-                               :width "90%"
-                               :height "30px"
-                               :anchor "top center")
-           :stacking "fg"
-           :reserve (struts :distance "40px" :side "top")
-           :windowtype "dock"
-           :wm-ignore false
-  "example content")
+(defwidget EthWidget []
+    (box :orientation "h" :spacing 4 :space-evenly false :halign "center"
+         (label :text "ETH:") Eth_Connection))
 
 (defwindow TimeWindow
            :monitor 0
@@ -119,3 +114,16 @@
            :wm-ignore true
 
            (WifiWidget))
+
+(defwindow EthWindow
+           :monitor 0
+           :geometry (geometry :x "-9%"
+                               :y "50%"
+                               :width "8%"
+                               :height "5%"
+                               :anchor "top center")
+           :stacking "bg"
+           :windowtype "dialog"
+           :wm-ignore true
+
+           (EthWidget))
