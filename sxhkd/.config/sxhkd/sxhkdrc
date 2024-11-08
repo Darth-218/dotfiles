@@ -15,4 +15,4 @@ super + shift + {equal,minus}
   brightnessctl set {+5%,5%-}
 
 super + space
-  launcheww
+  togglepolybar
