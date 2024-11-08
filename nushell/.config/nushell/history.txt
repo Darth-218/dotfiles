@@ -1,0 +1,190 @@
+mv ~/.config/nushell/history.txt nushell/.config/nushell/history.txt
+stow nushell/
+stow nushell/ --adopt
+ls
+eza
+clear
+cat README.md
+bat README.md
+p -R eza
+sudo pacman -R eza
+clear
+tm new
+ls
+cd nushell/.config/nushell/
+ls
+rm nushell
+rm nushell -r
+ls
+clear
+ls
+nv config.nu
+help commands
+..
+-
+cd -
+clear
+yay ventoy
+yay qemu
+sudo pacman -S qemu-base
+yay -S ventoy
+yay -S libvirt
+sudo pacman -S librvirt
+sudo pacman -S libvirt
+date
+date now
+date list-timezone 
+date
+date to-timezone 595
+date now | date to-timezone 595
+date now | date to-timezone 
+clear
+ls
+clear
+s
+ls
+clear
+ls
+nomacs
+nomacs 2024-11-02_21-46.png
+clear
+sudo pacman -Syu
+clear
+nvim nu.lua
+nvim config.nu
+exit
+sed
+clear
+ls
+clear
+nvim .
+ps 
+ps | sort
+ps | where cpu > 50
+ps | where cpu 
+ps | where cpu > 0
+ps | sort-by cpu
+ps | sort-by mem
+yay ventoy
+ventoy
+lsblk
+ventou
+ventoy
+ventoy -u sdb
+lsblk
+ventoy -u 
+ventoy -u sd
+ventoy -u sdb
+ventoy -u sdb1
+clear
+ventoygui 
+clear
+ls
+cd .dotfiles/
+ls
+cd
+clear
+nv sxhkd/.config/sxhkd/sxhkdrc
+cd shellscripts/
+cd .scripts/
+ls
+nvim togglepolybar
+man polbar
+polybar --help
+polybar -s
+clear
+ps | grep poly
+killall polybar
+ps | grep poly
+chmod +x shellscripts/.scripts/togglepolybar.sh
+ln -s /home/darth/.dotfiles/shellscripts/.scripts/togglepolybar.sh /bin/togglepolybar
+sudo ln -s /home/darth/.dotfiles/shellscripts/.scripts/togglepolybar.sh /bin/togglepolybar
+togglepolybar 
+polybar &
+polybar
+togglepolybar 
+clear
+togglepolybar 
+tree polybar/
+cd polybar/
+ls
+cd ..
+lg
+lazygit
+ls -a
+togglepolybar 
+clear
+/home/darth/.dotfiles/polybar/.config/polybar/launch_polybar.sh
+ps
+ps | grep poly
+ps | grep poly -q
+ps | grep polr -q
+togglepolybar 
+killall sxhkd
+polybar -h
+polybar -l
+polybar -m
+polybar
+nvim sxhkd/.config/sxhkd/sxhkdrc
+polybar-msg toggle
+polybar-msg cmd toggle
+man polybar-msh
+man polybar-msg
+polybar
+polybar &
+polybar example &
+polybar-msg cmd toggle
+polybar example
+killall polybar
+scope aliases
+aliase cat bat
+alias cat = bat
+cat README.md
+nv
+nvim togglepolybar.sh
+nv
+clear
+nv
+scope aliases
+alias help
+help aliases
+clear
+...
+p -Syu
+clear
+watch
+watch "hello"
+watch -n 1 "hello"
+watch --help
+nv
+/bin/watch -n 0.5 "hello"
+internet
+$env
+cd
+ls -a
+help path
+$env.PATH
+$env.SUDO_EDIT
+sudoedit
+sudoedit README.md
+export
+$env.SUDO_EDIT = /bin/nvim
+$env.SUDO_EDIT = "/bin/nvim"
+sudoedit README.md
+$env.SUDO_EDIT
+sudo nvim README.md
+man sudoedit
+sudoedit README.md
+$env.SUDO_EDIT
+$env
+$env.SUDO_EDIT
+man sudoedit
+sudoedit -u darth /etc/dunst/dunstrc
+sudo nvim -u darth /etc/dunst/dunstrc
+man sudo
+sudo nvim -v -u darth /etc/dunst/dunstrc
+clear
+nvim nushell/.config/nushell/config.nu
+lg
+cat README.md
+cat zshrc/.zshrc
