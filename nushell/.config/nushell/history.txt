@@ -295,3 +295,37 @@ cd .dotfiles/nushell/.config/nushell/
 ls
 nv config.nu
 git status
+lg
+clear
+cd
+clear
+cd .dotfiles/nushell/.config/nushell/
+ls
+zoxide init nushell | save -f ~/.scripts/.zoxide.nu
+nv config.nu
+mv ~/.scripts/.zoxide.nu ~/.scripts/zoxide.nu
+clear
+cd .dotfiles/nushell/.config/nushell/
+cd
+clear
+ls
+fc-list | grep jet
+fc-list | grep Jet
+ls
+:q
+ls
+nu tmux.nu
+tmux info
+clear
+tmux info
+$TMUX
+$env.TMUX
+clear
+$env.TMUX
+nu tmux.nu
+cd ../..
+cd ..
+stow nushell
+$env.TMUX
+lg
+exit
