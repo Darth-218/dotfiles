@@ -1,1 +1,0 @@
-rm nushell/.config/nushell/history.txt
