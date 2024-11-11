@@ -17,7 +17,8 @@ for_window [class="^.*"] border pixel 3
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font JetBrainsMonoSB:monospace 8
+# font JetBrainsMono Nerd Font Mono:monospace 10
+font pango:monospace 8
 
 # Color scheme
 set $bgcolor    #c4746e
@@ -27,7 +28,7 @@ set $u-bgcolor  #ff0000
 set $indicator  #c4746e
 set $in-text    #969696
 #                       border          background      text            indicator (a line which shows where the next window will be placed)     
-client.focused          $bgcolor        #262626         $text           $indicator
+client.focused          #262626         #262626         $text           $indicator
 client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor
