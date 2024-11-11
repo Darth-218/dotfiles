@@ -147,7 +147,7 @@ let light_theme = {
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
-    show_banner: false # true or false to enable or disable the welcome banner at startup
+    show_banner: true # true or false to enable or disable the welcome banner at startup
 
     ls: {
         use_ls_colors: true # use the LS_COLORS environment variable to colorize output
@@ -702,7 +702,7 @@ $env.config = {
             name: move_left
             modifier: control
             keycode: char_b
-            mode: emacs
+            mode: [emacs, vi_insert]
             event: {
                 until: [
                     { send: menuleft }
@@ -714,7 +714,7 @@ $env.config = {
             name: move_right_or_take_history_hint
             modifier: control
             keycode: char_f
-            mode: emacs
+            mode: [emacs, vi_insert]
             event: {
                 until: [
                     { send: historyhintcomplete }
@@ -897,13 +897,6 @@ $env.config = {
     ]
 }
 
-alias p = sudo pacman
-alias gpp = g++
-alias py = python3 -u
-alias cat = bat -n --theme ansi
-alias loc = plocate
-alias nv = nvim
-alias lg = lazygit
-alias internet = /bin/watch -n 0.5 lsof -i
-
-bash ~/.scripts/launchtmux.sh
+source ./aliases.nu
+source ./tmux.nu
+source ./zoxide.nu
