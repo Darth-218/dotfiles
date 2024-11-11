@@ -329,3 +329,24 @@ stow nushell
 $env.TMUX
 lg
 exit
+lg
+nv .gitignore
+lg
+nv .gitignore
+lg
+git status
+nv .gitignore
+lg
+nv .gitignore
+lg
+clear
+git status
+git rm -rf --cached .<\n>git add .
+ls
+git status
+lg
+git rm -rf --cached .
+git add .
+lg
+git status
+git rm -rf --cached .
