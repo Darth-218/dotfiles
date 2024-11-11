@@ -906,3 +906,4 @@ alias nv = nvim
 alias lg = lazygit
 alias internet = /bin/watch -n 0.5 lsof -i
 
+bash ~/.scripts/launchtmux.sh

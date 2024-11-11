@@ -188,3 +188,110 @@ nvim nushell/.config/nushell/config.nu
 lg
 cat README.md
 cat zshrc/.zshrc
+nv nushell/.config/nushell/config.nu
+ls
+unrar `HW 7.rar`
+unrar e `HW 7.rar`
+ls
+zathura .
+lg
+nv .xinitrc
+nv polybar/.config/polybar/launch_polybar.sh
+polybar
+shutdown now
+clear
+nv config
+nv launch_polybar.sh
+clear
+ls
+yay lightdm
+systemctl enable lightdm
+sudo systemctl enable lightdm
+sudo systemctl disable ly
+sudo systemctl enable lightdm
+lightdm
+lightdm --test-mode
+sudo lightdm
+clear
+p -S sddm
+sudo systemctl disable ly
+sudo systemctl enable sddm
+reboot
+ls /usr/share/sddm/themes
+tmyx
+sudo nvim /etc/sddm.conf
+sddm-greeter --test-mode
+loc 
+sudo updatedb
+loc sddm.conf
+sudo nvim /usr/lib/sddm/sddm.conf.d/default.conf
+sudo tar -xzvf ~/Downloads/sddm-chili.tar.gz -C /usr/share/sddm/themes
+sudo tar -xzvf ~/Downloads/sddm-chili.tar.tar -C /usr/share/sddm/themes
+ls
+ls /usr/share/sddm/themes
+sddm-greeter --test-mode
+sddm-greeter --test-mode --theme chili
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/chili
+sudo pacman -S qt5 qt5-quickcontrols qt5-graphicaleffects
+clear
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/chili
+sudo nvim /usr/lib/sddm/sddm.conf.d/default.conf
+sddm-greeter --test-mode
+sudo nvim /usr/lib/sddm/sddm.conf.d/default.conf
+sddm-greeter --test-mode
+ls
+cp wallpaper.jpg /usr/share/sddm/themes/chili/assets/background.jpg
+sudo cp wallpaper.jpg /usr/share/sddm/themes/chili/assets/background.jpg
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/chili
+nomacs /usr/share/sddm/themes/chili/assets/background.jpg
+nomacs wallpaper.jpg
+nomacs 2024-11-02_21-46.png
+rm 2024-11-02_21-46.png
+ls
+nomacs wallpaper.jpg
+nomacs the-duat/Images/cats.jpg
+nomacs the-duat/Images/cats.webp
+feh
+sudo cp ./the-duat/Images/cats.jpg /usr/share/sddm/themes/chili/assets/background.jpg
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/chili
+git clone https://github.com/fllipwise/sddm-breeze-514 /usr/share/sddm/themes/breeze
+sudo git clone https://github.com/fllipwise/sddm-breeze-514 /usr/share/sddm/themes/breeze
+unzip Downloads/sddm-breeze-514-master.zip
+ls
+ls Downloads/
+ls
+mv sddm-breeze-514-master/ breeze
+mv breeze/ /usr/share/sddm/themes/
+sudo mv breeze/ /usr/share/sddm/themes/
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/breeze
+clear
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/chili/
+feh /usr/share/sddm/themes/chili/assets/background.jpg
+p -S nomacs
+yay nomacs
+nomacs the-duat/Images/cats.webp
+feh the-duat/Images/cats.webp
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/chili/
+sudo systemctl disable sddm
+sudo systemctl enable ly
+clear
+nv 
+ls
+nv treesitter.lua
+nv nushell/.config/nushell/config.nu
+source
+nv launchtmux.sh
+nvim launchtmux.sh
+nv .dotfiles/nushell/.config/nushell/config.nu
+nvim .dotfiles/nushell/.config/nushell/config.nu
+clear
+source
+source .scripts/launchtmux.sh
+bash .scripts/launchtmux.sh
+cd .dotfiles/nushell/.config/nushell/
+cd -
+clear
+cd .dotfiles/nushell/.config/nushell/
+ls
+nv config.nu
+git status
