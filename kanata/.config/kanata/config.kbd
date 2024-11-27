@@ -1,8 +1,37 @@
 
 (defsrc
-  esc caps lctrl lalt
-  )
+  esc caps lctrl lalt a s d f j k l
+)
+
+(defalias
+  a-hold (tap-hold 300 200 a lalt)
+)
+
+(defalias
+  s-hold (tap-hold 300 200 s lshift)
+)
+
+(defalias
+  d-hold (tap-hold 300 200 d lmet)
+)
+
+(defalias
+  f-hold (tap-hold 300 200 f lctrl)
+)
+
+(defalias
+  l-hold (tap-hold 300 200 l rshift)
+)
+
+(defalias
+  k-hold (tap-hold 300 200 k rmet)
+)
+
+(defalias
+  j-hold (tap-hold 300 200 j rctrl)
+)
+
 
 (deflayer base
-  caps esc lalt lctrl
+  caps esc lalt lctrl @a-hold @s-hold @d-hold @f-hold @j-hold @k-hold @l-hold
 )
