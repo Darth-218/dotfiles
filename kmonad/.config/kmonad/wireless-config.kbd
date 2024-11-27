@@ -1,0 +1,22 @@
+(defcfg
+  input (device-file "/dev/input/by-id/usb-YICHIP_Wireless_Device-event-kbd")
+  output (uinput-sink "Kmonand output")
+  fallthrough true
+  allow-cmd false
+)
+
+(defsrc
+  esc caps lctrl lalt a s d f j k l
+)
+
+(deflayer base
+  caps esc lalt lctrl
+  (tap-hold-next-release 200 a lalt)
+  (tap-hold-next-release 200 s lshift)
+  (tap-hold-next-release 200 d lmet)
+  (tap-hold-next-release 200 f lctrl)
+  (tap-hold-next-release 200 j rctrl)
+  (tap-hold-next-release 200 k rmet)
+  (tap-hold-next-release 200 l rshift)
+)
+
