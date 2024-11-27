@@ -9,6 +9,7 @@ return {
   config = function()
 
     vim.api.nvim_set_hl(0, "LineNr", {fg="#80A0FF", bold = true})
+    vim.g.moonflyItalics = true
 
   end
 }

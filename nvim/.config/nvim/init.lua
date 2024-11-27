@@ -11,4 +11,4 @@ end
 
 Tmux()
 
-vim.cmd.colorscheme("material-deep-ocean")
+vim.cmd.colorscheme("moonfly")
