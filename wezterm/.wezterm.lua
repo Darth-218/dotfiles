@@ -5,8 +5,8 @@ config.enable_tab_bar = false
 
 -- config.font = wezterm.font('Jetbrains Mono', { weight = "ExtraBold"})
 config.font = wezterm.font_with_fallback {
-  "Jetbrains Mono NF ExtraBold",
-  "FiraCode Nerd Font SemBd",
+  "Jetbrains Mono NF",
+  "FiraCode Nerd Font",
 }
 
 config.colors = {
@@ -19,32 +19,40 @@ config.colors = {
   selection_bg = "#f0f0f0",
 
   ansi = {
-    "#262626",
-    "#ac8a8c",
-    "#8aac8b",
-    "#aca98a",
-    "#8f8aac",
-    "#ac8aac",
-    "#8aacab",
+    -- black
+    "#000000",
+    -- red
+    "#d04255",
+    -- green
+    "#a8c373",
+    -- yellow
+    "#e5b567",
+    -- blue
+    "#6c99bb",
+    -- magenta
+    "#9e86c8",
+    -- cyan
+    "#73bbb2",
+    -- white
     "#e7e7e7",
   },
   brights = {
     -- black
     "#4c4c4c",
     -- red
-    "#c49ea0",
+    "#d04255",
     -- green
-    "#9ec49f",
+    "#a8c373",
     -- yellow
-    "#c4c19e",
+    "#e5b567",
     -- blue
-    "#a39ec4",
+    "#6c99bb",
     -- magenta
-    "#c49ec4",
+    "#9e86c8",
     -- cyan
-    "#9ec3c4",
+    "#73bbb2",
     -- white
-    "#f0f0f0",
+    "#e7e7e7",
   }
 }
 
