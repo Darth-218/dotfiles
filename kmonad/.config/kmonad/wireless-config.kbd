@@ -15,8 +15,8 @@
   (tap-hold-next-release 200 s lshift)
   (tap-hold-next-release 200 d lmet)
   (tap-hold-next-release 200 f lctrl)
-  (tap-hold-next-release 200 j rctrl)
+  (tap-hold-next-release 200 j lctrl)
   (tap-hold-next-release 200 k rmet)
-  (tap-hold-next-release 200 l rshift)
+  (tap-hold-next-release 200 l lshift)
 )
 

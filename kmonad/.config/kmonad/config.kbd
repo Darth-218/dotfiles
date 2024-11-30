@@ -14,9 +14,9 @@
   s-hold (tap-hold-next-release 200 s lshift)
   d-hold (tap-hold-next-release 200 d lmet)
   f-hold (tap-hold-next-release 200 f lctrl)
-  j-hold (tap-hold-next-release 200 j rctrl)
+  j-hold (tap-hold-next-release 200 j lctrl)
   k-hold (tap-hold-next-release 200 k rmet)
-  l-hold (tap-hold-next-release 200 l rshift)
+  l-hold (tap-hold-next-release 200 l lshift)
 )
 
 (deflayer base
