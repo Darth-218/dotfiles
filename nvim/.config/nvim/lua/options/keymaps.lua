@@ -1,3 +1,4 @@
+vim.keymap.set("n", "<leader>m", "<cmd>set modifiable!<CR>", {noremap = true})
 -- Pane navigation
 vim.keymap.set("n", "<C-k>", "<C-w>k", {noremap = true})
 vim.keymap.set("n", "<C-j>", "<C-w>j", {noremap = true})
@@ -59,7 +60,7 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {noremap = true})
 vim.keymap.set("n", "<leader>wc", "<cmd>NoNeckPain<CR>", {noremap = true})
 
 -- todo-comments
-vim.keymap.set("n", "<leader>m", "<cmd>TodoTelescope cwd=%:h<CR>", {noremap = true})
+vim.keymap.set("n", "<leader>td", "<cmd>TodoTelescope cwd=%:h<CR>", {noremap = true})
 
 -- hop
 vim.keymap.set("n", "<leader>j", "<cmd>HopWord<CR>", {noremap = true})
