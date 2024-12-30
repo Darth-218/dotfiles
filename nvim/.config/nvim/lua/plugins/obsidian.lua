@@ -15,10 +15,9 @@ return {
         name = "personal",
         path = "~/the-duat/Notes",
       },
-      {
-	name = "uni",
-	path = "~/the-duat/uni"
-      }
     },
   },
+    init = function()
+    	vim.opt.conceallevel = 2
+    end,
 }
