@@ -9,14 +9,17 @@
   esc caps lctrl lalt a s d f j k l
 )
 
+(defalias
+  a-hold (tap-hold-next-release 200 a lalt)
+  s-hold (tap-hold-next-release 200 s lshift)
+  d-hold (tap-hold-next-release 200 d lmet)
+  f-hold (tap-hold-next-release 200 f lctrl)
+  j-hold (tap-hold-next-release 200 j lctrl)
+  k-hold (tap-hold-next-release 200 k lmet)
+  l-hold (tap-hold-next-release 200 l lshift)
+)
+
 (deflayer base
-  caps esc lalt lctrl
-  (tap-hold-next-release 200 a lalt)
-  (tap-hold-next-release 200 s lshift)
-  (tap-hold-next-release 200 d lmet)
-  (tap-hold-next-release 200 f lctrl)
-  (tap-hold-next-release 200 j lctrl)
-  (tap-hold-next-release 200 k rmet)
-  (tap-hold-next-release 200 l lshift)
+  caps esc lalt lctrl @a-hold @s-hold @d-hold @f-hold @j-hold @k-hold @l-hold 
 )
 

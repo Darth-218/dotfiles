@@ -15,7 +15,7 @@
   d-hold (tap-hold-next-release 200 d lmet)
   f-hold (tap-hold-next-release 200 f lctrl)
   j-hold (tap-hold-next-release 200 j lctrl)
-  k-hold (tap-hold-next-release 200 k rmet)
+  k-hold (tap-hold-next-release 200 k lmet)
   l-hold (tap-hold-next-release 200 l lshift)
 )
 
