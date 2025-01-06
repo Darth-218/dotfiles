@@ -1,7 +1,5 @@
-# eval "$(oh-my-posh init zsh --config ~/.ohmyposhtheme.omp.toml)"
-RPROMPT="%F{#c6a679}%*%f"
-PS1="%F{#a39ec4}[%n@%m]: %~%f
-%(?.%F{#c6a679}-->%f.%F{#c47463}->>%f) "
+RPROMPT="%F{#9e86c8}%*%f"
+PS1="%F{#a8c373}%~%f%(?.%F{#73bbb2}:%f.%F{#c47463}:%f) "
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
@@ -80,12 +78,12 @@ alias ls='ls --color'
 alias p="sudo pacman"
 alias gpp="g++"
 alias py="python3 -u"
-alias ls='eza -1 -l --icons=always --time=created --no-permissions --no-user --no-time'
 alias cat='bat -n --theme ansi'
 alias loc='plocate'
 alias nv="nvim"
 alias lg="lazygit"
 alias internet="watch -n 0.5 lsof -i"
+alias pyvenv="source ~/venv/bin/activate"
 
 # Some functions
 f() { sesh connect "$(sesh list | fzf-tmux -p 55%,60%)"; }
