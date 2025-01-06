@@ -6,3 +6,4 @@ alias loc = plocate
 alias nv = nvim
 alias lg = lazygit
 alias internet = /bin/watch -n 0.5 lsof -i
+alias tlauncher = sudo java -jar /home/darth/the-duat/Applications/Tlauncher/TLauncher.jar
