@@ -1,6 +1,6 @@
 require("options.lazy")
 require("options.keymaps")
-require("options.darthline")
+-- require("options.darthline")
 
 vim.o.shiftwidth = 2
 
@@ -9,6 +9,6 @@ Tmux = function()
   vim.cmd.TmuxNavigateUp()
 end
 
-Tmux()
+-- Tmux()
 
-vim.cmd.colorscheme("moonfly")
+vim.cmd.colorscheme("material-deep-ocean")
