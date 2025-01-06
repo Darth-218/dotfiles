@@ -33,11 +33,17 @@ return {
       lspconfig.csharp_ls.setup({})
       lspconfig.pyright.setup({})
       lspconfig.clangd.setup({
-	on_attach = function(client, bufnr)
-	  client.server_capabilities.signatureHelpProvider = false
-	  on_attach(client, bufnr)
-	end,
-	capabilities = capabilities
+	filetypes = {"cpp", "c", "h", "tpp"},
+	-- on_attach = function(client, bufnr)
+	--   client.server_capabilities.signatureHelpProvider = false
+	--   on_attach(client, bufnr)
+	-- end,
+	capabilities = capabilities,
+	vim.filetype.add({
+	  extension = {
+	    tpp = "cpp",
+	  },
+	})
       })
     end
   },
