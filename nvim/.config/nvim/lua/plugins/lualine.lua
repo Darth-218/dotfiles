@@ -7,8 +7,8 @@ return {
   opts = {
     options = {
       icons_enabled = false,
-      theme = 'onedark',
-      component_separators = { left = '|', right = '|'},
+      -- theme = 'onedark',
+      component_separators = { left = '', right = ''},
       section_separators = { left = '', right = ''},
       disabled_filetypes = {
 	statusline = {},
@@ -26,10 +26,10 @@ return {
     sections = {
       lualine_a = {'location'},
       lualine_b = {'filename'},
-      lualine_c = {'diff'},
-      lualine_x = {'diagnostics'},
-      lualine_y = {'branch'},
-      lualine_z = {'filename'}
+      lualine_c = {''},
+      lualine_x = {''},
+      lualine_y = {''},
+      lualine_z = {''}
     },
     inactive_sections = {
       lualine_a = {},
