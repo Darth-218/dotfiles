@@ -1,3 +1,5 @@
+-- vim.keymap.set("n", "<leader>b", "<cmd>Buffers<CR>", {noremap = true})
+
 vim.keymap.set("n", "<leader>m", "<cmd>set modifiable!<CR>", {noremap = true})
 -- Pane navigation
 vim.keymap.set("n", "<C-k>", "<C-w>k", {noremap = true})
@@ -16,7 +18,7 @@ vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>s", "<cmd>:w<CR>")
 
 -- Splitting windows --
---
+
 -- Horizontally
 vim.keymap.set("n", "<C-w>-", "<C-w>s", {noremap = true})
 -- Vertically
@@ -24,9 +26,12 @@ vim.keymap.set("n", "<C-w>\\", "<C-w>v", {noremap = true})
 
 
 -- Plugins --
---
+
 -- Oil
 vim.keymap.set("n", "-", "<cmd>Oil --float<CR>", {noremap = true})
+
+-- Neotree
+vim.keymap.set("n", "_", "<cmd>Neotree toggle<CR>", {noremap = true})
 
 -- Telescope
 vim.keymap.set("n", "<leader>F", "<cmd>cd %:h | Telescope find_files hidden=true<CR>", {noremap = true})
@@ -34,7 +39,7 @@ vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files hidden=true<CR>", {n
 vim.keymap.set("n", "<leader>r", "<cmd>Telescope oldfiles<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>g", "<cmd>Telescope git_files<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>tl", "<cmd>Telescope live_grep<CR>", {noremap = true})
-vim.keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<CR>", {noremap = true})
+vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>tm", "<cmd>Telescope marks<CR>", {noremap = true})
 
 -- Trouble
