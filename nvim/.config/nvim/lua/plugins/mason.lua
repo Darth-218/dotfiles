@@ -28,6 +28,7 @@ return {
 
     config = function()
       local lspconfig = require("lspconfig")
+      lspconfig.texlab.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.gopls.setup({})
       lspconfig.csharp_ls.setup({})
