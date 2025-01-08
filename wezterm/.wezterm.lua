@@ -9,7 +9,10 @@ config.font = wezterm.font_with_fallback {
   "FiraCode Nerd Font",
 }
 
+config.font_size = 10.0
+
 config.colors = {
+
   foreground = "#f0f0f0",
   background = "#000000",
   cursor_fg = "#000000",
