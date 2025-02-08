@@ -55,14 +55,13 @@ vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, {noremap = true})
 vim.keymap.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
 vim.keymap.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
 vim.keymap.set("n", "<leader>bk", "<cmd>BufferLinePickClose<CR>")
+vim.keymap.set("n", "<C-h>", "<cmd>BufferLineMovePrev<CR>")
+vim.keymap.set("n", "<C-l>", "<cmd>BufferLineMoveNext<CR>")
 
 -- lspconfig
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true})
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {noremap = true})
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {noremap = true})
-
--- NoNeckPain
-vim.keymap.set("n", "<leader>wc", "<cmd>NoNeckPain<CR>", {noremap = true})
 
 -- todo-comments
 vim.keymap.set("n", "<leader>td", "<cmd>TodoTelescope cwd=%:h<CR>", {noremap = true})
@@ -73,8 +72,11 @@ vim.keymap.set("n", "<leader>j", "<cmd>HopWord<CR>", {noremap = true})
 -- Silicon
 vim.keymap.set("n", "<C-s>", "<cmd>cd %:h | Silicon<CR>")
 
+-- NoNeckPain
+vim.keymap.set("n", "<leader>zn", "<cmd>NoNeckPain<CR>", {noremap = true})
+
 -- ZenMode
-vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")
+vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<CR>")
 
 -- Glow (Makrdown preview)
 vim.keymap.set("n", "<leader><C-g>", "<cmd>Glow<CR>")
