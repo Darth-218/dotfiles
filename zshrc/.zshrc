@@ -1,5 +1,5 @@
 RPROMPT="%F{#9e86c8}%*%f"
-PS1="%F{#a8c373}%~%f%(?.%F{#73bbb2}:%f.%F{#c47463}:%f) "
+PS1="%F{#a8c373}%(4~|.../%2~|%~)%f%(?.%F{#73bbb2}:%f.%F{#c47463}:%f) "
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
@@ -84,6 +84,7 @@ alias nv="nvim"
 alias lg="lazygit"
 alias internet="watch -n 0.5 lsof -i"
 alias pyvenv="source ~/venv/bin/activate"
+alias vnc="x11vnc -display :0 -auth guess -forever -loop -noxdamage -repeat -rfbauth ~/.vnc/passwd -rfbport 5900 -shared"
 
 # Some functions
 f() { sesh connect "$(sesh list | fzf-tmux -p 55%,60%)"; }
