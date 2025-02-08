@@ -16,3 +16,9 @@ super + shift + {equal,minus}
 
 super + space
   togglepolybar
+
+super + shift + return
+  wezterm
+
+space + alt
+  ~/.dotfiles/shellscripts/.scripts/keylayouts.sh
