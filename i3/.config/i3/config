@@ -13,7 +13,7 @@ set $mod Mod4
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec_always --no-startup-id sxhkd
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -25,7 +25,7 @@ set $bgcolor    #000000
 set $in-bgcolor #000000
 set $text       #000000
 set $u-bgcolor  #ff0000
-set $indicator  #84d4f5
+set $indicator  #768a84
 set $in-text    #969696
 # class                 border          background      text            indicator (a line which shows where the next window will be placed)     
 client.focused          $bgcolor        $indicator      $text           $bgcolor
