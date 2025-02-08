@@ -11,4 +11,5 @@ end
 
 -- Tmux()
 
+vim.diagnostic.config({ virtual_text = false })
 vim.cmd.colorscheme("rose-pine")
