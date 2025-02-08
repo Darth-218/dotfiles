@@ -33,6 +33,7 @@ return {
       lspconfig.gopls.setup({})
       lspconfig.csharp_ls.setup({})
       lspconfig.pyright.setup({})
+      -- lspconfig.typescript_language_server.setup({})
       lspconfig.clangd.setup({
 	filetypes = {"cpp", "c", "h", "tpp"},
 	-- on_attach = function(client, bufnr)
