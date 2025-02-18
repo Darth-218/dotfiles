@@ -1,6 +1,11 @@
 -- vim.keymap.set("n", "<leader>b", "<cmd>Buffers<CR>", {noremap = true})
 
 vim.keymap.set("n", "<leader>m", "<cmd>set modifiable!<CR>", {noremap = true})
+
+vim.keymap.set("n", "H", "<cmd>bprev<CR>")
+vim.keymap.set("n", "L", "<cmd>bnext<CR>")
+vim.keymap.set("n", "<leader>q", "<cmd>BufferLinePickClose<CR>")
+
 -- Pane navigation
 vim.keymap.set("n", "<C-k>", "<C-w>k", {noremap = true})
 vim.keymap.set("n", "<C-j>", "<C-w>j", {noremap = true})
@@ -16,14 +21,6 @@ vim.keymap.set("v", "<leader>y", '"+y')
 
 -- Quick saving
 vim.keymap.set("n", "<leader>s", "<cmd>:w<CR>")
-
--- Splitting windows --
-
--- Horizontally
-vim.keymap.set("n", "<C-w>-", "<C-w>s", {noremap = true})
--- Vertically
-vim.keymap.set("n", "<C-w>\\", "<C-w>v", {noremap = true})
-
 
 -- Plugins --
 
@@ -45,19 +42,6 @@ vim.keymap.set("n", "<leader>tm", "<cmd>Telescope marks<CR>", {noremap = true})
 -- Trouble
 vim.keymap.set("n", "<leader>t", "<cmd>Trouble diagnostics<CR>", {noremap = true})
 
--- Dashboard
-vim.keymap.set("n", "<leader>d", "<cmd>Dashboard<CR>", {noremap = true})
-
--- Undotree
-vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, {noremap = true})
-
--- bufferline
-vim.keymap.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
-vim.keymap.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
-vim.keymap.set("n", "<leader>bk", "<cmd>BufferLinePickClose<CR>")
-vim.keymap.set("n", "<C-h>", "<cmd>BufferLineMovePrev<CR>")
-vim.keymap.set("n", "<C-l>", "<cmd>BufferLineMoveNext<CR>")
-
 -- lspconfig
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true})
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {noremap = true})
@@ -77,9 +61,6 @@ vim.keymap.set("n", "<leader>zn", "<cmd>NoNeckPain<CR>", {noremap = true})
 
 -- ZenMode
 vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<CR>")
-
--- Glow (Makrdown preview)
-vim.keymap.set("n", "<leader><C-g>", "<cmd>Glow<CR>")
 
 -- Nabla (math preview)
 vim.keymap.set("n", "<leader>l", "<cmd>lua require(\"nabla\").popup()<CR>")
