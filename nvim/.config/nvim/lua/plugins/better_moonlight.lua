@@ -1,1 +1,0 @@
-return { 'astridlyre/moonlight.nvim' }
