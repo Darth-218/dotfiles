@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Detect all keyboard devices
-KEYBOARDS=$(ls /dev/input/by-path/ | grep -i kbd)
-
-for kb in $KEYBOARDS; do
-    kmonad ~/.config/kmonad/config.kbd --input "/dev/input/by-path/$kb" &
-done
-
