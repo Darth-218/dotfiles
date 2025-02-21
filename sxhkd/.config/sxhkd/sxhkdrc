@@ -18,7 +18,7 @@ super + space
   togglepolybar
 
 super + shift + return
-  wezterm
+  ghostty
 
 space + alt
   ~/.dotfiles/shellscripts/.scripts/keylayouts.sh
