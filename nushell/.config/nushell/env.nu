@@ -99,3 +99,5 @@ $env.PATH = ($env.PATH | append '~/go/bin' | append '/home/darth/.dotnet/tools' 
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
+
+zoxide init nushell | save -f ~/.zoxide.nu
