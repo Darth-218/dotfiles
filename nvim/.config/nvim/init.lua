@@ -7,4 +7,4 @@ vim.diagnostic.config({ virtual_text = false })
 
 vim.opt.conceallevel = 3
 
-vim.cmd.colorscheme("moonfly")
+vim.cmd.colorscheme("rose-pine")
