@@ -115,4 +115,8 @@ return {
   {
     "mfussenegger/nvim-jdtls"
   },
+
+  {
+    "kmonad/kmonad-vim"
+  },
 }
