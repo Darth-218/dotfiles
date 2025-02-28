@@ -1,6 +1,6 @@
 (defcfg
-  input (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
-  output (uinput-sink "Laptop kmonand output")
+  input (device-file "/dev/input/by-id/usb-YICHIP_Wireless_Device-event-kbd")
+  output (uinput-sink "Kmonand output")
   fallthrough true
   allow-cmd false
 )
