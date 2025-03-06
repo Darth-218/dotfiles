@@ -55,10 +55,18 @@ return {
 	theme = {
 	  normal = {
 	    a = {fg = "#080808", bg = "#a3ace1"},
-	    b = {fg = "#bcbcbc", bg = "#080808", buffers_color = {active = "#000000"}}
-	  },
-	  inactive = {
-	    a = {fg = "#bcbcbc", bg = "#080808"},
+	    b = {
+	      fg = "#bcbcbc",
+	      bg = "#191724",
+	      buffers_color = {
+		active = {
+		  fg = "#e3ab5d"
+		},
+	      },
+	    },
+	    inactive = {
+	      a = {fg = "#bcbcbc", bg = "#080808"},
+	    },
 	  },
 	},
       },
