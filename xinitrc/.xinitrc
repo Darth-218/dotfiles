@@ -1,6 +1,7 @@
-xhidecursor &
-feh --bg-fill ~/.dotfiles/wallpaper.jpg
 syncthing --no-browser &
 dunst &
+xhidecursor &
 picom &
-exec i3
+feh --bg-fill ~/.dotfiles/wallpaper.jpg
+slstatus
+exec dwm
