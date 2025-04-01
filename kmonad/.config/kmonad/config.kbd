@@ -6,34 +6,36 @@
 )
 
 (defalias
-  h-b (tap-hold-next-release 200 h lalt)
+  mod (layer-toggle mods)
+  num (layer-toggle numbers)
+  def (layer-switch default)
+  bse (layer-switch base)
+  a-l (tap-hold 200 a @num)
+  co-l (tap-hold 200 ; @num)
+  c-l (tap-hold 200 c @num)
+  m-l (tap-hold 200 m @mod)
+  v-l (tap-hold 200 v @mod)
+  h-l (tap-hold-next-release 200 h @mod)
+  g-l (tap-hold-next-release 200 g @mod)
+)
+
+(defalias
   s-b (tap-hold-next-release 200 s lshift)
   d-b (tap-hold-next-release 200 d lmet)
   f-b (tap-hold-next-release 200 f lctrl)
   j-b (tap-hold-next-release 200 j lctrl)
   k-b (tap-hold-next-release 200 k lmet)
   l-b (tap-hold-next-release 200 l lshift)
-  g-b (tap-hold-next-release 200 g lalt)
 
-  a-n (tap-hold-next-release 200 ! lalt)
+  a-n (tap-hold-next-release 200 ! @num)
   s-n (tap-hold-next-release 200 @ lshift)
-  d-n (tap-hold-next-release 200 [ lmet)
-  f-n (tap-hold-next-release 200 ] lctrl)
-  j-n (tap-hold-next-release 200 \( lctrl)
-  k-n (tap-hold-next-release 200 \) lmet)
+  d-n (tap-hold-next-release 200 { lmet)
+  f-n (tap-hold-next-release 200 } lctrl)
+  j-n (tap-hold-next-release 200 [ lctrl)
+  k-n (tap-hold-next-release 200 ] lmet)
+  c-n (tap-hold-next-release 200 c @num)
   l-n (tap-hold-next-release 200 \ lshift)
-  c-n (tap-hold-next-release 200 ' lalt)
-)
-
-(defalias
-  mod (layer-toggle mods)
-  num (layer-toggle numbers)
-  def (layer-switch default)
-  bse (layer-switch base)
-  a-l (tap-hold 200 a @num)
-  c-l (tap-hold 200 ; @num)
-  m-l (tap-hold 200 m @mod)
-  v-l (tap-hold 200 v @mod)
+  co-n (tap-hold-next-release 200 ' @num)
 )
 
 (defsrc
@@ -47,16 +49,16 @@
 (deflayer base
   _    _    _    _    _    _    _    _    _    _    _    _    _    bspc
   XX   q    w    e    r    t    y    u    i    o    p    _    _    XX
-  XX   @a-l @s-b @d-b @f-b @g-b @h-b @j-b @k-b @l-b @c-l _    XX
-  XX   z    x    c    @v-l b    n    @m-l ,    .    /    XX
+  XX   @a-l @s-b @d-b @f-b @g-l @h-l @j-b @k-b @l-b @co-l _    XX
+  XX   z    x    @c-l @v-l b    n    @m-l ,    .    /    XX
   @def lmet @mod           spc            @num rctl
 )
 
 (deflayer numbers
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   XX   1    2    3    4    5    6    7    8    9    0    _    _    _
-  XX   @a-n @s-n @d-n @f-n %    ^    @j-n @k-n @l-n @c-n _    _
-  XX   `    _    #    $    _    -    =    *    &    _    _
+  XX   @a-n @s-n @d-n @f-n _    _    @j-n @k-n @l-n @co-n _    _
+  XX   `    _    @c-n _    _    -    =    _    _    _    _
   _    _    _              spc            _    _
 )
 
@@ -64,7 +66,7 @@
   _    _    _    _    _    _    _    _    _    _     _    _    _    _
   XX   tab  _    _    _    _    _    _    _    bspc  del  _    _    _
   XX   esc  @s-b @d-b @f-b _    left down up   right ret  _    _
-  XX   caps _    _    _    _    _    _    _    _     _    _
+  XX   lalt caps _    ret  _    _    ret  _    _     ralt _
   _    lctl _              spc            _    _
 )
 

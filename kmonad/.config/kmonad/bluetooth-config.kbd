@@ -1,28 +1,8 @@
 (defcfg
-  input (device-file "/dev/input/by-id/usb-YICHIP_Wireless_Device-event-kbd")
+  input (device-file "/dev/input/by-id/")
   output (uinput-sink "Kmonand output")
   fallthrough true
   allow-cmd false
-)
-
-(defalias
-  h-b (tap-hold-next-release 200 h lalt)
-  s-b (tap-hold-next-release 200 s lshift)
-  d-b (tap-hold-next-release 200 d lmet)
-  f-b (tap-hold-next-release 200 f lctrl)
-  j-b (tap-hold-next-release 200 j lctrl)
-  k-b (tap-hold-next-release 200 k lmet)
-  l-b (tap-hold-next-release 200 l lshift)
-  g-b (tap-hold-next-release 200 g lalt)
-
-  a-n (tap-hold-next-release 200 ! lalt)
-  s-n (tap-hold-next-release 200 @ lshift)
-  d-n (tap-hold-next-release 200 [ lmet)
-  f-n (tap-hold-next-release 200 ] lctrl)
-  j-n (tap-hold-next-release 200 \( lctrl)
-  k-n (tap-hold-next-release 200 \) lmet)
-  l-n (tap-hold-next-release 200 \ lshift)
-  c-n (tap-hold-next-release 200 ' lalt)
 )
 
 (defalias
@@ -34,6 +14,26 @@
   c-l (tap-hold 200 ; @num)
   m-l (tap-hold 200 m @mod)
   v-l (tap-hold 200 v @mod)
+)
+
+(defalias
+  s-b (tap-hold-next-release 200 s lshift)
+  d-b (tap-hold-next-release 200 d lmet)
+  f-b (tap-hold-next-release 200 f lctrl)
+  h-b (tap-hold-next-release 200 h @mod)
+  g-b (tap-hold-next-release 200 g @mod)
+  j-b (tap-hold-next-release 200 j lctrl)
+  k-b (tap-hold-next-release 200 k lmet)
+  l-b (tap-hold-next-release 200 l lshift)
+
+  a-n (tap-hold-next-release 200 ! lalt)
+  s-n (tap-hold-next-release 200 @ lshift)
+  d-n (tap-hold-next-release 200 { lmet)
+  f-n (tap-hold-next-release 200 } lctrl)
+  j-n (tap-hold-next-release 200 [ lctrl)
+  k-n (tap-hold-next-release 200 ] lmet)
+  l-n (tap-hold-next-release 200 \ lshift)
+  c-n (tap-hold-next-release 200 ' lalt)
 )
 
 (defsrc
@@ -55,8 +55,8 @@
 (deflayer numbers
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   XX   1    2    3    4    5    6    7    8    9    0    _    _    _
-  XX   @a-n @s-n @d-n @f-n %    ^    @j-n @k-n @l-n @c-n _    _
-  XX   `    _    #    $    _    -    =    *    &    _    _
+  XX   @a-n @s-n @d-n @f-n _    _    @j-n @k-n @l-n @c-n _    _
+  XX   `    _    _    _    _    -    =    _    _    _    _
   _    _    _              spc            _    _
 )
 
@@ -64,7 +64,7 @@
   _    _    _    _    _    _    _    _    _    _     _    _    _    _
   XX   tab  _    _    _    _    _    _    _    bspc  del  _    _    _
   XX   esc  @s-b @d-b @f-b _    left down up   right ret  _    _
-  XX   caps _    _    _    _    _    _    _    _     _    _
+  XX   lalt caps _    _    _    _    _    _    _     ralt _
   _    lctl _              spc            _    _
 )
 
