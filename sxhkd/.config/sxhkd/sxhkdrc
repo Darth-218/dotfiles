@@ -1,10 +1,13 @@
 # Rofi shortcuts
-super + m ; {r,d,c,f,p,w}
+super + r ; {r,d,c,f,p,w}
   rofi -theme ~/.config/rofi/launchers/type-4/style-4.rasi -show {run,drun,calc,filebrowser,power-menu -modi power-menu:~/.local/bin/rofi-power-menu,window}
 
 # flameshot shortcuts
 super + o ; {f,m,r}
   flameshot {full,screen,gui}
+
+super + o ; {w}
+  rofi -theme ~/.config/rofi/launchers/type-4/style-4.rasi -show {window}
 
 # Volume shortcuts
 super + {equal,minus}
@@ -22,3 +25,6 @@ super + shift + return
 
 space + alt
   ~/.dotfiles/shellscripts/.scripts/keylayouts.sh
+
+super + o ; l
+  i3lock
