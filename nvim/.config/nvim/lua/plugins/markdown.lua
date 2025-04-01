@@ -24,12 +24,6 @@ return {
     }
   },
 
-  -- Renders LaTeX math
-
-  {
-    'jbyuki/nabla.nvim'
-  },
-
   {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
@@ -58,17 +52,22 @@ return {
     },
   },
 
-  -- Used to preview markdown files
-
   {
-
-    "ellisonleao/glow.nvim",
-
+  "tadmccorkle/markdown.nvim",
+  ft = "markdown",
+  opts = {
+  },
     config = function()
-      require('glow').setup({
-	style = 'dark'
+      require('markdown').setup({
       })
     end
   },
 
+  {
+    "dhruvasagar/vim-table-mode"
+  },
+
+  {
+    "bullets-vim/bullets.vim"
+  }
 }

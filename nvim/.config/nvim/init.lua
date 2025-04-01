@@ -5,6 +5,6 @@ vim.o.shiftwidth = 2
 
 vim.diagnostic.config({ virtual_text = false })
 
-vim.opt.conceallevel = 3
+vim.opt.conceallevel = 1
 
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("catppuccin")

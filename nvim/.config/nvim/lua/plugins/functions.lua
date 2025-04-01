@@ -130,7 +130,10 @@ return {
     lazy = false,
     opts = {
       image = {
-	enabled = true
+	enabled = false,
+	latex = {
+	  font_size = "10pt"
+	}
       }
     }
   }
