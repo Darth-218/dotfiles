@@ -65,7 +65,7 @@
 (deflayer mods
   _    _    _    _    _    _    _    _    _    _     _    _    _    _
   XX   tab  _    _    _    _    _    _    _    bspc  del  _    _    _
-  XX   esc  @s-b @d-b @f-b _    left down up   right ret  _    _
+  XX   esc  @s-b @d-b @f-b ret  left down up   right ret  _    _
   XX   lalt caps _    ret  _    _    ret  _    _     ralt _
   _    lctl _              spc            _    _
 )
