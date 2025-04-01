@@ -11,7 +11,7 @@ static const int horizpadbar = 4;    /* horizontal padding for statusbar */
 static const int vertpadbar = 6;     /* vertical padding for statusbar */
 static const int vertpad = 0;        /* vertical padding of bar */
 static const int sidepad = 0;        /* horizontal padding of bar */
-static const char *fonts[] = {"Departure Mono:size=8"};
+static const char *fonts[] = {"Departure Mono:size=7"};
 static const char dmenufont[] = "Departure Mono:size=9";
 static const char col_gray1[] = "#181616";
 static const char col_gray2[] = "#444444";
@@ -63,9 +63,9 @@ static const int lockfullscreen =
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    {" 󰝘 ", tile}, /* first entry is default */
-    {"  ", NULL},  /* no layout function means floating behavior */
-    {"  ", monocle},
+    {" T ", tile}, /* first entry is default */
+    {" F ", NULL}, /* no layout function means floating behavior */
+    {" M ", monocle},
     /* { "[@]",      spiral },
        { "[\\]",     dwindle },
        { "H[]",      deck },
