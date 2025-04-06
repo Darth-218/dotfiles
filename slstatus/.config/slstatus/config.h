@@ -65,13 +65,17 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
     /* function            format          argument */
-    {ram_perc, "^c#cacaca^ ram: %s%% ", NULL},
+    {username, " %s", NULL},
+    {hostname, "@%s ", NULL},
+    {ram_perc, "| ram: %3s%% ", NULL},
     {ram_used, ": %s ", NULL},
+    {cpu_perc, "| cpu: %3s%% ", NULL},
     {wifi_essid, "| wifi: %s ", "wlan0"},
-    {ipv4, "| eth: %s ", "eth0"},
+    {ipv4, "| eth: %s ", "enp3s0"},
     {run_command, "| vol: %4s ",
-     "awk -F\"[][]\" '/dB/ { print $2 }' <(amixer sget Master)"},
-    {datetime, "| %s ", "%F %T"},
+     "awk '{print $5}' <(pactl get-sink-volume @DEFAULT_SINK@)"},
+    // "awk -F\"[][]\" '/dB/ { print $2 }' <(amixer sget Master)"},
+    {datetime, "| %s ", "%F, %T"},
     {keymap, "| %s - ", NULL},
     {keyboard_indicators, "%s - ", "n"},
     {keyboard_indicators, "%s ", "c"},
