@@ -3,5 +3,5 @@ dunst &
 xhidecursor &
 picom &
 feh --bg-fill ~/.dotfiles/wallpaper.jpg
-slstatus
+slstatus &
 exec dwm
