@@ -7,4 +7,4 @@ vim.diagnostic.config({ virtual_text = false })
 
 vim.opt.conceallevel = 1
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("mellifluous")

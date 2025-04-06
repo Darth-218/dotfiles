@@ -32,10 +32,9 @@ return {
 	section_separators = { left = '', right = ''},
 	theme = {
 	  normal = {
-	    a = {fg = "#080808", bg = "#a3ace1"},
+	    a = {fg = "#bcbcbc"},
 	    b = {
 	      fg = "#bcbcbc",
-	      bg = "#191724",
 	      buffers_color = {
 		active = {
 		  fg = "#e3ab5d"
@@ -43,7 +42,7 @@ return {
 	      },
 	    },
 	    inactive = {
-	      a = {fg = "#bcbcbc", bg = "#080808"},
+	      a = {fg = "#bcbcbc"},
 	    },
 	  },
 	},

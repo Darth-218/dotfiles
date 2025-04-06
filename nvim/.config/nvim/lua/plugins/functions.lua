@@ -101,8 +101,8 @@ return {
 
     config = function()
       require("silicon").setup({
-	font = "Firacode NF=34;Noto Color Emoji=34",
-	theme = "moonfly",
+	font = "Monocraft=34",
+	-- theme = "catppuccin",
 	no_window_controls = true,
 	pad_vert = 0,
 	pad_horiz = 0,
@@ -121,9 +121,9 @@ return {
     "tpope/vim-commentary",
   },
 
-  {
-    "Raimondi/delimitMate",
-  },
+  -- {
+  --   "Raimondi/delimitMate",
+  -- },
 
   {
     "folke/snacks.nvim",
