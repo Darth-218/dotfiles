@@ -44,12 +44,14 @@
 # Disable title-bar
 gtk-titlebar = false
 
+title = "Ghostty"
+
 # Font
 font-size = 10
 font-family = Departure Mono
 
 # Terminal colors
-background = #000000
+background = #0f0f0f
 foreground = #f0f0f0
 selection-foreground = #262626
 selection-background = #f0f0f0
