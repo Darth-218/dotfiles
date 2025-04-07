@@ -12,3 +12,5 @@ static const char *browsercmd[] = {"librewolf", NULL};
 
 /* Launch file browser */
 static const char *filescmd[] = {"dolphin", NULL};
+
+static const char *restartbar[] = {"pkill slstatus; slstatus &", NULL};
