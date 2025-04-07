@@ -12,7 +12,7 @@ static Keychord *keychords[] = {
     &((Keychord){2, {{MODKEY, XK_n}, {MODKEY, XK_n}}, spawn, {.v = termcmd}}),
 
     /* Toggle status bar */
-    &((Keychord){1, {{MODKEY, XK_space}}, togglebar, {0}}),
+    &((Keychord){1, {{MODKEY, XK_b}}, togglebar, {0}}),
 
     /* Change window focus */
     &((Keychord){1, {{MODKEY, XK_j}}, focusstack, {.i = +1}}),
@@ -81,7 +81,19 @@ static Keychord *keychords[] = {
     &((Keychord){1, {{MODKEY | ShiftMask, XK_q}}, quit, {0}}),
 
     /* Restart DWM */
-    &((Keychord){1, {{MODKEY | ControlMask | ShiftMask, XK_q}}, quit, {1}}),
+    &((Keychord){1, {{MODKEY | ShiftMask, XK_r}}, quit, {1}}),
+
+    /* Restart slstatus */
+    &((Keychord){1,
+                 {{MODKEY | ControlMask | ShiftMask, XK_b}},
+                 spawn,
+                 {.v = restartbar}}),
+
+    // "mod + a, b" Mercury browser
+    &((Keychord){2, {{MODKEY, XK_a}, {0, XK_b}}, spawn, {.v = browsercmd}}),
+
+    // "mod + a, f" Launch file manager
+    &((Keychord){2, {{MODKEY, XK_a}, {0, XK_f}}, spawn, {.v = filescmd}}),
 
     /* Tags */
     TAGKEYS(XK_1, 0),
@@ -93,10 +105,4 @@ static Keychord *keychords[] = {
     TAGKEYS(XK_7, 6),
     TAGKEYS(XK_8, 7),
     TAGKEYS(XK_9, 8),
-
-    // "mod + a, b" Mercury browser
-    &((Keychord){2, {{MODKEY, XK_a}, {0, XK_b}}, spawn, {.v = browsercmd}}),
-
-    // "mod + a, f" Launch file manager
-    &((Keychord){2, {{MODKEY, XK_a}, {0, XK_f}}, spawn, {.v = filescmd}}),
 };
