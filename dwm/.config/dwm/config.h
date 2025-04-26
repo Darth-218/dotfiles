@@ -2,7 +2,7 @@
 
 /* appearance */
 
-static const unsigned int borderpx = 1; /* border pixel of windows */
+static const unsigned int borderpx = 2; /* border pixel of windows */
 
 static const int startwithgaps = 1;  /* 1 means gaps are used by default */
 static const unsigned int gappx = 0; /* default gap between windows in pixels */
@@ -25,7 +25,7 @@ static const char dmenufont[] = "Departure Mono:size=9";
 static const char *colors[][3] = {
     /*               fg         bg          border   */
     [SchemeNorm] = {col_gray4, col_gray5, col_gray2},
-    [SchemeSel] = {col_gray5, col_white, col_gray4},
+    [SchemeSel] = {col_gray5, col_blue, col_white},
 };
 
 /* Tag Names */
