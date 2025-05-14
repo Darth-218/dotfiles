@@ -2,30 +2,30 @@
 
 /* appearance */
 
-static const unsigned int borderpx = 2; /* border pixel of windows */
+static const unsigned int borderpx = 3; /* border pixel of windows */
 
 static const int startwithgaps = 1;  /* 1 means gaps are used by default */
-static const unsigned int gappx = 0; /* default gap between windows in pixels */
+static const unsigned int gappx = 5; /* default gap between windows in pixels */
 
 static const unsigned int snap = 32; /* snap pixel */
 
 static const int showbar = 1; /* 0 means no bar */
-static const int topbar = 0;  /* 0 means bottom bar */
+static const int topbar = 1;  /* 0 means bottom bar */
 
 static const int horizpadbar = 4; /* horizontal padding for statusbar */
 static const int vertpadbar = 6;  /* vertical padding for statusbar */
 static const int vertpad = 0;     /* vertical padding of bar */
 static const int sidepad = 0;     /* horizontal padding of bar */
 
-static const char *fonts[] = {"Departure Mono:size=7"};
+static const char *fonts[] = {"JetBrainsMono:size=7"};
 static const char dmenufont[] = "Departure Mono:size=9";
 
 #include "colors.h"
 
 static const char *colors[][3] = {
     /*               fg         bg          border   */
-    [SchemeNorm] = {col_gray4, col_gray5, col_gray2},
-    [SchemeSel] = {col_gray5, col_blue, col_white},
+    [SchemeNorm] = {col_gray2, col_black, col_gray2},
+    [SchemeSel] = {col_white, col_black, col_white},
 };
 
 /* Tag Names */
