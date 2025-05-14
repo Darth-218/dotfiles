@@ -22,7 +22,7 @@
   c-l (tap-hold 200 c @mos)
   cm-l (tap-hold 200 , @num)
   ctl (tap-hold 200 @def rctl)
-  sp-l (tap-hold 200 spc @app)
+  sp-l (tap-hold 200 spc @mod)
 )
 
 (defalias
