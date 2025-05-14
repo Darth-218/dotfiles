@@ -62,23 +62,23 @@ static const char unknown_str[] = "n/a";
  *                                                     NULL on OpenBSD/FreeBSD
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
+ *
+ * ^c#FFFFFF^ for foreground color
+ * ^b#FFFFFF^ for background color
  */
 static const struct arg args[] = {
     /* function            format          argument */
-    {username, " %s", NULL},
-    {hostname, "@%s ", NULL},
-    {ram_perc, "| ram: %3s%% ", NULL},
-    {ram_used, ": %s ", NULL},
-    {cpu_perc, "| cpu: %3s%% ", NULL},
-    {wifi_essid, "| wifi: %s ", "wlan0"},
-    {ipv4, "| eth: %s ", "enp3s0"},
-    {run_command, "| vol: %4s ",
+    {ram_perc, "^c#FFFFFF^ R %3s%% ", NULL},
+    {cpu_perc, " C %3s%% ", NULL},
+    {wifi_essid, " W %s ", "wlan0"},
+    {ipv4, " E %s ", "enp3s0"},
+    {run_command, " V %4s ",
      "awk '{print $5}' <(pactl get-sink-volume @DEFAULT_SINK@)"},
     // "awk -F\"[][]\" '/dB/ { print $2 }' <(amixer sget Master)"},
-    {datetime, "| %s ", "%F, %T"},
-    {keymap, "| %s - ", NULL},
+    {datetime, " T %s ", "%F, %T"},
+    {keymap, " K  %s - ", NULL},
     {keyboard_indicators, "%s - ", "n"},
     {keyboard_indicators, "%s ", "c"},
-    {battery_state, "| %s ", "BAT1"},
-    {battery_perc, "%s%% ", "BAT1"},
+    {battery_state, " %s ", "BAT1"},
+    {battery_perc, "%s%%  ", "BAT1"},
 };
