@@ -48,11 +48,15 @@ title = "Ghostty"
 
 # Font
 font-size = 10
-font-family = Departure Mono
+font-family = JetBrainsMono
 
 # Terminal colors
 background = #0f0f0f
 foreground = #f0f0f0
 selection-foreground = #262626
 selection-background = #f0f0f0
+
+# blur
+background-opacity = 0.9
+background-blur = 50
 
