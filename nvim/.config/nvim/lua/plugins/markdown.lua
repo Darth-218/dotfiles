@@ -2,15 +2,11 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && yarn install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
     ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
   },
 
   -- Makes markdown files look good inside buffers
-
   {
     "OXY2DEV/markview.nvim",
     lazy = false,
@@ -53,10 +49,10 @@ return {
   },
 
   {
-  "tadmccorkle/markdown.nvim",
-  ft = "markdown",
-  opts = {
-  },
+    "tadmccorkle/markdown.nvim",
+    ft = "markdown",
+    opts = {
+    },
     config = function()
       require('markdown').setup({
       })
