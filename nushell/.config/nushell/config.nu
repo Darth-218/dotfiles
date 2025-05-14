@@ -896,12 +896,6 @@ $env.config = {
   }
 }
 
-def compile [file] {
-  let out = $"(file | split column ".")"
-  g++ file -o ;
-  ./out;
-}
-
 source ./aliases.nu
 source ./tmux.nu
 source ./zoxide.nu
