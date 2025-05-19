@@ -2,6 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 18,  // Reduced from 24
+    "width": 100,
     "spacing": 2,  // Reduced from 4
     "modules-left": ["cpu", "memory", "network"],
     "modules-center": ["hyprland/workspaces"],
@@ -13,30 +14,30 @@
     },
     
     "clock": {
-        "format": "{:%d-%m-%Y | %H:%M:%S}",
+        "format": "\udb80\udced  {:%d-%m-%Y | %H:%M:%S}",
         "tooltip-format": "{:%A, %B %d %Y}"
     },
     
     "cpu": {
-        "format": "{usage}%",
-        "interval": 2
+        "format": "\uf4bc  {usage:>3}%",
+        "interval": 1
     },
     
     "memory": {
-        "format": "{used:0.1f}G",
-        "interval": 2
+        "format": "\ue266  {used:4.1f}G",
+        "interval": 1
     },
     
     "network": {
-        "format-wifi": "{essid}",
+        "format-wifi": "\udb81\udda9  {essid}",
         "format-ethernet": "{ipaddr}",
         "format-disconnected": "n/a",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
     },
     
     "pulseaudio": {
-        "format": "{volume}%",
-        "format-muted": "Muted",
+        "format": "\udb81\udd7e  {volume:>3}%",
+        "format-muted": "\udb81\udd81",
         "scroll-step": 5
     },
     
@@ -45,8 +46,8 @@
             "warning": 25,
             "critical": 15
         },
-        "format": "- {capacity}%",
-        "format-charging": "+ {capacity}%",
-        "format-full": "o {capacity}%"
+        "format": "\udb85\udfde {capacity:>3}%",
+        "format-charging": "\udb80\udc85 {capacity:>3}%",
+        "format-full": "\udb80\udc79 {capacity:>3}%"
     }
 }
