@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>s", "<cmd>:w<CR>")
 vim.keymap.set("n", "-", "<cmd>Oil --float<CR>", {noremap = true})
 
 -- Neotree
-vim.keymap.set("n", "_", "<cmd>Neotree toggle<CR>", {noremap = true})
+vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", {noremap = true})
 
 -- Telescope
 vim.keymap.set("n", "<leader>F", "<cmd>cd %:h | Telescope find_files hidden=true<CR>", {noremap = true})

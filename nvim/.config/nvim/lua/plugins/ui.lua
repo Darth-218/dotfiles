@@ -1,6 +1,9 @@
--- Provides buffer breadcrumbs
-
 return {
+
+  {'xiyaowong/transparent.nvim'},
+
+  -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+
   {
     "utilyre/barbecue.nvim",
     name = "barbecue",
@@ -56,7 +59,7 @@ return {
       },
       sections = {
 	lualine_a = {'location'},
-	lualine_b = {'buffers'},
+	lualine_b = {'filename'},
 	lualine_c = {''},
 	lualine_x = {''},
 	lualine_y = {''},
@@ -133,7 +136,7 @@ return {
 
     "HiPhish/rainbow-delimiters.nvim",
 
-    config = function()
+   config = function()
 
       require("rainbow-delimiters.setup").setup({
 
