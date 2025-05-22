@@ -1,0 +1,33 @@
+[user]
+  name = Yahia Gaber
+  email = yahia.hany.gaber@proton.me
+
+[push]
+  default = current
+
+[pull]
+  rebase = true
+
+[rebase]
+  autoStash = true
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+
+[advice]
+  statusHints = false
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+
+[url "git@github.com:darth/"]
+  insteadOf = "d:"
+
+[core]
+  whitespace = error
+
+[interactive]
+  editor = nvim
+  singleKey = true
