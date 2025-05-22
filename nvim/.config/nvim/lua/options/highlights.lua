@@ -1,15 +1,3 @@
-require("options.lazy")
-require("options.keymaps")
-require("options.highlights")
-
-vim.o.shiftwidth = 2
-
-vim.opt.conceallevel = 1
-
-vim.cmd.colorscheme("catppuccin-mocha")
-
-vim.diagnostic.config({ virtual_text = false })
-
 vim.api.nvim_set_hl(0, "TelescopeNormal",         { bg = "none" })
 vim.api.nvim_set_hl(0, "TelescopeBorder",         { bg = "none" })
 vim.api.nvim_set_hl(0, "TelescopePromptNormal",   { bg = "none" })

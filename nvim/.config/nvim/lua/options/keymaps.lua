@@ -35,7 +35,7 @@ vim.keymap.set("n", "<leader>F", "<cmd>cd %:h | Telescope find_files hidden=true
 vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files hidden=true<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>r", "<cmd>Telescope oldfiles<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>g", "<cmd>Telescope git_files<CR>", {noremap = true})
-vim.keymap.set("n", "<leader>tl", "<cmd>Telescope live_grep<CR>", {noremap = true})
+vim.keymap.set("n", "<leader>l", "<cmd>Telescope live_grep<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>tm", "<cmd>Telescope marks<CR>", {noremap = true})
 
@@ -63,7 +63,7 @@ vim.keymap.set("n", "<leader>zn", "<cmd>NoNeckPain<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<CR>")
 
 -- Nabla (math preview)
-vim.keymap.set("n", "<leader>l", "<cmd>lua require(\"nabla\").popup()<CR>")
+vim.keymap.set("n", "<leader>n", "<cmd>lua require(\"nabla\").popup()<CR>")
 
 -- Obsidian
 vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianTemplate<CR>")
