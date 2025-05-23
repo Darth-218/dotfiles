@@ -155,3 +155,5 @@ configuration {
       sorting-method:    "name";
   }
 }
+
+@theme "/home/darth/.local/share/rofi/themes/simple-tokyonight.rasi"
