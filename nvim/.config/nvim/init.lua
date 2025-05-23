@@ -4,6 +4,8 @@ require("options.highlights")
 
 vim.o.shiftwidth = 2
 
+vim.g.copilot_enabled = 0
+
 vim.opt.conceallevel = 1
 
 vim.cmd.colorscheme("catppuccin-mocha")
