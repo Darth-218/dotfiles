@@ -68,3 +68,10 @@ vim.keymap.set("n", "<leader>n", "<cmd>lua require(\"nabla\").popup()<CR>")
 -- Obsidian
 vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianTemplate<CR>")
 vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<CR>")
+
+-- dap
+vim.keymap.set('n', '<F2>', function() require('dap').continue() end)
+vim.keymap.set('n', '<F3>', function() require('dap').step_into() end)
+vim.keymap.set('n', '<F4>', function() require('dap').step_over() end)
+vim.keymap.set('n', '<F5>', function() require('dap').step_out() end)
+vim.keymap.set('n', '<leader>db', function() require('dap').toggle_breakpoint() end)
