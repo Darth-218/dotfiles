@@ -64,7 +64,7 @@
   _    q    w    e    r    t    y    u    i     o    p    _    _    _
   esc  @a-l @s-b @d-b @f-b g    h    @j-b @k-b  @l-b @cl-l _   _
   _    z    x    @c-l @v-l b    n    @m-l  @cm-l .    /    _
-  ctl  lmet @num           @sp-l           ralt rctl
+  ctl  lmet @def           @sp-l           ralt rctl
 )
 
 (deflayer numbers
@@ -104,5 +104,5 @@
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
   esc   a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft  z    x    c    v    b    n    m    ,    .    /    rsft
-  lctrl lmet lalt           spc            rctl @bse
+  lctrl lmet @bse           spc            rctl @bse
 )
