@@ -8,7 +8,8 @@
     
     "clock": {
         "format": "\udb80\udced  {:%d-%m-%Y | %H:%M:%S}",
-        "tooltip-format": "{:%A, %B %d %Y}"
+        "tooltip-format": "{:%A, %B %d %Y}",
+        "interval": 1
     },
     
     "cpu": {
