@@ -1,3 +1,6 @@
+[credential]
+    helper = store
+
 [user]
   name = Yahia Gaber
   email = yahia.hany.gaber@proton.me
