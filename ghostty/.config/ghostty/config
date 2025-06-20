@@ -51,7 +51,7 @@ font-size = 11
 font-family = JetBrainsMono
 
 # Terminal colors
-background = #0f0f0f
+background = #000000
 foreground = #f0f0f0
 selection-foreground = #262626
 selection-background = #f0f0f0
