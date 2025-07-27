@@ -98,6 +98,8 @@ alias internet="watch -n 0.5 lsof -i"
 alias k="sudo systemctl restart kmonad"
 alias wdk="sudo systemctl restart wdkmonad"
 
+alias pdf="zathura"
+
 
 mkdircd() { mkdir "$1" && cd "$1" ; }
 
@@ -107,3 +109,10 @@ mkdircd() { mkdir "$1" && cd "$1" ; }
 enable-fzf-tab
 
 eval "$(oh-my-posh init zsh --config ~/.ohmyposhtheme.omp.json)"
+
+# bun completions
+[ -s "/home/darth/.local/share/reflex/bun/_bun" ] && source "/home/darth/.local/share/reflex/bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.local/share/reflex/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
