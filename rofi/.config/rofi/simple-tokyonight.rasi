@@ -1,13 +1,13 @@
 * {
-  font:   "Iosevka Nerd Font Medium 11";
+  font:   "JetbrainsMono 12";
 
-  bg0     : #1a1b26;
-  bg1     : #1f2335;
-  bg2     : #24283b;
-  bg3     : #414868;
-  fg0     : #c0caf5;
-  fg1     : #a9b1d6;
-  fg2     : #737aa2;
+  bg0     : #000;
+  bg1     : #000;
+  bg2     : #000;
+  bg3     : #fff;
+  fg0     : #fff;
+  fg1     : #fff;
+  fg2     : #fff;
   red     : #f7768e;
   green   : #9ece6a;
   yellow  : #e0af68;
@@ -15,7 +15,7 @@
   magenta : #9a7ecc;
   cyan    : #4abaaf;
 
-  accent: @red;
+  accent: @bg3;
   urgent: @yellow;
 
   background-color : transparent;
@@ -31,8 +31,8 @@ element-icon, element-text, scrollbar {
 }
 
 window {
-  location : northwest;
-  width    : 280px;
+  location : center;
+  width    : 30%;
   x-offset : 4px;
   y-offset : 26px;
 
@@ -45,7 +45,7 @@ window {
 inputbar {
   spacing  : 8px;
   padding  : 4px 8px;
-  children : [ icon-search, entry ];
+  children : [ entry ];
 
   background-color: @bg0;
 }
@@ -69,7 +69,7 @@ listview {
   padding      : 4px 0px;
   lines        : 12;
   columns      : 1;
-  scrollbar    : true;
+  scrollbar    : false;
   fixed-height : false;
   dynamic      : true;
 }
@@ -109,7 +109,7 @@ element-text {
 }
 
 scrollbar {
-  handle-width : 4px;
+  handle-width : 0px;
   handle-color : @fg2;
   padding      : 0 4px;
 }
