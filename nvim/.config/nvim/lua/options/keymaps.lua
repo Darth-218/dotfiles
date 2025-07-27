@@ -4,7 +4,7 @@ vim.keymap.set("n", "<leader>m", "<cmd>set modifiable!<CR>", {noremap = true})
 
 vim.keymap.set("n", "H", "<cmd>bprev<CR>")
 vim.keymap.set("n", "L", "<cmd>bnext<CR>")
-vim.keymap.set("n", "<leader>q", "<cmd>BufferLinePickClose<CR>")
+vim.keymap.set("n", "<leader>q", "<cmd>bdelete<CR>")
 
 -- Pane navigation
 vim.keymap.set("n", "<C-k>", "<C-w>k", {noremap = true})

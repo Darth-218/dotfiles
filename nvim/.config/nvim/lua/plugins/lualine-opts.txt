@@ -1,0 +1,37 @@
+    -- opts = {
+      --     options = {
+	--         icons_enabled = false,
+	--         component_separators = {left = '', right = ''},
+	--         section_separators = {left = '', right = ''},
+	--         theme = {
+	  --             normal = {
+	    --                 a = {fg = "#bcbcbc"},
+	    --                 b = {
+	      --                     fg = "#bcbcbc",
+	      --                     buffers_color = {active = {fg = "#e3ab5d"}}
+	      --                 },
+	      --                 inactive = {a = {fg = "#bcbcbc"}}
+	      --             }
+	      --         }
+	      --     },
+	      --     always_divide_middle = true,
+	      --     globalstatus = false,
+	      --     refresh = {statusline = 1000, tabline = 1000, winbar = 1000},
+	      --     sections = {
+		--         lualine_a = {'location'},
+		--         lualine_b = {'filename'},
+		--         lualine_c = {''},
+		--         lualine_x = {''},
+		--         lualine_y = {''},
+		--         lualine_z = {''}
+		--     },
+		--     inactive_sections = {
+		  --         lualine_a = {'filename'},
+		  --         lualine_b = {},
+		  --         lualine_c = {},
+		  --         lualine_x = {},
+		  --         lualine_y = {},
+		  --         lualine_z = {}
+		  --     }
+		  -- }
+

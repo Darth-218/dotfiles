@@ -1,5 +1,14 @@
 return {
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+
+  { "EdenEast/nightfox.nvim" },
+
+  {
     'astridlyre/moonlight.nvim'
   },
 
@@ -9,11 +18,11 @@ return {
     priority = 1000,
     config = function()
       require("catppuccin").setup({
-      transparent_background = true,
+      transparent_background = false,
       integrations = {
 	telescope = {
 	  enabled = true,
-	  style = "nvchad" -- or "classic", try both
+	  style = "classic" -- or "classic", try both
 	},
 	-- enable others if needed
       }
