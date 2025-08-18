@@ -4,8 +4,8 @@
   bg0     : #000;
   bg1     : #000;
   bg2     : #000;
-  bg3     : #fff;
-  fg0     : #fff;
+  bg3     : #bbbbbb;
+  fg0     : #bbbbbb;
   fg1     : #fff;
   fg2     : #fff;
   red     : #f7768e;

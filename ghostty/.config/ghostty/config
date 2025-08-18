@@ -60,3 +60,4 @@ selection-background = #f0f0f0
 background-opacity = 0.9
 background-blur = 50
 
+confirm-close-surface = false

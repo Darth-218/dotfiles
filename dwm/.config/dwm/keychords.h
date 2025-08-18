@@ -9,7 +9,7 @@ static Keychord *keychords[] = {
 
     /* Spawn terminal */
     &((Keychord){1, {{MODKEY | ShiftMask, XK_Return}}, spawn, {.v = termcmd}}),
-    &((Keychord){2, {{MODKEY, XK_n}, {MODKEY, XK_n}}, spawn, {.v = termcmd}}),
+    &((Keychord){2, {{MODKEY, XK_n}}, spawn, {.v = termcmd}}),
 
     /* Toggle status bar */
     &((Keychord){1, {{MODKEY, XK_b}}, togglebar, {0}}),
@@ -96,13 +96,13 @@ static Keychord *keychords[] = {
     &((Keychord){2, {{MODKEY, XK_a}, {0, XK_f}}, spawn, {.v = filescmd}}),
 
     /* Tags */
-    TAGKEYS(XK_1, 0),
-    TAGKEYS(XK_2, 1),
-    TAGKEYS(XK_3, 2),
-    TAGKEYS(XK_4, 3),
-    TAGKEYS(XK_5, 4),
-    TAGKEYS(XK_6, 5),
-    TAGKEYS(XK_7, 6),
-    TAGKEYS(XK_8, 7),
-    TAGKEYS(XK_9, 8),
+    TAGKEYS(XK_1,XK_p),
+    TAGKEYS(XK_2,XK_q),
+    TAGKEYS(XK_3,XK_w),
+    TAGKEYS(XK_4,XK_e),
+    TAGKEYS(XK_5,XK_r),
+    TAGKEYS(XK_6,XK_t),
+    TAGKEYS(XK_7,XK_y),
+    TAGKEYS(XK_8,XK_u),
+    TAGKEYS(XK_9,XK_i),
 };
