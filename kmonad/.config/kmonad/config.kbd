@@ -42,11 +42,11 @@
 )
 
 (deflayer base
-  XX   XX   XX   XX   XX   XX   XX   XX   XX    XX   XX   XX   XX   bspc
-  XX   q    w    e    r    t    y    u    i     o    p    XX   XX   XX
-  XX   @a-l @s-b @d-b @f-b g    h    @j-b @k-b  @l-b @cl-l XX  XX
-  XX   z    x    c    @v-l b    n    @m-l ,     .    /    XX
-  XX   XX   XX             @sp-l          XX    @def
+  caps _    _    _    _    _    _    _    _     _    _    _    _    bspc
+  _    q    w    e    r    t    y    u    i     o    p    _    _    _ 
+  esc  @a-l @s-b @d-b @f-b g    h    @j-b @k-b  @l-b @cl-l _   _ 
+  _    z    x    c    @v-l b    n    @m-l ,     .    /    _ 
+  _    _    _              @sp-l          _     @def
 )
 
 (deflayer numbers
