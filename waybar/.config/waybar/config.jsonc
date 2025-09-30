@@ -1,55 +1,76 @@
 {
-    "layer": "top",
-    "position": "bottom",
-    "height": 1,  // Reduced from 24
-    "width": 100,
-    "spacing": 0,  // Reduced from 4
-    "modules-center": ["hyprland/workspaces", "cpu", "memory", "network", "pulseaudio", "custom/mic", "clock", "tray", "battery"],
-    
-    "clock": {
-        "format": "\udb80\udced  {:%d-%m-%Y | %H:%M:%S}",
-        "tooltip-format": "{:%A, %B %d %Y}",
-        "interval": 1
-    },
-    
-    "cpu": {
-        "format": "\uf4bc  {usage:>3}%",
-        "interval": 1
-    },
-    
-    "memory": {
-        "format": "\ue266  {used:4.1f}G",
-        "interval": 1
-    },
-    
-    "network": {
-        "format-wifi": "\udb81\udda9  {essid}",
-        "format-ethernet": "{ipaddr}",
-        "format-disconnected": "n/a",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
-    },
-    
-    "pulseaudio": {
-        "format": "\udb81\udd7e  {volume:>3}%",
-        "format-muted": "\udb81\udd81",
-        "scroll-step": 1,
-	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-    },
+  "layer": "top",
+  "position": "bottom",
+  "height": 26,  // Reduced from 24
+  "spacing": 0,  // Reduced from 4
+  "modules-right": ["cpu", "memory", "network", "pulseaudio", "custom/mic", "tray", "battery"],
+  "modules-center": ["clock"],
+  "modules-left": ["hyprland/workspaces"],
 
-    "custom/mic": {
-        "exec": "~/.config/waybar/scripts/mic.sh",
-        "interval": 1,
-        "format": "{} ",
-        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-    },
-    
-    "battery": {
-        "states": {
-            "warning": 25,
-            "critical": 15
-        },
-        "format": "\udb85\udfde {capacity:>3}%",
-        "format-charging": "\udb80\udc85 {capacity:>3}%",
-        "format-full": "\udb80\udc79 {capacity:>3}%"
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "active": "󱓻"
     }
+  },
+
+  "clock": {
+    "format": "{:%d-%m-%Y | %H:%M:%S}",
+    "tooltip-format": "{:%A, %B %d %Y}",
+    "interval": 1
+  },
+
+  "cpu": {
+    "format": "CPU:{usage:>4}%",
+    "interval": 1,
+    "on-click": "btop"
+  },
+
+  "memory": {
+    "format": "MEM:{used:4.1f}G",
+    "interval": 1
+  },
+
+  "network": {
+    "format-wifi": "WIFI",
+    "format-ethernet": "ETH",
+    "format-disconnected": "n/a",
+    "tooltip-format": "{ifname}: {essid} {ipaddr}/{cidr}",
+    "on-click": "nmtui"
+  },
+
+  "pulseaudio": {
+    "format": "VOL:{volume:>4}%",
+    "format-muted": "MUTE",
+    "scroll-step": 1,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "custom/mic": {
+    "exec": "~/.config/waybar/scripts/mic.sh",
+    "interval": 1,
+    "format": "MIC: {}",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 25,
+      "critical": 15
+    },
+    "format": "BAT:{capacity:>4}%",
+    "format-charging": "BAT:{capacity:>4}%",
+    "format-full": "BAT:{capacity:>4}%"
+  }
 }
