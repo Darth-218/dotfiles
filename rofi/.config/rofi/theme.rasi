@@ -1,0 +1,209 @@
+configuration {
+    show-icons: true;
+    display-drun: "launch:";
+    display-run: "run:";
+    display-window: "switch:";
+}
+
+* {
+    font: "JetBrainsMono 10";
+
+    bg0: #0a0a0a;   /* translucent background */
+    bg1: #00000099;   /* overlay tone */
+    fg0: #f5f5f7;
+    fg1: #ffffff;
+    accent: #007aff;  /* macOS blue */
+    urgent: #ff9f0a;
+
+    background-color: transparent;
+    text-color: @fg0;
+}
+
+window {
+    location: center;
+    width: 40%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: @bg0;
+}
+
+mainbox {
+    spacing: 10px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #ffffff1a;
+    children: [ entry ];
+}
+
+entry {
+    placeholder: "Search...";
+    text-color: @fg1;
+    background-color: transparent;
+    expand: true;
+    horizontal-align: 0;
+}
+
+listview {
+    padding: 10px 0;
+    lines: 8;
+    columns: 1;
+    fixed-height: true;
+    dynamic: true;
+    scrollbar: false;
+}
+
+element {
+    padding: 10px 12px;
+    spacing: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+element normal {
+    text-color: @fg0;
+}
+
+element selected {
+    background-color: #ffffff22;
+    text-color: @accent;
+    font-weight: bold;
+}
+
+element-icon {
+    size: 1.2em;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @fg0;
+}
+
+scrollbar {
+    handle-width: 0px;
+}
+
+
+// * {
+//   font:   "JetbrainsMono 12";
+//
+//   bg0     : #000;
+//   bg1     : #000;
+//   bg2     : #000;
+//   bg3     : #bbbbbb;
+//   fg0     : #bbbbbb;
+//   fg1     : #fff;
+//   fg2     : #fff;
+//   red     : #f7768e;
+//   green   : #9ece6a;
+//   yellow  : #e0af68;
+//   blue    : #7aa2f7;
+//   magenta : #9a7ecc;
+//   cyan    : #4abaaf;
+//
+//   accent: @bg3;
+//   urgent: @yellow;
+//
+//   background-color : transparent;
+//   text-color       : @fg0;
+//
+//   margin  : 0;
+//   padding : 0;
+//   spacing : 0;
+// }
+//
+// element-icon, element-text, scrollbar {
+//   cursor: pointer;
+// }
+//
+// window {
+//   location : center;
+//   width    : 30%;
+//   x-offset : 4px;
+//   y-offset : 26px;
+//
+//   background-color: @bg1;
+//   border: 1px;
+//   border-color: @bg3;
+//   border-radius: 6px;
+// }
+//
+// inputbar {
+//   spacing  : 8px;
+//   padding  : 4px 8px;
+//   children : [ entry ];
+//
+//   background-color: @bg0;
+// }
+//
+// icon-search, entry, element-icon, element-text {
+//   vertical-align: 0.5;
+// }
+//
+// icon-search {
+//   expand   : false;
+//   filename : "search-symbolic";
+//   size     : 14px;
+// }
+//
+// textbox {
+//   padding          : 4px 8px;
+//   background-color : @bg2;
+// }
+//
+// listview {
+//   padding      : 4px 0px;
+//   lines        : 12;
+//   columns      : 1;
+//   scrollbar    : false;
+//   fixed-height : false;
+//   dynamic      : true;
+// }
+//
+// element {
+//   padding : 4px 8px;
+//   spacing : 8px;
+// }
+//
+// element normal urgent {
+//   text-color: @urgent;
+// }
+//
+// element normal active {
+//   text-color: @accent;
+// }
+//
+// element alternate active {
+//   text-color: @accent;
+// }
+//
+// element selected {
+//   text-color       : @bg1;
+//   background-color : @accent;
+// }
+//
+// element selected urgent {
+//   background-color: @urgent;
+// }
+//
+// element-icon {
+//   size: 0.8em;
+// }
+//
+// element-text {
+//   text-color: inherit;
+// }
+//
+// scrollbar {
+//   handle-width : 0px;
+//   handle-color : @fg2;
+//   padding      : 0 4px;
+// }

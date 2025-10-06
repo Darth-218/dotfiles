@@ -156,4 +156,4 @@ configuration {
   }
 }
 
-@theme "/home/darth/.dotfiles/rofi/.config/rofi/simple-tokyonight.rasi"
+@theme "/home/darth/.dotfiles/rofi/.config/rofi/theme.rasi"
