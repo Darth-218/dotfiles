@@ -3,7 +3,7 @@
   "position": "bottom",
   "height": 26,  // Reduced from 24
   "spacing": 0,  // Reduced from 4
-  "modules-right": ["cpu", "memory", "network", "pulseaudio", "custom/mic", "tray", "battery"],
+  "modules-right": ["tray", "cpu", "memory", "network", "pulseaudio", "custom/mic", "battery"],
   "modules-center": ["clock"],
   "modules-left": ["hyprland/workspaces"],
 
