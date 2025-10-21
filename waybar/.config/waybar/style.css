@@ -5,12 +5,9 @@
   padding: 0px 2px 0px 2px;
   border-radius: 0;
   min-height: 0;
-  background: #000000;
-  color: #929292;
-}
-
-window#waybar {
-  transition: background-color 0.5s;
+  background: transparent;
+  color: #e6e6dc;
+  /* margin-bottom: 1px; */
 }
 
 #workspaces button {
@@ -18,14 +15,29 @@ window#waybar {
   background: transparent;
   font-size: 10px;
   box-shadow: none;
+  transition: none;
+}
+
+tooltip {
+  background: #000000;
+  color: #e6e6dc;
+}
+
+.modules-left,
+.modules-right,
+.modules-center {
+  background: #000000;
+  border-radius: 8px;
+  padding: 2px 0px 2px 0px;
+  border: solid 1px #fff;
 }
 
 .modules-left {
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 .modules-right {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 #clock,
@@ -35,8 +47,11 @@ window#waybar {
 #network,
 #pulseaudio,
 #custom-mic,
-#tray {
-  padding: 0px 10px 0px 10px;
+#tray,
+#bluetooth,
+#custom-windows,
+#workspaces {
+  padding: 0px 8px 0px 8px;
 }
 
 #cpu:hover,

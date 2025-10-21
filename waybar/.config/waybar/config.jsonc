@@ -3,14 +3,14 @@
   "position": "bottom",
   "height": 26,  // Reduced from 24
   "spacing": 0,  // Reduced from 4
-  "modules-right": ["tray", "cpu", "memory", "network", "pulseaudio", "custom/mic", "battery"],
+  "modules-right": ["custom/mic", "bluetooth", "network", "tray", "cpu", "memory", "pulseaudio", "battery"],
   "modules-center": ["clock"],
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "custom/windows"],
 
   "hyprland/workspaces": {
+    "show-special": true,
     "format": "{icon}",
     "format-icons": {
-      "default": "",
       "1": "1",
       "2": "2",
       "3": "3",
@@ -21,13 +21,21 @@
       "8": "8",
       "9": "9",
       "10": "10",
-      "active": "󱓻"
+      "special": "S",
+      "default": "󱓻",
+      "active": ""
     }
   },
 
+  "custom/windows": {
+    "format": "[{}]",
+    "interval": 0.5,
+    "exec": "~/.config/waybar/scripts/windows.sh"
+  },
+
   "clock": {
-    "format": "{:%d-%m-%Y | %H:%M:%S}",
-    "tooltip-format": "{:%A, %B %d %Y}",
+    "format": "{:%d - %H:%M}",
+    "tooltip-format": "{:%A, %B %d %Y - %H:%M:%S}",
     "interval": 1
   },
 
@@ -38,7 +46,7 @@
   },
 
   "memory": {
-    "format": "MEM:{used:4.1f}G",
+    "format": "MEM:{percentage:>4}%",
     "interval": 1
   },
 
@@ -69,8 +77,24 @@
       "warning": 25,
       "critical": 15
     },
-    "format": "BAT:{capacity:>4}%",
-    "format-charging": "BAT:{capacity:>4}%",
+    "format": "BAT:{capacity:>4}%-",
+    "format-charging": "BAT:{capacity:>4}%+",
     "format-full": "BAT:{capacity:>4}%"
-  }
+  },
+
+  "bluetooth": {
+	"format": "BLU: {icon}",
+  "format-icons": {
+    "on": "on",
+    "off": "off",
+    "connected": "c",
+    "disabled": "dis"
+  },
+  "format-no-controller": "",
+	"format-connected": "BLU: {num_connections} {icon} ",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t BAT: {device_battery_percentage}%",
+  "on-click": "~/.config/waybar/scripts/bluetooth.sh"
+}
 }

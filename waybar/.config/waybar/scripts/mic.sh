@@ -4,7 +4,7 @@
 status=$(pactl get-source-mute @DEFAULT_SOURCE@ | awk '{print $2}')
 
 if [ "$status" = "yes" ]; then
-    echo "ON"
+    echo "off"
 else
-    echo "OFF"
+    echo "on"
 fi
