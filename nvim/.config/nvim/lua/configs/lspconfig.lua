@@ -11,6 +11,7 @@ local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
 lspconfig.gopls.setup({})
+lspconfig.pyright.setup({})
 
 lspconfig.ts_ls.setup {
   on_attach = on_attach,
