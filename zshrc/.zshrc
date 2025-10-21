@@ -100,6 +100,9 @@ alias wdk="sudo systemctl restart wdkmonad"
 
 alias pdf="zathura"
 
+alias windowss="hyprshot -m window"
+alias monitorss="hyprshot -m monitor"
+alias regionss="hyprshot -m region"
 
 mkdircd() { mkdir "$1" && cd "$1" ; }
 
