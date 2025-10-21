@@ -36,6 +36,7 @@ return {
 
   {
     "lervag/vimtex",
+    lazy = false,
     init = function()
       vim.g.vimtex_view_general_viewer = 'zathura'
       vim.g.vimtex_compiler_latexmk = { aux_dir = '.tex_aux/' }
@@ -89,6 +90,9 @@ return {
         },
         markdown_inline = {
           enable = false
+        },
+        experimental = {
+          check_rtp_message = false
         }
       }
     },
@@ -113,6 +117,11 @@ return {
 
     {
       "bullets-vim/bullets.vim"
+    },
+
+    {
+      "folke/zen-mode.nvim",
+      lazy = false,
     }
   }
 }
