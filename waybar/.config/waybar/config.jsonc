@@ -3,9 +3,9 @@
   "position": "bottom",
   "height": 26,  // Reduced from 24
   "spacing": 0,  // Reduced from 4
-  "modules-right": ["custom/mic", "bluetooth", "network", "tray", "cpu", "memory", "pulseaudio", "battery"],
+  "modules-right": ["tray", "custom/mic", "bluetooth", "network", "cpu", "memory", "pulseaudio", "battery"],
   "modules-center": ["clock"],
-  "modules-left": ["hyprland/workspaces", "custom/windows"],
+  "modules-left": ["hyprland/workspaces", "custom/windows", "hyprland/submap"],
 
   "hyprland/workspaces": {
     "show-special": true,
@@ -21,8 +21,8 @@
       "8": "8",
       "9": "9",
       "10": "10",
-      "special": "S",
-      "default": "󱓻",
+      "special": "",
+      "default": "󰆢",
       "active": ""
     }
   },
@@ -83,18 +83,24 @@
   },
 
   "bluetooth": {
-	"format": "BLU: {icon}",
-  "format-icons": {
-    "on": "on",
-    "off": "off",
-    "connected": "c",
-    "disabled": "dis"
+    "format": "BLU: {icon}",
+    "format-icons": {
+      "on": "on",
+      "off": "off",
+      "connected": "c",
+      "disabled": "dis"
+    },
+    "format-no-controller": "",
+    "format-connected": "BLU: {num_connections} {icon} ",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t BAT: {device_battery_percentage}%",
+    "on-click": "~/.config/waybar/scripts/bluetooth.sh"
   },
-  "format-no-controller": "",
-	"format-connected": "BLU: {num_connections} {icon} ",
-	"tooltip-format": "{controller_alias}\t{controller_address}",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected-battery": "{device_alias}\t BAT: {device_battery_percentage}%",
-  "on-click": "~/.config/waybar/scripts/bluetooth.sh"
-}
+
+  "hyprland/submap": {
+    "format": "{} ",
+    "max-length": 8,
+    "tooltip": false
+  }
 }

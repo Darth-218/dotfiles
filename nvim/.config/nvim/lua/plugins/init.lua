@@ -64,6 +64,7 @@ return {
     name = "barbecue",
     version = "*",
     dependencies = { "SmiteshP/nvim-navic", "nvim-tree/nvim-web-devicons" },
+    lazy = false,
   },
 
   {
@@ -74,54 +75,81 @@ return {
   },
 
   {
-    {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      ft = { "markdown" },
-      build = function() vim.fn["mkdp#util#install"]() end,
-    },
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
 
-    {
-      "OXY2DEV/markview.nvim",
-      lazy = false,
-      opts = {
-        markdown = {
-          enable = false
-        },
-        markdown_inline = {
-          enable = false
-        },
-        experimental = {
-          check_rtp_message = false
-        }
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+    opts = {
+      markdown = {
+        enable = false
+      },
+      markdown_inline = {
+        enable = false
+      },
+      experimental = {
+        check_rtp_message = false
       }
-    },
+    }
+  },
 
-    {
-      'MeanderingProgrammer/render-markdown.nvim',
-      dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
-      opts = require "configs.render-markdown",
-    },
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    opts = require "configs.render-markdown",
+  },
 
-    {
-      "tadmccorkle/markdown.nvim",
-      ft = "markdown",
-      config = function()
-        require('markdown').setup({})
-      end
-    },
+  {
+    "tadmccorkle/markdown.nvim",
+    ft = "markdown",
+    config = function()
+      require('markdown').setup({})
+    end
+  },
 
-    {
-      "dhruvasagar/vim-table-mode"
-    },
+  {
+    "dhruvasagar/vim-table-mode"
+  },
 
-    {
-      "bullets-vim/bullets.vim"
-    },
+  {
+    "bullets-vim/bullets.vim"
+  },
 
-    {
-      "folke/zen-mode.nvim",
-      lazy = false,
+  {
+    "folke/zen-mode.nvim",
+    lazy = false,
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = false,
+  },
+  {
+    "hat0uma/csvview.nvim",
+    opts = {
+      parser = { comments = { "#", "//" } },
+      keymaps = {
+        -- Text objects for selecting fields
+        textobject_field_inner = { "if", mode = { "o", "x" } },
+        textobject_field_outer = { "af", mode = { "o", "x" } },
+        jump_next_field_end = { "<Tab>", mode = { "n", "v" } },
+        jump_prev_field_end = { "<S-Tab>", mode = { "n", "v" } },
+        jump_next_row = { "<Enter>", mode = { "n", "v" } },
+        jump_prev_row = { "<S-Enter>", mode = { "n", "v" } },
+      },
+    },
+    cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
+  },
+  {
+    "michaelrommel/nvim-silicon",
+    lazy = true,
+    cmd = "Silicon",
+    opts = {
+      disable_defaults = true
     }
   }
 }
