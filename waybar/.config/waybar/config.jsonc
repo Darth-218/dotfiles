@@ -5,7 +5,7 @@
   "spacing": 0,  // Reduced from 4
   "modules-right": ["tray", "custom/mic", "bluetooth", "network", "cpu", "memory", "pulseaudio", "battery"],
   "modules-center": ["clock"],
-  "modules-left": ["hyprland/workspaces", "custom/windows", "hyprland/submap"],
+  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
 
   "hyprland/workspaces": {
     "show-special": true,
@@ -42,7 +42,7 @@
   "cpu": {
     "format": "CPU:{usage:>4}%",
     "interval": 1,
-    "on-click": "btop"
+    "on-click": "monitor-center"
   },
 
   "memory": {
@@ -99,7 +99,7 @@
   },
 
   "hyprland/submap": {
-    "format": "{} ",
+    "format": "({}) ",
     "max-length": 8,
     "tooltip": false
   }

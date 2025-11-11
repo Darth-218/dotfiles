@@ -1,7 +1,7 @@
 configuration {
     show-icons: true;
-    display-drun: "launch:";
-    display-run: "run:";
+    display-drun: "";
+    display-run: "";
     display-window: "switch:";
 }
 

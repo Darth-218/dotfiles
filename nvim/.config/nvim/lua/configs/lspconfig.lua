@@ -12,6 +12,7 @@ local util = require "lspconfig/util"
 
 lspconfig.gopls.setup({})
 lspconfig.pyright.setup({})
+-- lspconfig.qmlls.setup({})
 
 lspconfig.ts_ls.setup {
   on_attach = on_attach,
