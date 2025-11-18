@@ -49,12 +49,13 @@ tooltip {
 #custom-mic,
 #tray,
 #bluetooth,
-#custom-windows,
 #submap,
 #workspaces {
   padding: 0px 8px 0px 8px;
 }
 
+#bluetooth:hover,
+#memory:hover,
 #cpu:hover,
 #network:hover,
 #pulseaudio:hover,

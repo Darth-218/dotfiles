@@ -3,7 +3,7 @@
   "position": "bottom",
   "height": 26,  // Reduced from 24
   "spacing": 0,  // Reduced from 4
-  "modules-right": ["tray", "custom/mic", "bluetooth", "network", "cpu", "memory", "pulseaudio", "battery"],
+  "modules-right": ["tray", "network", "custom/mic", "bluetooth", "cpu", "memory", "pulseaudio", "battery"],
   "modules-center": ["clock"],
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
 
@@ -40,26 +40,27 @@
   },
 
   "cpu": {
-    "format": "CPU:{usage:>4}%",
+    "format": "C:{usage:>4}%",
     "interval": 1,
-    "on-click": "monitor-center"
+    "on-click": "missioncenter"
   },
 
   "memory": {
-    "format": "MEM:{percentage:>4}%",
-    "interval": 1
+    "format": "M:{percentage:>4}%",
+    "interval": 1,
+    "on-click": "missioncenter"
   },
 
   "network": {
-    "format-wifi": "WIFI",
-    "format-ethernet": "ETH",
+    "format-wifi": "W",
+    "format-ethernet": "E",
     "format-disconnected": "n/a",
     "tooltip-format": "{ifname}: {essid} {ipaddr}/{cidr}",
-    "on-click": "nmtui"
+    "on-click": "nmgui"
   },
 
   "pulseaudio": {
-    "format": "VOL:{volume:>4}%",
+    "format": "V:{volume:>4}%",
     "format-muted": "MUTE",
     "scroll-step": 1,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
@@ -68,7 +69,7 @@
   "custom/mic": {
     "exec": "~/.config/waybar/scripts/mic.sh",
     "interval": 1,
-    "format": "MIC: {}",
+    "format": "{}",
     "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
   },
 
@@ -77,13 +78,13 @@
       "warning": 25,
       "critical": 15
     },
-    "format": "BAT:{capacity:>4}%-",
-    "format-charging": "BAT:{capacity:>4}%+",
-    "format-full": "BAT:{capacity:>4}%"
+    "format": "B:{capacity:>4}%-",
+    "format-charging": "B:{capacity:>4}%+",
+    "format-full": "B:{capacity:>4}%"
   },
 
   "bluetooth": {
-    "format": "BLU: {icon}",
+    "format": "BT:{icon}",
     "format-icons": {
       "on": "on",
       "off": "off",
@@ -91,7 +92,7 @@
       "disabled": "dis"
     },
     "format-no-controller": "",
-    "format-connected": "BLU: {num_connections} {icon} ",
+    "format-connected": "{num_connections}-{icon} ",
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t BAT: {device_battery_percentage}%",
