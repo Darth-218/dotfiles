@@ -1,0 +1,23 @@
+killall kanata
+sudo kanata -c ~/.config/kanata/config.kbd 
+ls
+fc-list
+fc-list | grep Jet
+fc-list | grep Jet Semi
+fc-list | grep JetBrainsMonoNerdFont-Se
+go install golang.org/x/tools/gopls@latest
+go get -u github.com/dougm/goflymake
+go install -u github.com/dougm/goflymake
+go install github.com/dougm/goflymake
+clear
+cls
+cleare
+clear
+p -S pylsp
+yay pylsp
+cd
+ls
+ls -a
+cd .config/
+ls
+clear
