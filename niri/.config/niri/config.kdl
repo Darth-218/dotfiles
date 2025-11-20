@@ -372,13 +372,13 @@ animations {
 window-rule {
   match title="Ghostty"
   open-on-workspace "Terminal"
-  open-maximized true
+  // open-maximized true
 }
 
 window-rule {
   match title="LibreWolf"
   open-on-workspace "Browser"
-  open-maximized true
+  // open-maximized true
 }
 
 // window-rule {
@@ -479,7 +479,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+N hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
-    Mod+C hotkey-overlay-title="Run Commands" { spawn-sh "rofi -show run"; }
+    Mod+Shift+D hotkey-overlay-title="Run Commands" { spawn-sh "rofi -show run"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -504,6 +504,9 @@ binds {
     // but you need to manually put each argument in separate "" quotes.
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+
+    Mod+Shift+Equal allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    Mod+Shift+Minus allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -696,7 +699,7 @@ binds {
     // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
 
-    Mod+Shift+C { center-column; }
+    Mod+C { center-column; }
 
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
@@ -713,8 +716,8 @@ binds {
     Mod+Ctrl+Equal { set-column-width "+10%"; }
 
     // Finer height adjustments when in column with other windows.
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Ctrl+Shift+Minus { set-window-height "-10%"; }
+    Mod+Ctrl+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+Shift+Space       { toggle-window-floating; }
