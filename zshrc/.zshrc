@@ -68,6 +68,7 @@ export PATH=$PATH:~/go/bin
 
 
 alias p="sudo pacman"
+alias pk="pacseek"
 
 alias gpp="g++"
 alias py="python3 -u"
