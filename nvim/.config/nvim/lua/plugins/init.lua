@@ -144,6 +144,7 @@ return {
     },
     cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
   },
+
   {
     "michaelrommel/nvim-silicon",
     lazy = true,
@@ -151,5 +152,17 @@ return {
     opts = {
       disable_defaults = true
     }
-  }
+  },
+
+  {
+    "akinsho/flutter-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("flutter-tools").setup({
+        lsp = {
+          color = { enabled = true },
+        }
+      })
+    end,
+  },
 }

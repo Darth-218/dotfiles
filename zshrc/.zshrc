@@ -117,6 +117,7 @@ eval "$(oh-my-posh init zsh --config ~/.ohmyposhtheme.omp.json)"
 # bun completions
 [ -s "/home/darth/.local/share/reflex/bun/_bun" ] && source "/home/darth/.local/share/reflex/bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.local/share/reflex/bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+export QT_QPA_PLATFORMTHEME=gtk3
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+

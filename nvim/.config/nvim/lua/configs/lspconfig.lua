@@ -11,8 +11,19 @@ local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
 lspconfig.gopls.setup({})
+
 lspconfig.pyright.setup({})
--- lspconfig.qmlls.setup({})
+
+lspconfig.dartls.setup({
+  cmd = { "dart", "language-server", "--protocol=lsp" }
+})
+
+-- ESLint configuration
+lspconfig.eslint.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+}
 
 lspconfig.ts_ls.setup {
   on_attach = on_attach,
@@ -44,20 +55,3 @@ lspconfig.ts_ls.setup {
     },
   },
 }
-
--- ESLint configuration
-lspconfig.eslint.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-}
-
--- Tailwind CSS (for Next.js)
-lspconfig.tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "html" },
-  root_dir = util.root_pattern("tailwind.config.js", "postcss.config.js"),
-}
-
--- read :h vim.lsp.config for changing options of lsp servers
