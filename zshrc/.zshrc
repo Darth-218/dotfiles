@@ -105,6 +105,8 @@ alias windowss="hyprshot -m window"
 alias monitorss="hyprshot -m monitor"
 alias regionss="hyprshot -m region"
 
+alias hotspot="sudo create_ap wlan0 enp3s0"
+
 mkdircd() { mkdir "$1" && cd "$1" ; }
 
 

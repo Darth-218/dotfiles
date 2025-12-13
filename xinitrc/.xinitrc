@@ -1,7 +1,7 @@
 syncthing --no-browser &
 dunst &
 feh --bg-fill ~/.dotfiles/wallpaper.jpg
-slstatus &
+slstatus & disown &
 xhidecursor &
-picom &
+# picom &
 exec dwm
