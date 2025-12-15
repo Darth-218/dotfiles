@@ -10,6 +10,8 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
+lspconfig.verible.setup({})
+
 lspconfig.gopls.setup({})
 
 lspconfig.pyright.setup({})

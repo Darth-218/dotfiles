@@ -1,5 +1,15 @@
 prefer-no-csd
 
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
+workspace "6"
+workspace "7"
+workspace "8"
+workspace "9"
+
 xwayland-satellite {
     path "/usr/bin/xwayland-satellite"
 }
@@ -58,6 +68,7 @@ layout {
 }
 
 spawn-at-startup "syncthing --no-browser"
+spawn-at-startup "swaybg -i ~/the-duat/Media/Images/Wallpapers/blackwaves.jpg"
 
 hotkey-overlay {
     skip-at-startup
@@ -168,7 +179,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+N hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+D hotkey-overlay-title="Applications Launcher" { spawn-sh "rofi -show run"; }
+    Mod+D hotkey-overlay-title="Applications Launcher" { spawn-sh "rofi -show combi -modes combi -combi-modes \"window,drun\""; }
+    Mod+P hotkey-overlay-title="Applications Launcher" { spawn "wmenu-run"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%"; }
@@ -202,10 +214,10 @@ binds {
     Mod+Shift+K     { move-window-up; }
     Mod+Shift+L     { move-column-right; }
 
-    Mod+Ctrl+comma     { focus-monitor-left; }
-    Mod+Ctrl+Ctrl+J     { focus-monitor-down; }
-    Mod+Ctrl+Ctrl+K     { focus-monitor-up; }
-    Mod+Ctrl+period     { focus-monitor-right; }
+    Mod+Ctrl+H     { focus-monitor-left; }
+    Mod+Ctrl+J     { focus-monitor-down; }
+    Mod+Ctrl+K     { focus-monitor-up; }
+    Mod+Ctrl+L     { focus-monitor-right; }
 
     Mod+Shift+comma     { move-column-to-monitor-left; }
     // Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
@@ -242,7 +254,7 @@ binds {
     Mod+U { focus-workspace 7; }
     Mod+I { focus-workspace 8; }
     Mod+O { focus-workspace 9; }
-    Mod+P { focus-workspace 10; }
+    // Mod+P { focus-workspace 10; }
 
     Mod+Shift+Q { move-window-to-workspace 1; }
     Mod+Shift+W { move-window-to-workspace 2; }
@@ -253,7 +265,7 @@ binds {
     Mod+Shift+U { move-window-to-workspace 7; }
     Mod+Shift+I { move-window-to-workspace 8; }
     Mod+Shift+O { move-window-to-workspace 9; }
-    Mod+Shift+P { move-window-to-workspace 10; }
+    // Mod+Shift+P { move-window-to-workspace 10; }
 
     Mod+Tab { focus-workspace-previous; }
 

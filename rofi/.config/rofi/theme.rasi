@@ -22,8 +22,9 @@ configuration {
 window {
     location: center;
     width: 40%;
-    border: 0px;
+    border: 1px;
     border-radius: 8px;
+    border-color: #ffffff;
     padding: 20px;
     background-color: @bg0;
 }
@@ -51,7 +52,7 @@ entry {
 listview {
     padding: 10px 0;
     lines: 8;
-    columns: 1;
+    columns: 2;
     fixed-height: true;
     dynamic: true;
     scrollbar: false;
@@ -72,6 +73,8 @@ element selected {
     background-color: #ffffff22;
     text-color: @accent;
     font-weight: bold;
+    border-color: #ffffff;
+    border: 1px;
 }
 
 element-icon {
