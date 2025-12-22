@@ -67,6 +67,7 @@ layout {
     }
 }
 
+spawn-at-startup "mako"
 spawn-at-startup "syncthing --no-browser"
 spawn-at-startup "swaybg -i ~/the-duat/Media/Images/Wallpapers/blackwaves.jpg"
 
