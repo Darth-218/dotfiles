@@ -221,6 +221,8 @@ binds {
     Mod+M        allow-when-locked=true { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle"; }
     Mod+Shift+M     allow-when-locked=true { spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle"; }
 
+    Mod+S {spawn "~/.scripts/stats-notifications.sh";}
+
     Mod+Shift+B {spawn-sh "~/.local/bin/toggle-waybar";}
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
