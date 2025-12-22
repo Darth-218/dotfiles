@@ -1,36 +1,18 @@
 {
   "layer": "top",
-  "position": "bottom",
-  "height": 26,  // Reduced from 24
-  "spacing": 0,  // Reduced from 4
+  "position": "top",
+  "height": 26,
+  "spacing": 0,
   "modules-right": ["tray", "network", "custom/mic", "bluetooth", "cpu", "memory", "pulseaudio", "battery"],
   "modules-center": ["clock"],
-  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+  // "modules-left": ["custom/workspaces"],
 
-  "hyprland/workspaces": {
-    "show-special": true,
-    "format": "{icon}",
-    "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10",
-      "special": "",
-      "default": "󰆢",
-      "active": ""
-    }
-  },
-
-  "custom/windows": {
+  "custom/workspaces": {
     "format": "[{}]",
     "interval": 0.5,
-    "exec": "~/.config/waybar/scripts/windows.sh"
+    "exec": "~/.config/waybar/scripts/workspaces.py",
+    "return-type": "json",
+    "tooltip": true
   },
 
   "clock": {
@@ -84,7 +66,7 @@
   },
 
   "bluetooth": {
-    "format": "BT:{icon}",
+    "format": "BT: {icon}",
     "format-icons": {
       "on": "on",
       "off": "off",
@@ -97,11 +79,5 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t BAT: {device_battery_percentage}%",
     "on-click": "~/.config/waybar/scripts/bluetooth.sh"
-  },
-
-  "hyprland/submap": {
-    "format": "({}) ",
-    "max-length": 8,
-    "tooltip": false
   }
 }

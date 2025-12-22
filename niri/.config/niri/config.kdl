@@ -175,6 +175,13 @@ window-rule {
     clip-to-geometry true
 }
 
+recent-windows {
+  binds {
+    Mod+Z { next-window; }
+    Mod+Shift+Z { previous-window; }
+  }
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -182,17 +189,19 @@ binds {
     Mod+D hotkey-overlay-title="Applications Launcher" { spawn-sh "rofi -show combi -modes combi -combi-modes \"window,drun\""; }
     Mod+P hotkey-overlay-title="Applications Launcher" { spawn "wmenu-run"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Shift+F12 hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle"; }
+    F8 allow-when-locked=true {spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle";}
 
     Mod+Equal allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%"; }
     Mod+Minus allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%"; }
     Mod+M        allow-when-locked=true { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle"; }
     Mod+Shift+M     allow-when-locked=true { spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle"; }
 
-    Mod+Shift+B {spawn-sh "dms ipc call bar toggle";}
+    Mod+Shift+B {spawn-sh "~/.local/bin/toggle-waybar";}
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
