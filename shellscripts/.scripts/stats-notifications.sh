@@ -3,7 +3,7 @@
 # -------------------------
 # Time / Date
 # -------------------------
-TIME="$(date '+%Y-%m-%d %H:%M')"
+TIME="$(date '+%d-%m-%Y %H:%M')"
 
 # -------------------------
 # Battery
@@ -75,17 +75,11 @@ VPN=$(ip link show tun0 2>/dev/null | grep -q "state UP" && echo "vpn:up" || ech
 # -------------------------
 # Compose notification text
 # -------------------------
-TEXT="$NET
+TEXT="$TIME
+$NET
+$VOL
 $BAT
-vol:$VOL
-$BRIGHT
-kbd:$KBD
-cpu:$CPU
-mem:$MEM 
-Load:$LOAD
-Disk: /:$ROOT_DISK ~/:$HOME_DISK
-VPN: $VPN
-$TIME"
+"
 
 # -------------------------
 # Send notification

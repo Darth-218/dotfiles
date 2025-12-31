@@ -5,7 +5,6 @@
   "spacing": 0,
   "modules-right": ["tray", "network", "custom/mic", "bluetooth", "cpu", "memory", "pulseaudio", "battery"],
   "modules-center": ["clock"],
-  // "modules-left": ["custom/workspaces"],
 
   "custom/workspaces": {
     "format": "[{}]",
