@@ -8,7 +8,7 @@ TIME="$(date '+%d-%m-%Y %H:%M')"
 # -------------------------
 # Battery
 # -------------------------
-BAT_PATH="/sys/class/power_supply/BAT0"
+BAT_PATH="/sys/class/power_supply/BAT1"
 if [ -d "$BAT_PATH" ]; then
     BAT_CAP=$(cat "$BAT_PATH/capacity")
     BAT_STAT=$(cat "$BAT_PATH/status")
@@ -77,8 +77,8 @@ VPN=$(ip link show tun0 2>/dev/null | grep -q "state UP" && echo "vpn:up" || ech
 # -------------------------
 TEXT="$TIME
 $NET
-$VOL
 $BAT
+$VOL
 "
 
 # -------------------------
