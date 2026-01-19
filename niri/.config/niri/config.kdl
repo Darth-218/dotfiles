@@ -35,7 +35,7 @@ output "HDMI-A-1" {
 }
 
 layout {
-    gaps 5
+    gaps 7
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -46,15 +46,18 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        off
-        width 1
+        // off
+        width 2
+        // active-color "#b395eb"
         active-color "#ffffff"
+        inactive-color "#50505000"
+        urgent-color "#9b0000"
     }
 
     border {
         // off
-        width 1.5
-        active-color "#ffffff"
+        width 2
+        active-color "#262626"
         inactive-color "#505050"
         urgent-color "#9b0000"
     }
@@ -68,8 +71,8 @@ layout {
 }
 
 spawn-at-startup "mako"
-spawn-at-startup "syncthing --no-browser"
-spawn-at-startup "swaybg -i ~/the-duat/Media/Images/Wallpapers/blackwaves.jpg"
+spawn-sh-at-startup "syncthing --no-browser"
+spawn-sh-at-startup "swaybg -i ~/the-duat/Media/Images/Wallpapers/great-waves.png"
 
 hotkey-overlay {
     skip-at-startup
@@ -78,7 +81,7 @@ hotkey-overlay {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    off
+    // off
 
     workspace-switch {
         spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
@@ -145,7 +148,17 @@ window-rule {
 }
 
 window-rule {
+  match title="Vesktop"
+  open-on-workspace "3"
+}
+
+window-rule {
   match title="LibreWolf"
+  open-on-workspace "2"
+}
+
+window-rule {
+  match title="Zen"
   open-on-workspace "2"
 }
 
@@ -157,6 +170,18 @@ window-rule {
 window-rule {
   match title="Dolphin"
   open-on-workspace "4"
+}
+
+window-rule {
+  match title="Bluetooth Devices"
+  match title="Volume Control"
+  match title="File Upload"
+  match title="Qalculate!"
+  match title="KeePassXC"
+  open-floating true
+
+  max-height 700
+  min-height 700
 }
 
 window-rule {
@@ -223,8 +248,6 @@ binds {
     Mod+Shift+M     allow-when-locked=true { spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle"; }
 
     Mod+S {spawn "~/.scripts/stats-notifications.sh";}
-
-    Mod+Shift+B {spawn-sh "~/.local/bin/toggle-waybar";}
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
