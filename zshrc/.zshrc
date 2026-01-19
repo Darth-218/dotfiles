@@ -68,6 +68,9 @@ export PATH=$PATH:~/go/bin
 
 
 alias p="sudo pacman"
+alias y="yay"
+alias pn="sudo pacman --noconfirm"
+alias yn="yay --noconfirm"
 alias pk="pacseek"
 
 alias gpp="g++"
