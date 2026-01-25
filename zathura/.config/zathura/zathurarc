@@ -1,5 +1,8 @@
 set selection-clipboard clipboard
 
+map e navigate next
+map w navigate previous
+
 map j navigate next
 map k navigate previous
 

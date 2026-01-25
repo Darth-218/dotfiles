@@ -1,7 +1,6 @@
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 
-
 if tmux info &> /dev/null; then 
   if ! [ -n "$TMUX" ]; then
     tmux attach;
@@ -13,7 +12,6 @@ else
   tmux;
   echo "starting tmux..."
 fi
-
 
 # Setting a default directory for zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -34,6 +32,8 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+enable-fzf-tab
 
 # History
 HISTSIZE=2500
@@ -57,6 +57,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+
+eval "$(oh-my-posh init zsh --config ~/.ohmyposhtheme.omp.json)"
 
 
 export SUDO_EDITOR=/usr/bin/nvim
@@ -102,27 +105,21 @@ alias internet="watch -n 0.5 lsof -i"
 alias k="sudo systemctl restart kmonad"
 alias wdk="sudo systemctl restart wdkmonad"
 
-alias pdf="zathura"
-
-alias windowss="hyprshot -m window"
-alias monitorss="hyprshot -m monitor"
-alias regionss="hyprshot -m region"
-
 alias hotspot="sudo create_ap wlan0 enp3s0"
 
 mkdircd() { mkdir "$1" && cd "$1" ; }
 
+fpdf() {
+  local file
 
-[ -f ~/.fzf.zsh ]&& source ~/.fzf.zsh
+  if [[ $# -eq 0 ]]; then
+    file=$(find . -type f -name "*.pdf" | fzf)
+    [[ -z "$file" ]] && return
+  else
+    file="$1"
+  fi
 
-enable-fzf-tab
+  zathura "$file" &>/dev/null &
 
-eval "$(oh-my-posh init zsh --config ~/.ohmyposhtheme.omp.json)"
-
-# bun completions
-[ -s "/home/darth/.local/share/reflex/bun/_bun" ] && source "/home/darth/.local/share/reflex/bun/_bun"
-
-export QT_QPA_PLATFORMTHEME=gtk3
-export ANDROID_HOME=/opt/android-sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
-
+  disown
+}
