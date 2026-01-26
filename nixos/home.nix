@@ -39,6 +39,7 @@ in
 		enable = true;
 		shellAliases = {
 			nixswitch = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#deathstar";
+			lg = "lazygit";
 		};
 	};
 	

@@ -7,5 +7,6 @@
     keepassxc
     wmenu
     rofi
+    swaybg
   ];
 }

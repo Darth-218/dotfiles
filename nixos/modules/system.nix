@@ -12,6 +12,8 @@
     bluez
     blueman
     efibootmgr
+    sesh
+    lazygit
     linux-wifi-hotspot
     python315
     zoxide
