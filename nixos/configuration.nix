@@ -1,10 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -30,7 +34,10 @@
 
   users.users.darth = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "uinput" ];
+    extraGroups = [
+      "wheel"
+      "uinput"
+    ];
     packages = with pkgs; [
       tree
     ];
@@ -51,8 +58,10 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   system.stateVersion = "25.11"; # NEVER EVER CHANGE
 }
-
