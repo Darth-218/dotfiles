@@ -10,7 +10,7 @@ let
 		kmonad = "kmonad/.config/kmonad";
 		ghostty = "ghostty/.config/ghostty";
 		tmux = "tmux/.config/tmux";
-	#	git = "git/.config/git";
+		git = "git/.config/git";
 	};
 in
 
@@ -25,26 +25,16 @@ in
 	home.homeDirectory = "/home/darth";
 	home.stateVersion = "25.11";
 
-	programs.git = {
-		enable = true;
-		settings = {
-			user = {
-				name = "Yahia Gaber";
-				email = "yahia.hany.gaber@proton.me";
-			};
-		};
-	};
+    programs.bash = {
+      enable = true;
+      shellAliases = {
+        nixswitch = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#deathstar";
+        lg = "lazygit";
+      };
+    };
 
-	programs.bash = {
-		enable = true;
-		shellAliases = {
-			nixswitch = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#deathstar";
-			lg = "lazygit";
-		};
-	};
-	
-	xdg.configFile = builtins.mapAttrs (name: subpath: {
-		source = create_symlink "${dotfiles}/${subpath}";
-		recursive = true;
-	}) configs;
-}
+    xdg.configFile = builtins.mapAttrs (name: subpath: {
+        source = create_symlink "${dotfiles}/${subpath}";
+        recursive = true;
+        }) configs;
+  }
