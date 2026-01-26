@@ -72,7 +72,7 @@ layout {
 
 spawn-at-startup "mako"
 spawn-sh-at-startup "syncthing --no-browser"
-spawn-sh-at-startup "swaybg -i ~/the-duat/Media/Images/Wallpapers/great-waves.png"
+spawn-sh-at-startup "swaybg -i ~/.dotfiles/wallpaper.png"
 
 hotkey-overlay {
     skip-at-startup
