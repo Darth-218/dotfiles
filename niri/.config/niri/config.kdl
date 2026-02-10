@@ -81,7 +81,7 @@ hotkey-overlay {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    // off
+    off
 
     workspace-switch {
         spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
@@ -217,7 +217,7 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 1
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 
@@ -234,6 +234,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+N hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+B hotkey-overlay-title="Open a Terminal: ghostty" { spawn "librewolf"; }
     Mod+D hotkey-overlay-title="Applications Launcher" { spawn-sh "rofi -show combi -modes combi -combi-modes \"window,drun\""; }
     Mod+P hotkey-overlay-title="Applications Launcher" { spawn "wmenu-run"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
