@@ -30,14 +30,6 @@ in
   home.homeDirectory = "/home/darth";
   home.stateVersion = "25.11";
 
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      nixswitch = "sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#deathstar";
-      lg = "lazygit";
-    };
-  };
-
   xdg.configFile = builtins.mapAttrs (name: subpath: {
     source = create_symlink "${dotfiles}/${subpath}";
     recursive = true;

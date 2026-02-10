@@ -13,5 +13,10 @@
     wmenu
     rofi
     swaybg
+    zathura
+    libreoffice
+    pulseaudio
+    swaylock
+    nomacs
   ];
 }

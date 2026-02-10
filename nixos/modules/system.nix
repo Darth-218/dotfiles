@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     kmonad
     tmux
+    fzf
     gcc
     syncthing
     keepassxc-go
@@ -22,5 +23,7 @@
     linux-wifi-hotspot
     python315
     zoxide
+    unzip
+    putty
   ];
 }
