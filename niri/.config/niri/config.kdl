@@ -5,10 +5,6 @@ workspace "2"
 workspace "3"
 workspace "4"
 workspace "5"
-workspace "6"
-workspace "7"
-workspace "8"
-workspace "9"
 
 xwayland-satellite {
     path "/usr/bin/xwayland-satellite"
@@ -178,6 +174,7 @@ window-rule {
   match title="File Upload"
   match title="Qalculate!"
   match title="KeePassXC"
+  // match title="Btop" // FIX
   open-floating true
 
   max-height 700
