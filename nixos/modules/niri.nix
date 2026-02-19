@@ -7,16 +7,22 @@
 
 {
   home.packages = with pkgs; [
-    xwayland-satellite
-    librewolf
+    ghostty
     keepassxc
-    wmenu
+    libnotify
+    libreoffice
+    librewolf
+    mako
+    mpv
+    nomacs
+    pulseaudio
     rofi
     swaybg
-    zathura
-    libreoffice
-    pulseaudio
     swaylock
-    nomacs
+    syncplay
+    vlc
+    wmenu
+    xwayland-satellite
+    zathura
   ];
 }

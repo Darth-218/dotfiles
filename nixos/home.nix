@@ -9,21 +9,23 @@ let
   dotfiles = "${config.home.homeDirectory}/.dotfiles";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
-    nvim = "nvim/.config/nvim";
-    niri = "niri/.config/niri";
-    rofi = "rofi/.config/rofi";
-    kmonad = "kmonad/.config/kmonad";
     ghostty = "ghostty/.config/ghostty";
-    tmux = "tmux/.config/tmux";
     git = "git/.config/git";
+    kmonad = "kmonad/.config/kmonad";
+    mako = "mako/.config/mako";
+    niri = "niri/.config/niri";
+    nvim = "nvim/.config/nvim";
+    rofi = "rofi/.config/rofi";
+    tmux = "tmux/.config/tmux";
   };
 in
 
 {
   imports = [
-    ./modules/system.nix
     ./modules/neovim.nix
     ./modules/niri.nix
+    ./modules/system.nix
+    ./modules/virtualization.nix
   ];
 
   home.username = "darth";

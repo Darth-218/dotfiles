@@ -37,6 +37,7 @@
     extraGroups = [
       "wheel"
       "uinput"
+      "libvirtd"
     ];
     packages = with pkgs; [
       tree
@@ -44,14 +45,17 @@
   };
 
   programs.niri.enable = true;
+  programs.xwayland.enable = true;
   programs.firefox.enable = true;
+
+  virtualisation.libvirtd.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
     wget
-    kmonad
     git
-    ghostty
+    kmonad
+    gnumake
   ];
 
   fonts.packages = with pkgs; [
@@ -62,6 +66,12 @@
     "nix-command"
     "flakes"
   ];
+
+  nix = {
+    settings = {
+      max-jobs = 2;
+    };
+  };
 
   system.stateVersion = "25.11"; # NEVER EVER CHANGE
 }
