@@ -1,5 +1,6 @@
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
+eval "$(oh-my-posh init bash --config ~/.dotfiles/oh-my-posh/.ohmyposhtheme.omp.json)"
 
 # if command -v tmux >/dev/null 2>&1; then
 #   if tmux info &>/dev/null; then

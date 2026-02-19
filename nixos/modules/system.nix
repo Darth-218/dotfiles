@@ -21,6 +21,7 @@
     sesh
     lazygit
     linux-wifi-hotspot
+    oh-my-posh
     python315
     zoxide
     unzip

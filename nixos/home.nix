@@ -17,6 +17,7 @@ let
     nvim = "nvim/.config/nvim";
     rofi = "rofi/.config/rofi";
     tmux = "tmux/.config/tmux";
+    zathura = "zathura/.config/zathura";
   };
 in
 
