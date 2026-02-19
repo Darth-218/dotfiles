@@ -1,19 +1,19 @@
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 
-if command -v tmux >/dev/null 2>&1; then
-  if tmux info &>/dev/null; then
-    if [ -z "$TMUX" ]; then
-      echo "attaching to tmux..."
-      tmux attach || tmux
-    else
-      echo "in tmux..."
-    fi
-  else
-    echo "starting tmux..."
-    tmux
-  fi
-fi
+# if command -v tmux >/dev/null 2>&1; then
+#   if tmux info &>/dev/null; then
+#     if [ -z "$TMUX" ]; then
+#       echo "attaching to tmux..."
+#       tmux attach || tmux
+#     else
+#       echo "in tmux..."
+#     fi
+#   else
+#     echo "starting tmux..."
+#     tmux
+#   fi
+# fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
