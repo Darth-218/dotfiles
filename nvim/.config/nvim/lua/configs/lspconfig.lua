@@ -18,6 +18,8 @@ lspconfig.pyright.setup({})
 
 lspconfig.nil_ls.setup({})
 
+lspconfig.clangd.setup({})
+
 lspconfig.dartls.setup({
   cmd = { "dart", "language-server", "--protocol=lsp" }
 })

@@ -7,24 +7,25 @@
 
 {
   home.packages = with pkgs; [
-    kmonad
-    tmux
-    fzf
-    gcc
-    syncthing
-    keepassxc-go
+    blueman
+    bluez
     brightnessctl
     btop
-    bluez
-    blueman
     efibootmgr
-    sesh
+    fzf
+    gcc
+    go
+    keepassxc-go
+    kmonad
     lazygit
     linux-wifi-hotspot
     oh-my-posh
-    python315
-    zoxide
-    unzip
     putty
+    python315
+    sesh
+    syncthing
+    tmux
+    unzip
+    zoxide
   ];
 }

@@ -25,6 +25,8 @@
   #     fsType = "ext4";
   #   };
 
+  services.printing.enable = true;
+
   services.openssh.enable = true;
   services.displayManager.ly.enable = true;
   services.pipewire = {
@@ -56,6 +58,7 @@
     git
     kmonad
     gnumake
+    system-config-printer
   ];
 
   fonts.packages = with pkgs; [

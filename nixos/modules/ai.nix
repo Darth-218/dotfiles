@@ -7,8 +7,6 @@
 
 {
   home.packages = with pkgs; [
-    podman
-    qemu
-    virt-manager
+    opencode
   ];
 }

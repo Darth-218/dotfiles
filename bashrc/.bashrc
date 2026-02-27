@@ -60,6 +60,8 @@ alias hotspot="sudo create_ap wlp4s0 enp3s0"
 
 alias nixswitch="sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#deathstar"
 
+alias xv6="podman exec -it xv6-debian bash -c 'cd /xv6-container && exec bash'"
+
 mkdircd() {
   mkdir -p "$1" && cd "$1" || return
 }

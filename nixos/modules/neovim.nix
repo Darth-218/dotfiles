@@ -12,12 +12,13 @@
   programs.neovim.defaultEditor = true;
 
   home.packages = with pkgs; [
-    ripgrep
+    cargo
     fd
     lua-language-server
     nil
     nixpkgs-fmt
     nodejs
+    ripgrep
     tree-sitter
   ];
 
