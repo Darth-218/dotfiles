@@ -1,6 +1,5 @@
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
-eval "$(oh-my-posh init bash --config ~/.dotfiles/oh-my-posh/.ohmyposhtheme.omp.json)"
 
 # if command -v tmux >/dev/null 2>&1; then
 #   if tmux info &>/dev/null; then
@@ -17,6 +16,8 @@ eval "$(oh-my-posh init bash --config ~/.dotfiles/oh-my-posh/.ohmyposhtheme.omp.
 # fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export PS1='[\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]]$ '
 
 HISTSIZE=2500
 HISTFILE=~/.bash_history
@@ -60,7 +61,7 @@ alias hotspot="sudo create_ap wlp4s0 enp3s0"
 
 alias nixswitch="sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#deathstar"
 
-alias xv6="podman exec -it xv6-debian bash -c 'cd /xv6-container && exec bash'"
+alias xv6="podman exec -it xv6-debian bash -c 'cd /xv6-container/xv6 && exec bash'"
 
 mkdircd() {
   mkdir -p "$1" && cd "$1" || return

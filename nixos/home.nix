@@ -27,6 +27,7 @@ in
     ./modules/niri.nix
     ./modules/system.nix
     ./modules/virtualization.nix
+    ./modules/ai.nix
   ];
 
   home.username = "darth";

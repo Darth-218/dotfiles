@@ -19,7 +19,6 @@
     kmonad
     lazygit
     linux-wifi-hotspot
-    oh-my-posh
     putty
     python315
     sesh
