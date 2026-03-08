@@ -25,7 +25,23 @@
   #     fsType = "ext4";
   #   };
 
+  hardware.graphics.enable = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    open = true;
+
+    modesetting.enable = true;
+
+    nvidiaSettings = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
   services.printing.enable = true;
+
+  services.tailscale.enable = true;
 
   services.openssh.enable = true;
   services.displayManager.ly.enable = true;
@@ -51,6 +67,8 @@
   programs.firefox.enable = true;
 
   virtualisation.libvirtd.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     vim
