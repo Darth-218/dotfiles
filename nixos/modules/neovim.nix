@@ -20,6 +20,7 @@
     nodejs
     ripgrep
     tree-sitter
+    texlive.combined.scheme-full
   ];
 
 }
