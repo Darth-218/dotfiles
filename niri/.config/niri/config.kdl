@@ -220,9 +220,9 @@ window-rule {
 
 recent-windows {
   binds {
-    Mod+Z { next-window; }
+    Mod+A { next-window; }
     // Mod+semi-Colon { next-window; }
-    Mod+Shift+Z { previous-window; }
+    Mod+Shift+A { previous-window; }
     // Mod+Shift+Z { previous-window; }
   }
 }
@@ -255,7 +255,7 @@ binds {
     Mod+Shift+Equal allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     Mod+Shift+Minus allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    Mod+A repeat=false { toggle-overview; }
+    Mod+Z repeat=false { toggle-overview; }
 
     Mod+Shift+X repeat=false { close-window; }
 
