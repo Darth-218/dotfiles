@@ -15,6 +15,7 @@
     fzf
     gcc
     go
+    nerd-fonts.jetbrains-mono
     keepassxc-go
     kmonad
     lazygit
@@ -23,6 +24,7 @@
     python315
     sesh
     syncthing
+    tailscale
     tmux
     unzip
     zoxide
