@@ -47,8 +47,9 @@ gtk-titlebar = false
 title = "Ghostty"
 
 # Font
-font-size = 10
-font-family = JetBrainsMono
+font-size = 13
+font-family = JetBrainsMono Nerd Font
+
 
 # Terminal colors
 background = #000000
