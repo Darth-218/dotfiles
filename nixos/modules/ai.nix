@@ -7,7 +7,7 @@
 
 {
   home.packages = with pkgs; [
-    opencode
     ollama
+    opencode
   ];
 }

@@ -1,0 +1,74 @@
+(defcfg
+  input (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  output (uinput-sink "Laptop kmonand output")
+  fallthrough true
+  allow-cmd false
+)
+
+(defalias
+  mod (layer-toggle mods)
+  num (layer-toggle numbers)
+  def (layer-switch default)
+  bse (layer-switch base)
+)
+
+(defalias
+  a-l (tap-hold 200 a @num)
+  cl-l (tap-hold 200 ; @num)
+  v-l (tap-hold 200 v @mod)
+  m-l (tap-hold 200 m @mod)
+  cm-l (tap-hold 200 , @num)
+  ctl (tap-hold 200 @def rctl)
+  sp-l (tap-hold 200 spc @mod)
+)
+
+(defalias
+  s-b (tap-hold 200 s lshift)
+  d-b (tap-hold 200 d lmet)
+  f-b (tap-hold 200 f lctrl)
+  g-b (tap-hold 200 g lalt)
+  h-b (tap-hold 200 h lalt)
+  j-b (tap-hold 200 j lctrl)
+  k-b (tap-hold 200 k lmet)
+  l-b (tap-hold 200 l lshift)
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rctl
+)
+
+(deflayer base
+  caps _    _    _    _    _    _    _    _     _    _    _    _    bspc
+  _    q    w    e    r    t    y    u    i     o    p    _    _    _ 
+  esc  @a-l @s-b @d-b @f-b g    h    @j-b @k-b  @l-b @cl-l _   _ 
+  _    z    x    c    @v-l b    n    @m-l ,     .    /    _ 
+  _    _    _              @sp-l          _     @def
+)
+
+(deflayer numbers
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    1    2    3    4    5    6    7    8    9    0    _    _    _
+  _    !    @    #    $    %    ^    &    *   \(   \)    _    _
+  _    `    _    _    _    _    -    =    [    ]    \    _
+  _    _    _              _              _    _
+)
+
+(deflayer mods
+  _    _    _    _    _    _    _    _    _    _     _    _    _    _
+  _    tab  _    _    _    _    _    _    _    bspc  del  _    _    _ 
+  _    esc  _    _    _    _    left down up   right ret  _    _ 
+  _    caps _    _    ret  _    _    ret  _    _     ralt _
+  _    lctl _              _              _    _
+)
+
+(deflayer default
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc   a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctrl lmet lalt           spc            ralt @bse
+)

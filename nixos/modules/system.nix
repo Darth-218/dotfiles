@@ -15,11 +15,11 @@
     fzf
     gcc
     go
-    nerd-fonts.jetbrains-mono
     keepassxc-go
     kmonad
     lazygit
     linux-wifi-hotspot
+    nerd-fonts.jetbrains-mono
     putty
     python315
     sesh

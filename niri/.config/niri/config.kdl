@@ -235,6 +235,7 @@ binds {
     Mod+D hotkey-overlay-title="Applications Launcher" { spawn-sh "rofi -show combi -modes combi -combi-modes \"window,drun\""; }
     Mod+P hotkey-overlay-title="Applications Launcher" { spawn "wmenu-run"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Alt+S hotkey-overlay-title="Suspend" { spawn-sh "systemctl suspend"; }
     Shift+F12 hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%"; }

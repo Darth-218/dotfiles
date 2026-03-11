@@ -19,8 +19,8 @@
     nixpkgs-fmt
     nodejs
     ripgrep
-    tree-sitter
     texlive.combined.scheme-full
+    tree-sitter
   ];
 
 }

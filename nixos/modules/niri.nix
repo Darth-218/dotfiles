@@ -20,6 +20,7 @@
     swaybg
     swaylock
     syncplay
+    vesktop
     vlc
     wmenu
     xwayland-satellite

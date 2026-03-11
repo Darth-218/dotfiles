@@ -56,7 +56,8 @@ alias wdk="sudo systemctl restart wdkmonad"
 
 alias hotspot="sudo create_ap wlp4s0 enp3s0"
 
-alias nixswitch="sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#deathstar"
+alias nsw="sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#deathstar"
+alias nsh="nix-shell"
 
 alias xv6="podman exec -it xv6-debian bash -c 'cd /xv6-container/xv6 && exec bash'"
 

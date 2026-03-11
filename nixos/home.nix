@@ -23,11 +23,11 @@ in
 
 {
   imports = [
+    ./modules/ai.nix
     ./modules/neovim.nix
     ./modules/niri.nix
     ./modules/system.nix
     ./modules/virtualization.nix
-    ./modules/ai.nix
   ];
 
   home.username = "darth";
