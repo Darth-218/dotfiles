@@ -14,12 +14,14 @@
     efibootmgr
     fzf
     gcc
+    gdb
     go
     keepassxc-go
     kmonad
     lazygit
     linux-wifi-hotspot
     nerd-fonts.jetbrains-mono
+    progress
     putty
     python315
     sesh

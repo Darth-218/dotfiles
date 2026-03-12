@@ -7,6 +7,7 @@
 
 {
   home.packages = with pkgs; [
+    blender
     ghostty
     keepassxc
     libnotify
@@ -20,6 +21,7 @@
     swaybg
     swaylock
     syncplay
+    tuxguitar
     vesktop
     vlc
     wmenu
