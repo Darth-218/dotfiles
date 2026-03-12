@@ -26,6 +26,7 @@
     python315
     sesh
     syncthing
+    system-config-printer
     tailscale
     tmux
     unzip

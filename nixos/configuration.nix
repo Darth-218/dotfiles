@@ -17,16 +17,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "deathstar";
-
   networking.networkmanager.enable = true;
+
   hardware.bluetooth.enable = true;
 
   time.timeZone = "Africa/Cairo";
-
-  # fileSystems."/mnt" =
-  #   { device = "/dev/disk/by-uuid/6bc46aca-3150-4c01-9a67-68cf5fe3346f";
-  #     fsType = "ext4";
-  #   };
 
   programs.niri.enable = true;
   programs.xwayland.enable = true;
@@ -40,22 +35,19 @@
     vim
     wget
     git
-    kmonad
     gnumake
-    system-config-printer
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
   nix = {
     settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       max-jobs = 2;
     };
   };
