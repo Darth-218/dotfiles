@@ -1,0 +1,43 @@
+IGNORE_PATTERNS=(
+    ".git"
+    ".venv"
+    "venv"
+    "env"
+    "__pycache__"
+    "node_modules"
+    ".tox"
+    ".pytest_cache"
+    ".mypy_cache"
+    ".cache"
+    "dist"
+    "build"
+    "*.egg-info"
+    ".svn"
+    ".hg"
+    "target"
+    ".idea"
+    ".vscode"
+)
+
+IGNORE_ARGS=()
+for pattern in "${IGNORE_PATTERNS[@]}"; do
+    IGNORE_ARGS+=( -not -path "*/$pattern/*" -not -path "*/$pattern" )
+done
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <directory> [depth]"
+    exit 1
+fi
+
+dir="$1"
+depth="${2:-4}"
+
+if [ ! -d "$dir" ]; then
+    echo "Error: $dir is not a directory"
+    exit 1
+fi
+
+find "$dir" -mindepth 1 -maxdepth "$depth" -type d "${IGNORE_ARGS[@]}" | while read -r subdir; do
+    echo "Adding: $subdir"
+    zoxide add "$subdir"
+done
