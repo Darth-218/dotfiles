@@ -19,13 +19,20 @@ fi
 # Volume (PipeWire / PulseAudio)
 # -------------------------
 if command -v wpctl >/dev/null 2>&1; then
-    VOL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null | awk '{printf "vol: %d%%", $2 * 100}')
-    MUTE=$(wpctl get-mute @DEFAULT_AUDIO_SINK@ 2>/dev/null)
-    [ "$MUTE" = "yes" ] && VOL="vol: muted"
+    VOL_VAL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null | awk '{printf "%d", $2 * 100}')
+    SINK_MUTE=$(pactl get-sink-mute @DEFAULT_SINK@ 2>/dev/null | awk '{print $2}')
+    MIC_MUTE=$(pactl get-source-mute @DEFAULT_SOURCE@ 2>/dev/null | awk '{print $2}')
+    [ "$SINK_MUTE" = "yes" ] && VOL="vol: ${VOL_VAL}% (muted)" || VOL="vol: ${VOL_VAL}%"
+    [ "$MIC_MUTE" = "yes" ] && MIC="mic: off" || MIC="mic: on"
+    VOL="$VOL, $MIC"
 elif command -v pamixer >/dev/null 2>&1; then
-    VOL="vol: $(pamixer --get-volume-human)"
+    VOL_VAL=$(pamixer --get-volume)
+    MIC_MUTE=$(pamixer --default-source --get-mute 2>/dev/null)
+    [ "$(pamixer --get-mute)" = "true" ] && VOL="vol: ${VOL_VAL}% (muted)" || VOL="vol: ${VOL_VAL}%"
+    [ "$MIC_MUTE" = "true" ] && MIC="mic: off" || MIC="mic: on"
+    VOL="$VOL, $MIC"
 else
-    VOL="vol: n/a"
+    VOL="vol: n/a, mic: n/a"
 fi
 
 # -------------------------
@@ -57,5 +64,6 @@ $VOL
 # -------------------------
 # Send notification
 # -------------------------
+makoctl dismiss -a 2>/dev/null
 notify-send "System Status" "$TEXT"
 

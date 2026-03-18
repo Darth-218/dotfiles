@@ -13,11 +13,13 @@
     libnotify
     libreoffice
     librewolf
+    localsend
     mako
     mpv
     nomacs
     pulseaudio
     rofi
+    scrcpy
     swaybg
     swaylock
     syncplay

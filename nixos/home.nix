@@ -27,6 +27,7 @@ in
     ./modules/neovim.nix
     ./modules/niri.nix
     ./modules/system.nix
+    ./modules/uni.nix
     ./modules/virtualization.nix
   ];
 

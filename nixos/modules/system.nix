@@ -30,6 +30,7 @@
     tailscale
     tmux
     unzip
+    wiremix
     zoxide
   ];
 }

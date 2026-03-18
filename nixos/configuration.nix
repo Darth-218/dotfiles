@@ -28,6 +28,7 @@
   programs.firefox.enable = true;
 
   virtualisation.libvirtd.enable = true;
+  virtualisation.waydroid.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
