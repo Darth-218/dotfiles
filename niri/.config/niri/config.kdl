@@ -6,8 +6,10 @@ workspace "3"
 workspace "4"
 workspace "5"
 
-xwayland-satellite {
-    path "/usr/bin/xwayland-satellite"
+spawn-at-startup "xwayland-satellite"
+
+environment {
+    DISPLAY ":0"
 }
 
 input {

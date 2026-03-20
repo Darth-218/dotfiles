@@ -14,7 +14,6 @@
     efibootmgr
     fzf
     gcc
-    gdb
     go
     keepassxc-go
     kmonad
