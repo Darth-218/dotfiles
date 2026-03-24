@@ -14,6 +14,7 @@
     efibootmgr
     fzf
     gcc
+    glow
     go
     keepassxc-go
     kmonad
@@ -31,5 +32,6 @@
     unzip
     wiremix
     zoxide
+    zip
   ];
 }
