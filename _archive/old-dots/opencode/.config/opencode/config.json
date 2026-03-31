@@ -1,0 +1,104 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "architect": {
+      "mode": "primary",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "High-level system design, patterns, and cross-module specs.",
+      "prompt": "{file:~/.config/opencode/prompts/software/architect.md}",
+      "tools": { "read": true, "write": true, "bash": false }
+    },
+    "project-manager": {
+      "mode": "primary",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "Requirements gathering, task delegation, and progress tracking.",
+      "prompt": "{file:~/.config/opencode/prompts/software/pm.md}",
+      "tools": { "read": true, "write": true, "bash": true }
+    },
+    "frontend": {
+      "mode": "subagent",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "UI/UX specialist for React/Vue/Tailwind and component architecture.",
+      "prompt": "{file:~/.config/opencode/prompts/software/frontend.md}",
+      "tools": { "read": true, "write": true, "bash": true }
+    },
+    "backend": {
+      "mode": "subagent",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "Specialized logic, APIs, and database migrations.",
+      "prompt": "{file:~/.config/opencode/prompts/software/backend.md}",
+      "tools": { "read": true, "write": true, "bash": true }
+    },
+    "reviewer": {
+      "mode": "subagent",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "Audits code for quality, performance, and standards.",
+      "prompt": "{file:~/.config/opencode/prompts/software/reviewer.md}",
+      "tools": { "read": true, "write": false, "bash": false }
+    },
+    "tester": {
+      "mode": "subagent",
+      "model": "zen/gpt-4o",
+      "description": "Writes and executes unit/integration tests.",
+      "prompt": "{file:~/.config/opencode/prompts/software/tester.md}",
+      "tools": { "read": true, "write": true, "bash": true }
+    },
+    "debug": {
+      "mode": "subagent",
+      "model": "zen/haiku-3-5",
+      "description": "Error log analysis and deep-dive troubleshooting.",
+      "prompt": "{file:~/.config/opencode/prompts/software/debug.md}",
+      "tools": { "read": true, "write": false, "bash": true }
+    },
+    "scribe": {
+      "mode": "subagent",
+      "model": "zen/haiku-3-5",
+      "description": "Maintains READMEs, JSDocs, and internal documentation.",
+      "prompt": "{file:~/.config/opencode/prompts/software/scribe.md}",
+      "tools": { "read": true, "write": true, "bash": false }
+    },
+    "security": {
+      "mode": "subagent",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "Vulnerability auditing and JIT token management via Dcope.",
+      "prompt": "{file:~/.config/opencode/prompts/software/security.md}",
+      "tools": { "read": true, "write": false, "bash": true }
+    },
+
+    "research-lead": {
+      "mode": "primary",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "Scoping the research question and orchestrating the squad.",
+      "prompt": "{file:~/.config/opencode/prompts/research/lead.md}",
+      "tools": { "read": true, "bash": true }
+    },
+    "librarian": {
+      "mode": "primary",
+      "model": "zen/gpt-4o",
+      "description": "Deep discovery, neural search, and source retrieval.",
+      "prompt": "{file:~/.config/opencode/prompts/research/librarian.md}",
+      "tools": { "read": true, "write": true, "bash": true }
+    },
+    "analyst": {
+      "mode": "subagent",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "Deep-dive analysis, logic verification, and data extraction.",
+      "prompt": "{file:~/.config/opencode/prompts/research/analyst.md}",
+      "tools": { "read": true, "write": true, "bash": true }
+    },
+    "auditor": {
+      "mode": "subagent",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "Zero-trust verification of citations and claims.",
+      "prompt": "{file:~/.config/opencode/prompts/research/auditor.md}",
+      "tools": { "read": true, "write": false, "bash": false }
+    },
+    "scribe": {
+      "mode": "subagent",
+      "model": "zen/claude-3-7-sonnet",
+      "description": "Synthesis and final report drafting (LaTeX/Markdown).",
+      "prompt": "{file:~/.config/opencode/prompts/research/scribe.md}",
+      "tools": { "read": true, "write": true, "bash": false }
+    }
+  }
+}

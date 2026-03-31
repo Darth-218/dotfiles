@@ -9,7 +9,6 @@
   imports = [
     ./hardware-configuration.nix
     ./users.nix
-    ./services.nix
     ./nvidia.nix
   ];
 
@@ -54,5 +53,5 @@
     };
   };
 
-  system.stateVersion = "25.11"; # NEVER EVER CHANGE
+  system.stateVersion = "25.11";
 }

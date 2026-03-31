@@ -1,0 +1,10 @@
+# Nix
+*.flake.lock
+result
+result-*
+
+# Editor
+*.swp
+*.swo
+*~
+.DS_Store

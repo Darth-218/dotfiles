@@ -1,5 +1,35 @@
 {
   "nodes": {
+    "desktop": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1774991965,
+        "narHash": "sha256-cJ2Xzitd7hIMALYd7Fr45Asr+osR6KP7Zx3BLFNUpyU=",
+        "path": "/home/darth/.dotfiles/nixos/desktop",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/darth/.dotfiles/nixos/desktop",
+        "type": "path"
+      }
+    },
+    "env": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1774992405,
+        "narHash": "sha256-taAlwj/n3aBglYqOjNUCISroVQcTe8UyjYIFjyhL8hE=",
+        "path": "/home/darth/.dotfiles/nixos/env",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/darth/.dotfiles/nixos/env",
+        "type": "path"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -21,7 +51,127 @@
         "type": "github"
       }
     },
+    "kmonad": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1774991965,
+        "narHash": "sha256-Sf1e8NhEr2A15cE+LkfkhsICgaunZYfxJGNEEgqlhsI=",
+        "path": "/home/darth/.dotfiles/nixos/kmonad",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/darth/.dotfiles/nixos/kmonad",
+        "type": "path"
+      }
+    },
+    "neovim": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1774991965,
+        "narHash": "sha256-DV4z5fZKXsy8ejRHvVYX14t+moyl2fVRx9M4dCYO+iQ=",
+        "path": "/home/darth/.dotfiles/nixos/neovim",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/darth/.dotfiles/nixos/neovim",
+        "type": "path"
+      }
+    },
+    "niri": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1774991959,
+        "narHash": "sha256-c7QSGZ+07K7cpAorakeQE7QX9PGqlKAn4ezGmRP78SE=",
+        "path": "/home/darth/.dotfiles/nixos/niri",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/darth/.dotfiles/nixos/niri",
+        "type": "path"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1774799055,
+        "narHash": "sha256-Tsq9BCz0q47ej1uFF39m4tuhcwru/ls6vCCJzutEpaw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "107cba9eb4a8d8c9f8e9e61266d78d340867913a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-25.11",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1774799055,
+        "narHash": "sha256-Tsq9BCz0q47ej1uFF39m4tuhcwru/ls6vCCJzutEpaw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "107cba9eb4a8d8c9f8e9e61266d78d340867913a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-25.11",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1774799055,
+        "narHash": "sha256-Tsq9BCz0q47ej1uFF39m4tuhcwru/ls6vCCJzutEpaw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "107cba9eb4a8d8c9f8e9e61266d78d340867913a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-25.11",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1774799055,
+        "narHash": "sha256-Tsq9BCz0q47ej1uFF39m4tuhcwru/ls6vCCJzutEpaw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "107cba9eb4a8d8c9f8e9e61266d78d340867913a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-25.11",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1774799055,
+        "narHash": "sha256-Tsq9BCz0q47ej1uFF39m4tuhcwru/ls6vCCJzutEpaw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "107cba9eb4a8d8c9f8e9e61266d78d340867913a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-25.11",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1769089682,
         "narHash": "sha256-9yA/LIuAVQq0lXelrZPjLuLVuZdm03p8tfmHhnDIkms=",
@@ -36,10 +186,46 @@
         "type": "indirect"
       }
     },
+    "nixpkgs_7": {
+      "locked": {
+        "lastModified": 1774799055,
+        "narHash": "sha256-Tsq9BCz0q47ej1uFF39m4tuhcwru/ls6vCCJzutEpaw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "107cba9eb4a8d8c9f8e9e61266d78d340867913a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-25.11",
+        "type": "indirect"
+      }
+    },
     "root": {
       "inputs": {
+        "desktop": "desktop",
+        "env": "env",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "kmonad": "kmonad",
+        "neovim": "neovim",
+        "niri": "niri",
+        "nixpkgs": "nixpkgs_6",
+        "services": "services"
+      }
+    },
+    "services": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_7"
+      },
+      "locked": {
+        "lastModified": 1774991965,
+        "narHash": "sha256-fsKFe+RYEkqacctkv3+aYG/IIJAQsi9GIeprLKAItm0=",
+        "path": "/home/darth/.dotfiles/nixos/services",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/darth/.dotfiles/nixos/services",
+        "type": "path"
       }
     }
   },
