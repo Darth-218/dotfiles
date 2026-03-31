@@ -46,7 +46,7 @@
   _    q    w    e    r    t    y    u    i     o    p    _    _    _ 
   esc  @a-l @s-b @d-b @f-b g    h    @j-b @k-b  @l-b @cl-l _   _ 
   _    z    x    c    @v-l b    n    @m-l ,     .    /    _ 
-  _    _    _              @sp-l          _     @def
+  _    _    ret            @sp-l          _     @def
 )
 
 (deflayer numbers
