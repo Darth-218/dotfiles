@@ -181,5 +181,12 @@ return {
         table_tidy_all = "<leader>ta", -- key for command :TableTidyAll<CR>
       },
     }
-  }
+  },
+{
+    'geg2102/nvim-jupyter-client',
+    lazy = false,
+    config = function()
+        require('nvim-jupyter-client').setup({})
+    end
+}
 }
