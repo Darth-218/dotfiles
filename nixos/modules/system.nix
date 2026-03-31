@@ -20,6 +20,7 @@
     kmonad
     lazygit
     linux-wifi-hotspot
+    pciutils
     nerd-fonts.jetbrains-mono
     progress
     putty

@@ -31,6 +31,7 @@
   virtualisation.waydroid.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   environment.systemPackages = with pkgs; [
     vim
