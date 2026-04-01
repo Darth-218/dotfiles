@@ -1,0 +1,43 @@
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+
+{
+  home.packages = with pkgs; [
+    blender
+    ghostty
+    keepassxc
+    libnotify
+    libreoffice
+    librewolf
+    localsend
+    mako
+    mpv
+    nomacs
+    pulseaudio
+    rofi
+    scrcpy
+    swaybg
+    swaylock
+    syncplay
+    tuxguitar
+    vesktop
+    vlc
+    wmenu
+    xwayland-satellite
+    zathura
+    ollama
+    opencode
+  ];
+
+  xdg.configFile = {
+    "mako".source = ./mako;
+    "ghostty".source = ./ghostty;
+    "rofi".source = ./rofi;
+    "opencode".source = ./opencode;
+    "zathura".source = ./zathura;
+  };
+}

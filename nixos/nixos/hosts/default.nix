@@ -1,0 +1,5 @@
+{ lib, ... }:
+
+{
+  nixosSystem = lib.nixosSystem;
+}
