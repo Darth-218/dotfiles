@@ -8,20 +8,34 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      zen-browser,
+      ...
+    }:
     let
       lib = nixpkgs.lib;
     in
     {
       nixosConfigurations.deathstar = lib.nixosSystem {
+        specialArgs = { inherit zen-browser; };
         modules = [
           ./nixos/base/default.nix
           ./nixos/features/keyboard.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
+              extraSpecialArgs = { inherit zen-browser; };
               useGlobalPkgs = true;
               useUserPackages = true;
               users.darth = {
@@ -42,3 +56,4 @@
       };
     };
 }
+

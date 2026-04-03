@@ -6,5 +6,5 @@
 }:
 
 {
-  xdg.configFile."niri".source = ./wm/niri;
+  home.file.".config/niri" = { source = ./wm/niri; recursive = true; };
 }

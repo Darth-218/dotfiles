@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  zen-browser,
   ...
 }:
 
@@ -14,26 +15,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.configurationLimit = 3;
-
-  systemd.services.boot-cleanup = {
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = pkgs.writeShellScript "boot-cleanup" ''
-        set -e
-        cd /boot/EFI/nixos || exit 0
-        for f in *-initrd*.efi; do
-          [ -f "$f" ] || continue
-          rm -f "$f"
-        done
-        for f in *.tmp; do
-          [ -f "$f" ] || continue
-          rm -f "$f"
-        done
-      '';
-    };
-  };
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   networking.hostName = "deathstar";
   networking.networkmanager.enable = true;
@@ -46,6 +28,16 @@
   programs.xwayland.enable = true;
   programs.firefox.enable = true;
 
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+        user = "darth";
+      };
+    };
+  };
+
   virtualisation.libvirtd.enable = lib.mkForce false;
   virtualisation.waydroid.enable = lib.mkForce false;
 
@@ -57,6 +49,9 @@
     wget
     git
     gnumake
+    greetd
+    tuigreet
+    zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   fonts.packages = with pkgs; [
