@@ -1,0 +1,57 @@
+{
+	"name": "Vimium C",
+	"@time": "4/3/2026, 8:44:49 PM",
+	"time": 1775241889079,
+	"environment": {
+		"extension": "2.12.3",
+		"platform": "linux",
+		"firefox": 149
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": ":https://leetcode.com/problems/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://vim-adventures.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://monkeytype.com/"
+		},
+		{
+			"passKeys": "<esc> ",
+			"pattern": ":https://web.whatsapp.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://euc-word-edit.officeapps.live.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.songsterr.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": "^https?://localhost:8888/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://euc-excel.officeapps.live.com/"
+		}
+	],
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"map J nextTab",
+		"map K previousTab",
+		"map e scrollDown",
+		"map w scrollUp",
+		"map y scrollUp",
+		""
+	],
+	"linkHintCharacters": "qwerasd",
+	"searchUrl": "https://duckduckgo.com/?q=$s DuckDuckGo",
+	"vimSync": true
+}
