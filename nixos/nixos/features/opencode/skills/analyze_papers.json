@@ -1,0 +1,16 @@
+{
+  "name": "analyze_papers",
+  "description": "Extracts all 10 literature review categories (Architecture, Reasoning, Data, MITRE, Metrics, Failures, Motivation, Baselines, IO Specs, Reproducibility) from an AI security paper PDF.",
+  "arguments": [
+    {
+      "name": "filepath",
+      "type": "string",
+      "description": "Absolute or relative path to the PDF file.",
+      "required": true
+    }
+  ],
+  "execute": {
+    "agent": "orchestrator",
+    "prompt": "Run the full extraction pipeline on the PDF at {filepath}. Execute Ingestor -> Parallel Analysis (Architect, Analyst, Critic) -> Compiler. Return the final markdown file path."
+  }
+}

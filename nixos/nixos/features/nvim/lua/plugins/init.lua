@@ -29,6 +29,12 @@ return {
   },
 
   {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = false
+  },
+
+  {
     "folke/trouble.nvim",
     lazy = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -173,20 +179,27 @@ return {
   {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 
   { "timantipov/md-table-tidy.nvim",
-    -- default config
-    opts = {
-      padding = 1,        -- number of spaces for cell padding
-      keymap = {
-        table_tidy = "<leader>tt", -- key for command :TableTidy<CR>
-        table_tidy_all = "<leader>ta", -- key for command :TableTidyAll<CR>
-      },
-    }
-  },
+  -- default config
+  opts = {
+    padding = 1,        -- number of spaces for cell padding
+    keymap = {
+      table_tidy = "<leader>tt", -- key for command :TableTidy<CR>
+      table_tidy_all = "<leader>ta", -- key for command :TableTidyAll<CR>
+    },
+  }
+},
 {
-    'geg2102/nvim-jupyter-client',
-    lazy = false,
-    config = function()
-        require('nvim-jupyter-client').setup({})
-    end
+  'geg2102/nvim-jupyter-client',
+  lazy = false,
+  config = function()
+    require('nvim-jupyter-client').setup({})
+  end
+},
+{
+  'nvim-java/nvim-java',
+  config = function()
+    require('java').setup()
+    vim.lsp.enable('jdtls')
+  end,
 }
 }

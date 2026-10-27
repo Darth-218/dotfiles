@@ -10,6 +10,7 @@
     tmux
     zoxide
     fzf
+    ffmpeg
     glow
     btop
     gcc
@@ -18,10 +19,13 @@
     python315
     sesh
     unzip
+    podman-compose
     lazygit
     nerd-fonts.jetbrains-mono
     mysql84
-    mysql-workbench
+    nodejs_24
+    ninja
+    meson
   ];
 
   programs.git = {

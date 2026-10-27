@@ -4,7 +4,6 @@ workspace "1"
 workspace "2"
 workspace "3"
 workspace "4"
-workspace "5"
 
 spawn-at-startup "xwayland-satellite"
 
@@ -27,14 +26,14 @@ input {
     position x=1280 y=0
 }
 
-output "HDMI-A-1" {
-  mode "1920x1080"
-  scale 1
-}
+// output "HDMI-A-1" {
+//   mode "1920x1080"
+//   scale 1
+// }
 
 layout {
     gaps 7
-    center-focused-column "never"
+    center-focused-column "on-overflow"
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -70,7 +69,8 @@ layout {
 
 spawn-at-startup "mako"
 spawn-sh-at-startup "syncthing --no-browser"
-spawn-sh-at-startup "swaybg -i ~/.dotfiles/wallpaper.png"
+spawn-sh-at-startup "swaybg -i ~/aaru/Media/Images/Wallpapers/pixel-meadow.png"
+// spawn-sh-at-startup "qs -c qshell"
 
 hotkey-overlay {
     skip-at-startup
@@ -162,7 +162,7 @@ window-rule {
 
 window-rule {
   match title="Zathura"
-  open-on-workspace "5"
+  open-on-workspace "4"
 }
 
 window-rule {
@@ -233,7 +233,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+N hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+B hotkey-overlay-title="Open a Terminal: ghostty" { spawn "librewolf"; }
+    Mod+B hotkey-overlay-title="Open a Terminal: ghostty" { spawn "zen"; }
     Mod+D hotkey-overlay-title="Applications Launcher" { spawn-sh "rofi -show combi -modes combi -combi-modes \"window,drun\""; }
     Mod+P hotkey-overlay-title="Applications Launcher" { spawn "wmenu-run"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
@@ -251,6 +251,7 @@ binds {
     Mod+Shift+M     allow-when-locked=true { spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle"; }
 
     Mod+S {spawn "~/.scripts/stats-notifications.sh";}
+    Mod+Shift+S {spawn "qs" "-c" "qshell" "ipc" "call" "island" "toggle";}
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }

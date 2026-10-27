@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/by-path/pci-0000:00:14.0-usb-0:4:1.0-event-kbd")
+  input (device-file "/dev/input/by-id/usb-Microsoft_Microsoft®_Nano_Transceiver_v2.0-event-kbd")
   output (uinput-sink "Laptop kmonand output")
   fallthrough true
   allow-cmd false

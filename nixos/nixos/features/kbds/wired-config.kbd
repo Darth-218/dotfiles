@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/by-id/usb-EVISION_USB-STDHID_2020-12-15-event-kbd")
+  input (device-file "/dev/input/by-id/usb-BY_Tech_Gaming_Keyboard-event-kbd")
   output (uinput-sink "Kmonand output")
   fallthrough true
   allow-cmd true

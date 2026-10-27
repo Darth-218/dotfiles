@@ -6,5 +6,5 @@
 }:
 
 {
-  home.file.".config/niri" = { source = ./wm/niri; recursive = true; };
+  home.file.".config/niri" = { source = ./wm/niri; recursive = true; force = true; };
 }

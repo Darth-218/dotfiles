@@ -6,32 +6,23 @@
 }:
 
 {
+  imports = [
+    ./apps/dev.nix
+    ./apps/creative.nix
+    ./apps/media.nix
+    ./apps/communication.nix
+    ./apps/productivity.nix
+    ./apps/system.nix
+  ];
+
   home.packages = with pkgs; [
-    blender
-    blueman
     ghostty
-    keepassxc
-    libnotify
-    libreoffice
-    librewolf
-    localsend
     mako
-    mpv
-    nomacs
-    ollama
-    opencode
-    pulseaudio
     rofi
-    scrcpy
     swaybg
     swaylock
-    syncplay
-    tuxguitar
-    vesktop
-    vlc
     wmenu
     xwayland-satellite
-    zathura
   ];
 
   home.file = {
@@ -57,4 +48,3 @@
     };
   };
 }
-

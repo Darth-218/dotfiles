@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  zen-browser,
   ...
 }:
 
@@ -12,6 +11,14 @@
     ./users.nix
     ./nvidia.nix
   ];
+
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings = {
+      "port_mapping" = true;
+    };
+  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -27,35 +34,51 @@
   programs.niri.enable = true;
   programs.xwayland.enable = true;
   programs.firefox.enable = true;
+  programs.nix-ld.enable = true;
 
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+        command = "${pkgs.tuigreet}/bin/tuigreet";
         user = "darth";
       };
     };
   };
 
-  virtualisation.libvirtd.enable = lib.mkForce false;
-  virtualisation.waydroid.enable = lib.mkForce false;
+  services.tailscale = {
+    enable = true;
+  };
+
+  services.openssh = {
+    enable = true;
+  };
+
+  services.mysql = {
+    enable = true;
+    package = pkgs.mysql84;
+  };
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "openclaw-2026.4.12"
+  ];
+
   environment.systemPackages = with pkgs; [
+    home-manager
     vim
     wget
     git
     gnumake
     greetd
     tuigreet
-    zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    font-awesome
   ];
 
   nix = {
